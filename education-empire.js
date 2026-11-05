@@ -126,16 +126,18 @@ dialog.addEventListener("close",()=>trigger.focus());
 document.addEventListener("keydown",event=>{if(event.altKey&&event.key.toLowerCase()==="e"&&!event.repeat){event.preventDefault();open()}});
 root.querySelectorAll("[data-empire-journey]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.empireJourney===state.journey)));
 renderJourney(state.journey||"thinker");showStar(stars[0]);updateHunt();
-const huntPages=new Set(["index.html","about.html","institutions.html","archives.html"]); // Four seals are hidden in the principal halls.
-if(huntPages.has(page)&&document.querySelector(".footer-bottom")){
- const button=document.createElement("button");button.type="button";button.className="empire-hunt-trigger";button.textContent="✧";button.title="頁の余白に隠された學印";button.setAttribute("aria-label","この頁に隠された學印を見つける");
+const huntTargets={"index.html":".imperial-principle-copy .emp-translation","about.html":"#director .kicker","institutions.html":"#academy-founder h3","archives.html":"#sixjo-yuzuriha h2"};
+if(huntTargets[page]){
+ const target=document.querySelector(huntTargets[page]);
+ if(!target)return;
+ const button=document.createElement("button");button.type="button";button.className="empire-hunt-trigger";button.textContent="✧";button.title="欄外に残された學印";button.setAttribute("aria-label","この頁に隠された學印を収める");
  button.addEventListener("click",()=>{
   const id=page;
   if(!collected.includes(id)){collected.push(id);safeWrite(HUNT,collected);button.classList.add("is-found");button.textContent="✦";toast(collected.length>=4?"四つの學印が結ばれた。羅針盤に秘められた頁がひらく。":"學印をひとつ収めた。");
   }else toast("この頁の學印は、すでに収められている。");
   updateHunt();
  });
- document.querySelector(".footer-bottom").appendChild(button);
+ target.appendChild(button);
  if(collected.includes(page)){button.classList.add("is-found");button.textContent="✦"}
 }
 })();
