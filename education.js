@@ -264,4 +264,151 @@ function selectCodex(index){
 codexButtons.forEach(button=>button.addEventListener("click",()=>selectCodex(codexChapters.findIndex(chapter=>chapter.key===button.dataset.codex))));
 const codexNext=$("#codex-next");if(codexNext)codexNext.addEventListener("click",()=>selectCodex(codexIndex+1));
 
+
+/* Imperial ceremonial portal */
+const rite=$("#rite-dialog"),riteOpen=$("[data-open-rite]"),riteClose=$("[data-rite-close]"),riteEnter=$("[data-rite-enter]");
+function openRite(){if(!rite)return;if(typeof rite.showModal==="function")rite.showModal();else rite.setAttribute("open","");}
+function closeRite(){if(!rite)return;if(typeof rite.close==="function"&&rite.open)rite.close();else rite.removeAttribute("open");}
+if(riteOpen)riteOpen.addEventListener("click",openRite);
+if(riteClose)riteClose.addEventListener("click",closeRite);
+if(riteEnter)riteEnter.addEventListener("click",closeRite);
+if(rite)rite.addEventListener("click",event=>{if(event.target===rite)closeRite();});
+const riteEmblem=$(".rite-emblem");
+if(riteEmblem&&window.matchMedia("(hover:hover) and (pointer:fine)").matches){
+ riteEmblem.addEventListener("pointermove",event=>{
+  const r=riteEmblem.getBoundingClientRect(),x=(event.clientX-r.left)/r.width,y=(event.clientY-r.top)/r.height;
+  riteEmblem.style.setProperty("--rite-y",((x-.5)*22)+"deg");
+  riteEmblem.style.setProperty("--rite-x",((.5-y)*18)+"deg");
+ });
+ riteEmblem.addEventListener("pointerleave",()=>{riteEmblem.style.setProperty("--rite-x","0deg");riteEmblem.style.setProperty("--rite-y","0deg");});
+}
+
+/* Reading lamps: a night-colored codex and a vertical Japanese folio */
+function syncToggle(selector,enabled,labelOn,labelOff){
+ $(selector).forEach(button=>{
+  button.setAttribute("aria-pressed",String(enabled));
+  const span=$("span",button);
+  if(span)span.textContent=enabled?labelOn:labelOff;
+ });
+}
+$("[data-night-toggle]").forEach(button=>button.addEventListener("click",()=>{
+ const enabled=!document.body.classList.contains("night-codex");
+ document.body.classList.toggle("night-codex",enabled);
+ syncToggle("[data-night-toggle]",enabled,"OFF","ON");
+}));
+$("[data-vertical-toggle]").forEach(button=>button.addEventListener("click",()=>{
+ const enabled=!document.body.classList.contains("vertical-codex");
+ document.body.classList.toggle("vertical-codex",enabled);
+ syncToggle("[data-vertical-toggle]",enabled,"横書","縦書");
+}));
+
+/* Constellation of the educational institutions */
+const orbitRecords={
+ juku:{label:"PRIVATE ACADEMY　／　01",title:"九条院塾",text:"九条院春臣が開いた私塾。春臣は塾生たちと学問を共にし、問いを持つことや、自ら考えることを大切にした。中原壱葉もかつてこの塾で学んだ。"},
+ university:{label:"HIGHER EDUCATION　／　02",title:"日ノ本帝國國立帝國大學",text:"九条院春臣が創設した高等教育・学術研究機關。「學問ノ府、文化ノ源流」を精神に掲げ、文学・哲学・歴史・自然科学・医学・美術など、学問そのものを探究する場所として構想された。"},
+ academy:{label:"GIRLS' ACADEMY　／　03",title:"日ノ本國立帝都女學院",text:"國語教諭の詩人・中原壱葉、央語教諭の文學者・翻譯家・中原八雲が教壇に立つ。異なる言葉と感性を持つ教師たちが、学生の学びを支えている。"},
+ ministry:{label:"PUBLIC EDUCATION　／　04",title:"帝國教育廳",text:"九条院春臣が長官を務める中央行政機關。教育と学問の発展を支え、学ぶ機会と学問の自由、文化の継承を重んじる。"}
+};
+const orbitButtons=$("[data-orbit]"),orbitLabel=$("#orbit-label"),orbitTitle=$("#orbit-title"),orbitDescription=$("#orbit-description");
+function selectOrbit(key){
+ const item=orbitRecords[key];if(!item)return;
+ orbitButtons.forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.orbit===key)));
+ if(orbitLabel)orbitLabel.textContent=item.label;
+ if(orbitTitle)orbitTitle.textContent=item.title;
+ if(orbitDescription)orbitDescription.textContent=item.text;
+}
+orbitButtons.forEach(button=>button.addEventListener("click",()=>selectOrbit(button.dataset.orbit)));
+
+/* Dual archive: classic learning and modern inquiry */
+const dualButtons=$("[data-dual]"),classicsPane=$("#dual-classics"),modernPane=$("#dual-modern"),dualConclusion=$("#dual-conclusion");
+const dualTexts={
+ classics:"古典と漢学を通じて、先人の言葉と思想を受け継ぐ。過去を知ることは、現在を考えるための礎となる。",
+ modern:"西洋思想・哲学・自然科学・近代教育学に向き合い、新たな問いを得る。新しさだけを正しさの証明とはしない。",
+ harmony:"古きを捨てて新しきを取るのではない。古典を知り、近代の知と照らし合わせ、自ら考えて選び取る。その対話の中に、春臣の学びの姿勢がある。"
+};
+function selectDual(key){
+ dualButtons.forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.dual===key)));
+ if(classicsPane)classicsPane.classList.toggle("is-emphasized",key==="classics"||key==="harmony");
+ if(modernPane)modernPane.classList.toggle("is-emphasized",key==="modern"||key==="harmony");
+ if(dualConclusion)dualConclusion.textContent=dualTexts[key]||dualTexts.harmony;
+}
+dualButtons.forEach(button=>button.addEventListener("click",()=>selectDual(button.dataset.dual)));
+
+/* Guided knowledge pilgrimage */
+const routes={
+ thinker:{label:"A PATH OF INQUIRY　／　問いを深める道",steps:[
+  ["FIRST GATE","教育理念","九条院春臣が大切にした、学びと自由の思想にふれる。","about.html#philosophy","理念を読む　→"],
+  ["SECOND GATE","『教育侖』","教育と自由、教師と学生、古典と近代を読み解く。","archives.html#education-theory","書をひらく　→"],
+  ["THIRD GATE","知の星図","春臣の学問的関心を六つの領域から辿る。","#atlas","星図を巡る　→"]
+ ]},
+ teacher:{label:"A PATH OF TEACHING　／　教えることを考える道",steps:[
+  ["FIRST GATE","春臣の教育思想","人を作るのではなく、その人が自分自身になることを助ける。","about.html#director","長官の言葉を読む　→"],
+  ["SECOND GATE","九条院塾","問いを持ち、学ぶ者と共に考えた春臣の私塾を辿る。","#institutions-orbit","塾の記録を辿る　→"],
+  ["THIRD GATE","帝都女學院","中原壱葉と中原八雲、それぞれの教え方にふれる。","institutions.html#academy","教師たちを知る　→"]
+ ]},
+ culture:{label:"A PATH OF CULTURE　／　文化を辿る道",steps:[
+  ["FIRST GATE","古典・漢学","先人の言葉と思想から、帝國の文化の根を辿る。","#atlas","星図を巡る　→"],
+  ["SECOND GATE","歴史・文学","歴史と文学に刻まれた人間の営みを読む。","archives.html","史料室を訪ねる　→"],
+  ["THIRD GATE","帝國大學","学問と文化を探究する「學問ノ府」を訪ねる。","institutions.html#university","大学を知る　→"]
+ ]}
+};
+const routeButtons=$("[data-route]"),routeContainer=$("#pilgrimage-route"),routeSummary=$("#pilgrimage-summary");
+function renderRoute(key){
+ const route=routes[key];if(!route||!routeContainer)return;
+ routeButtons.forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.route===key)));
+ routeContainer.replaceChildren();
+ route.steps.forEach((step,index)=>{
+  const article=document.createElement("article");article.className="pilgrimage-step";
+  const number=document.createElement("div");number.className="step-number";number.textContent=["Ⅰ","Ⅱ","Ⅲ"][index];
+  const small=document.createElement("small");small.textContent=step[0];
+  const title=document.createElement("h3");title.textContent=step[1];
+  const p=document.createElement("p");p.textContent=step[2];
+  const a=document.createElement("a");a.href=step[3];a.textContent=step[4];
+  article.append(number,small,title,p,a);routeContainer.appendChild(article);
+ });
+ if(routeSummary)routeSummary.textContent=route.label;
+}
+routeButtons.forEach(button=>button.addEventListener("click",()=>renderRoute(button.dataset.route)));
+
+/* A personal folio for saved quotations, held only in this browser */
+const BOOKMARK_KEY="imperial-education-folio-v1";
+function getBookmarks(){
+ try{const parsed=JSON.parse(localStorage.getItem(BOOKMARK_KEY)||"[]");return Array.isArray(parsed)?parsed:[];}
+ catch(_){return [];}
+}
+function setBookmarks(items){
+ try{localStorage.setItem(BOOKMARK_KEY,JSON.stringify(items));return true;}
+ catch(_){return false;}
+}
+const saveQuoteButton=$("#save-quote"),openBookmarksButton=$("#open-bookmarks"),bookmarkDialog=$("#bookmark-dialog"),bookmarkList=$("#bookmark-list"),bookmarkClose=$("#bookmark-close");
+function renderBookmarks(){
+ if(!bookmarkList)return;
+ const items=getBookmarks();bookmarkList.replaceChildren();
+ if(!items.length){const p=document.createElement("p");p.className="bookmark-empty";p.textContent="まだ栞はありません。心に残った言葉を、ここへ収めてください。";bookmarkList.appendChild(p);}
+ items.forEach((item,index)=>{
+  const entry=document.createElement("article");entry.className="bookmark-entry";
+  const p=document.createElement("p");p.textContent=item.text;
+  const small=document.createElement("small");small.textContent=item.source;
+  const remove=document.createElement("button");remove.type="button";remove.textContent="×";remove.setAttribute("aria-label","この栞を取り除く");
+  remove.addEventListener("click",()=>{const next=getBookmarks();next.splice(index,1);setBookmarks(next);renderBookmarks();});
+  entry.append(p,small,remove);bookmarkList.appendChild(entry);
+ });
+ if(openBookmarksButton)openBookmarksButton.textContent="栞の書架をひらく　／　"+items.length;
+ const current=quotations[quoteIndex];
+ const saved=items.some(item=>item.text===current.text);
+ if(saveQuoteButton){saveQuoteButton.setAttribute("aria-pressed",String(saved));saveQuoteButton.textContent=saved?"栞に収めました　✧":"この言葉を栞にする　✧";}
+}
+if(saveQuoteButton)saveQuoteButton.addEventListener("click",()=>{
+ const current=quotations[quoteIndex],items=getBookmarks();
+ const index=items.findIndex(item=>item.text===current.text);
+ if(index>=0)items.splice(index,1);else items.unshift({text:current.text,source:current.source});
+ if(setBookmarks(items))renderBookmarks();
+});
+if(openBookmarksButton)openBookmarksButton.addEventListener("click",()=>{
+ renderBookmarks();if(bookmarkDialog&&typeof bookmarkDialog.showModal==="function")bookmarkDialog.showModal();else if(bookmarkDialog)bookmarkDialog.setAttribute("open","");
+});
+if(bookmarkClose)bookmarkClose.addEventListener("click",()=>{if(bookmarkDialog&&typeof bookmarkDialog.close==="function")bookmarkDialog.close();else if(bookmarkDialog)bookmarkDialog.removeAttribute("open");});
+if(bookmarkDialog)bookmarkDialog.addEventListener("click",event=>{if(event.target===bookmarkDialog&&typeof bookmarkDialog.close==="function")bookmarkDialog.close();});
+renderBookmarks();
+
 })();
