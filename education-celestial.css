@@ -1,0 +1,44 @@
+/* CELESTIAL READING RITE — 玲瓏天球儀 */
+.celestial-trigger{position:fixed;left:22px;bottom:22px;z-index:181;width:58px;height:58px;border-radius:50%;border:1px solid #d8bd82;background:radial-gradient(circle at 35% 28%,#fff8e6 0 8%,#d8bd82 9% 11%,#6b1c35 12% 68%,#260d19 100%);color:#fff0cf;box-shadow:0 9px 28px #210c174a,inset 0 0 0 4px #f2dfb52b;cursor:pointer;font:24px Georgia,serif;transition:transform .35s,box-shadow .35s}
+.celestial-trigger:before{content:"";position:absolute;inset:6px;border:1px solid #e9d4a1;border-radius:50%;transform:rotate(-24deg) scaleX(.72)}
+.celestial-trigger:hover{transform:rotate(22deg) scale(1.08);box-shadow:0 12px 34px #210c1770,0 0 25px #d9b86c55}
+.celestial-dialog{width:min(920px,calc(100% - 28px));max-width:920px;max-height:min(88vh,850px);padding:0;border:1px solid #c7a66b;background:#f7efdf;color:#34232a;box-shadow:0 35px 120px #13070dc9}
+.celestial-dialog::backdrop{background:#160911d9;backdrop-filter:blur(7px)}
+.celestial-frame{position:relative;padding:clamp(24px,5vw,54px);overflow:hidden;background:radial-gradient(ellipse at 50% 0,#fffdf5 0,transparent 56%),linear-gradient(145deg,#f8f0df,#e9dbc0)}
+.celestial-frame:before{content:"";position:absolute;inset:10px;border:1px solid #b18a4d55;pointer-events:none}
+.celestial-head{text-align:center;position:relative}
+.celestial-head small{font:11px Georgia,serif;letter-spacing:.28em;color:#87623c}
+.celestial-head h2{margin:10px 0 5px;font:500 clamp(25px,4vw,38px) "Shippori Mincho",serif;letter-spacing:.16em;color:#571b30}
+.celestial-head p{font-size:12px;color:#5b4746;letter-spacing:.08em}
+.celestial-close{position:absolute;right:0;top:0;width:38px;height:38px;border:1px solid #b18a4d;background:#fff9ed;color:#5c2135;font-size:23px;cursor:pointer}
+.celestial-layout{display:grid;grid-template-columns:minmax(220px,.9fr) minmax(0,1.1fr);gap:clamp(22px,4vw,48px);align-items:center;margin-top:28px;position:relative}
+.celestial-orrery{width:min(100%,340px);aspect-ratio:1;margin:auto;position:relative;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,#fff9e9 0 23%,#e8d4a9 23.5% 24%,transparent 24.5%),radial-gradient(circle,#d9c18e22,transparent 67%)}
+.celestial-orrery:before,.celestial-orrery:after{content:"";position:absolute;border:1px solid #a67d45a8;border-radius:50%;inset:9%;transform:rotate(32deg) scaleY(.46)}
+.celestial-orrery:after{inset:20%;transform:rotate(-38deg) scaleY(.5);border-color:#8a294a88}
+.celestial-sun{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#fff1c9,#c59b5a 65%,#7b2941);box-shadow:0 0 36px #c49c5b77;color:#4c1a2d;font:26px Georgia,serif;z-index:1}
+.celestial-orbit{position:absolute;inset:0;border-radius:50%;animation:celestial-spin 28s linear infinite}
+.celestial-planet{position:absolute;left:50%;top:0;transform:translateX(-50%);width:43px;height:43px;border-radius:50%;border:1px solid #e7d3a5;background:linear-gradient(145deg,#fff1ce,#a66c58 68%,#5b1d36);box-shadow:0 4px 14px #4a1c3044;display:grid;place-items:center;color:#fff1dc;font-size:17px}
+.celestial-planet:nth-child(2){left:auto;top:50%;right:0;transform:translateY(-50%);background:linear-gradient(145deg,#fff3d4,#a78b61 65%,#53465a)}
+.celestial-planet:nth-child(3){left:50%;top:auto;bottom:0;transform:translateX(-50%);background:linear-gradient(145deg,#f5d8c4,#8b4050 70%,#3c182b)}
+.celestial-planet:nth-child(4){left:0;top:50%;transform:translateY(-50%);background:linear-gradient(145deg,#fff,#a4a5a2 65%,#55566b)}
+@keyframes celestial-spin{to{transform:rotate(360deg)}}
+.celestial-side h3{font:500 22px "Shippori Mincho",serif;color:#571b30;letter-spacing:.12em;margin:0 0 12px}
+.celestial-side>p{font-size:13px;line-height:2;color:#4b3b3d}
+.celestial-destinations{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:20px}
+.celestial-destinations a{padding:13px 14px;text-decoration:none;border:1px solid #b18a4d77;background:#fffaf0;color:#4b1c2d;transition:.25s}
+.celestial-destinations a:hover{background:#68172f;color:#fff1d7;transform:translateY(-2px)}
+.celestial-destinations strong{display:block;font-size:13px;font-weight:600}
+.celestial-destinations small{display:block;margin-top:4px;font:10px Georgia,serif;letter-spacing:.12em;color:inherit;opacity:.8}
+.celestial-season{margin-top:28px;padding-top:20px;border-top:1px solid #b18a4d66;position:relative}
+.celestial-season-label{font-size:11px;letter-spacing:.18em;color:#805b37}
+.celestial-seasons{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.celestial-seasons button{flex:1 1 90px;padding:10px 8px;border:1px solid #b18a4d66;background:#fffaf0;color:#4b3435;cursor:pointer;font:13px "Shippori Mincho",serif}
+.celestial-seasons button[aria-pressed=true]{background:#68172f;color:#fff0d6;border-color:#68172f;box-shadow:inset 0 0 0 2px #d6b77b}
+.celestial-season-note{margin:10px 0 0!important;font-size:12px!important;color:#594447!important;min-height:2em}
+body[data-celestial-season="spring"]:not(.lantern-reading):after,body[data-celestial-season="summer"]:not(.lantern-reading):after,body[data-celestial-season="autumn"]:not(.lantern-reading):after,body[data-celestial-season="winter"]:not(.lantern-reading):after{content:"";position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.12}
+body[data-celestial-season="spring"]:after{background:radial-gradient(ellipse at 15% 20%,#e7a6b2,transparent 40%),radial-gradient(ellipse at 85% 70%,#f2d6dc,transparent 38%)}
+body[data-celestial-season="summer"]:after{background:radial-gradient(ellipse at 80% 15%,#8ca7b5,transparent 40%),radial-gradient(ellipse at 20% 85%,#e2c77a,transparent 38%)}
+body[data-celestial-season="autumn"]:after{background:radial-gradient(ellipse at 15% 80%,#c47b42,transparent 42%),radial-gradient(ellipse at 85% 20%,#a64b3c,transparent 38%)}
+body[data-celestial-season="winter"]:after{background:radial-gradient(ellipse at 20% 15%,#b6c5d2,transparent 42%),radial-gradient(ellipse at 80% 85%,#e7e1d4,transparent 38%)}
+@media(max-width:680px){.celestial-trigger{left:14px;bottom:14px;width:50px;height:50px}.celestial-layout{grid-template-columns:1fr}.celestial-orrery{width:min(72vw,270px)}.celestial-side{text-align:center}.celestial-destinations{text-align:left}.celestial-close{position:relative;float:right}.celestial-head{padding-top:5px}}
+@media(prefers-reduced-motion:reduce){.celestial-orbit{animation:none}.celestial-trigger,.celestial-destinations a{transition:none}}
