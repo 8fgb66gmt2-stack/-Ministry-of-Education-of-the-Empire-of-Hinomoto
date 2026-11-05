@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="education-imperial.css?v=20261105-5">
 <link rel="stylesheet" href="education-renaissance.css?v=20261105-2">
 <link rel="stylesheet" href="education-celestial.css?v=20261105-1">
-<link rel="stylesheet" href="education-empire.css?v=20261105-2">
+<link rel="stylesheet" href="education-empire.css?v=20261105-3">
 <title>帝國教育廳｜日ノ本帝國 公式情報網</title>
 </head>
 <body>
@@ -169,6 +169,62 @@
     <div class="detail-index"><span>SELECTED FIELD</span><span id="atlas-position">01　／　06</span></div>
     <div class="atlas-hint">星を選択すると、解説が切り替わります。</div>
    </article>
+  </div>
+ </div>
+</section>
+
+
+<section class="inquiry-atelier" id="inquiry-atelier" aria-labelledby="atelier-title">
+ <div class="wrap">
+  <div class="atelier-heading">
+   <div class="kicker">THE IMPERIAL INQUIRY ATELIER　／　知の錬成室</div>
+   <h2 id="atelier-title">問いを選び、知をかたちにする。</h2>
+   <p>学問の領域、問いの向き、探究の方法。三つを選ぶと、あなた自身の探究の入口がひらかれます。</p>
+  </div>
+  <div class="atelier-layout">
+   <div class="atelier-instrument">
+    <div class="atelier-astrolabe" aria-hidden="true">
+     <svg viewBox="0 0 420 420" role="img">
+      <defs><radialGradient id="atelier-core" cx="35%" cy="30%"><stop offset="0" stop-color="#f6e7c2"/><stop offset=".45" stop-color="#b58c51"/><stop offset="1" stop-color="#64172e"/></radialGradient></defs>
+      <circle cx="210" cy="210" r="184" fill="none" stroke="#d8bd82" stroke-opacity=".55"/>
+      <circle cx="210" cy="210" r="166" fill="none" stroke="#ead7aa" stroke-opacity=".38" stroke-dasharray="2 7"/>
+      <circle cx="210" cy="210" r="130" fill="none" stroke="#d8bd82" stroke-opacity=".75"/>
+      <circle cx="210" cy="210" r="112" fill="none" stroke="#ead7aa" stroke-opacity=".4" stroke-dasharray="1 6"/>
+      <g class="atelier-orbit atelier-orbit-a"><ellipse cx="210" cy="210" rx="176" ry="74" fill="none" stroke="#e3c78d" stroke-width="1.2"/><circle cx="34" cy="210" r="5" fill="#f2dfb5"/><circle cx="386" cy="210" r="3" fill="#f2dfb5"/></g>
+      <g class="atelier-orbit atelier-orbit-b"><ellipse cx="210" cy="210" rx="74" ry="176" fill="none" stroke="#c7a66b" stroke-width="1"/><path d="M210 25V395M25 210H395" stroke="#e3c78d" stroke-opacity=".25"/></g>
+      <path d="M210 42L222 198L378 210L222 222L210 378L198 222L42 210L198 198Z" fill="none" stroke="#e7d3a5" stroke-opacity=".6"/>
+      <circle cx="210" cy="210" r="57" fill="url(#atelier-core)" stroke="#f1dfb7" stroke-width="2"/>
+      <circle cx="210" cy="210" r="48" fill="none" stroke="#f5e5c4" stroke-opacity=".75"/>
+      <text x="210" y="224" text-anchor="middle" fill="#fff4df" font-size="43" font-family="serif">問</text>
+      <g fill="#f1dfb7"><path d="M210 10l5 12-5 12-5-12z"/><path d="M410 210l-12 5-12-5 12-5z"/><path d="M210 410l-5-12 5-12 5 12z"/><path d="M10 210l12-5 12 5-12 5z"/></g>
+     </svg>
+    </div>
+    <div class="atelier-instrument-caption"><small>ARS QUAERENDI</small><strong>問うことは、學ぶこと。</strong><span>THE ART OF INQUIRY</span></div>
+   </div>
+   <form class="atelier-form" id="imperial-inquiry-form">
+    <div class="atelier-form-top"><small>THREE KEYS TO DISCOVERY</small><span>三つの鍵を選ぶ</span></div>
+    <label for="atelier-domain"><span>第一の鍵</span><strong>学問の領域</strong></label>
+    <select id="atelier-domain" name="domain">
+     <option value="classics">古典・漢学</option><option value="history">歴史・文学</option><option value="western">西洋思想・哲学</option><option value="science">自然科学</option><option value="education">近代教育学</option><option value="arts">美術・美意識</option>
+    </select>
+    <label for="atelier-lens"><span>第二の鍵</span><strong>問いの向き</strong></label>
+    <select id="atelier-lens" name="lens">
+     <option value="inherit">受け継ぐ</option><option value="compare">比較する</option><option value="rethink">問い直す</option><option value="future">未来へ結ぶ</option>
+    </select>
+    <label for="atelier-method"><span>第三の鍵</span><strong>探究の方法</strong></label>
+    <select id="atelier-method" name="method">
+     <option value="read">書物を読む</option><option value="compare">資料を比べる</option><option value="observe">観察し、記録する</option><option value="dialogue">対話から考える</option>
+    </select>
+    <button class="atelier-forge" type="submit"><span>✧</span>　問いを錬成する　<span>✧</span></button>
+    <div class="atelier-result" id="atelier-result" aria-live="polite" aria-atomic="true">
+     <small>YOUR INQUIRY　／　あなたの問い</small>
+     <h3 id="atelier-result-title">まだ名のない問いが、ここに眠っている。</h3>
+     <p id="atelier-result-question">三つの鍵を選び、「問いを錬成する」を押してください。あなたの探究の入口と、関連する書架がひらかれます。</p>
+     <p class="atelier-result-method" id="atelier-result-method"></p>
+     <div class="atelier-result-actions"><a id="atelier-result-link" href="archives.html">関連する頁をひらく　→</a><button type="button" id="atelier-save" disabled>學問手帖に収める　✧</button></div>
+     <span class="atelier-save-status" id="atelier-save-status" role="status"></span>
+    </div>
+   </form>
   </div>
  </div>
 </section>
@@ -441,6 +497,7 @@
 <script src="education-imperial.js?v=20261105-1" defer></script>
 <script src="education-renaissance.js?v=20261105-2" defer></script>
 <script src="education-celestial.js?v=20261105-1" defer></script>
-<script src="education-empire.js?v=20261105-2" defer></script>
+<script src="education-empire.js?v=20261105-3" defer></script>
+<script src="education-atelier.js?v=20261105-1" defer></script>
 </body>
 </html>
