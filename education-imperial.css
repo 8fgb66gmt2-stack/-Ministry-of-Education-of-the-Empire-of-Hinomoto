@@ -226,3 +226,63 @@ body.arg-body .arg-foot{color:#d1bd9c}
  body:not(.arg-body) .subsection p,
  body:not(.arg-body) .subpanel p{font-size:12px}
 }
+
+
+/* HIGH-CONTRAST TYPOGRAPHY — readable at a glance */
+body:not(.arg-body) main p,
+body:not(.arg-body) main li,
+body:not(.arg-body) main small,
+body:not(.arg-body) main .roman,
+body:not(.arg-body) main .en,
+body:not(.arg-body) main .kicker,
+body:not(.arg-body) main .eyebrow,
+body:not(.arg-body) main .section-index,
+body:not(.arg-body) main .chapter-index,
+body:not(.arg-body) main .card-description,
+body:not(.arg-body) main .description,
+body:not(.arg-body) main .meta,
+body:not(.arg-body) main .caption{
+ color:#302629 !important;
+ opacity:1 !important;
+ text-shadow:none;
+}
+body:not(.arg-body) main p,
+body:not(.arg-body) main li{font-size:14px;line-height:2.05}
+body:not(.arg-body) main small,
+body:not(.arg-body) main .roman,
+body:not(.arg-body) main .en,
+body:not(.arg-body) main .kicker,
+body:not(.arg-body) main .eyebrow,
+body:not(.arg-body) main .section-index,
+body:not(.arg-body) main .chapter-index,
+body:not(.arg-body) main .meta,
+body:not(.arg-body) main .caption{font-size:12px;letter-spacing:.08em}
+body:not(.arg-body) main a:not(.sealed-link):not(.btn-primary):not(.btn-ghost){
+ color:#641b32;
+}
+body:not(.arg-body) main .hero p,
+body:not(.arg-body) main .hero small,
+body:not(.arg-body) main .hero .roman,
+body:not(.arg-body) main .hero .en,
+body:not(.arg-body) main .hero .kicker,
+body:not(.arg-body) main .imperial-instruments p,
+body:not(.arg-body) main .imperial-instruments small,
+body:not(.arg-body) main .imperial-instruments .roman,
+body:not(.arg-body) main .imperial-instruments .en,
+body:not(.arg-body) main .imperial-instruments .kicker,
+body:not(.arg-body) main .lede-plaque p,
+body:not(.arg-body) main .lede-plaque small{
+ color:#f6ead4 !important;
+}
+body:not(.arg-body) main .hero a,
+body:not(.arg-body) main .imperial-instruments a{color:#f0d69f}
+body:not(.arg-body) main .sealed-archive p,
+body:not(.arg-body) main .sealed-archive small,
+body:not(.arg-body) main .sealed-archive .roman,
+body:not(.arg-body) main .sealed-archive .en,
+body:not(.arg-body) main .sealed-archive .kicker{
+ color:#302629 !important;
+}
+body.arg-body .arg-hero p{color:#f1e4ce !important}
+body.arg-body .arg-panel p{color:#302629 !important;font-size:14px}
+body.arg-body .arg-panel small{color:#69451f !important}
