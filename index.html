@@ -270,6 +270,13 @@
  </div>
  <div class="wrap footer-bottom"><span>© THE EMPIRE OF HINOMOTO　／　IMPERIAL MINISTRY OF EDUCATION</span><a href="#top">PAGE TOP　↑</a></div>
 </footer>
-<script src="education.js?v=20261105-3" defer></script>
+<dialog class="command-dialog" id="command-dialog" aria-labelledby="command-title">
+ <div class="command-top"><button class="command-close" type="button" data-command-close aria-label="索引を閉じる">×</button><small>THE IMPERIAL KNOWLEDGE INDEX</small><h2 id="command-title">帝國教育廳　総合索引</h2>
+  <form class="command-search" id="command-search-form"><label class="sr-only" for="command-search-input">検索語</label><input id="command-search-input" type="search" placeholder="人物・學校・思想・著作を検索" autocomplete="off"><button type="submit">探す</button></form>
+  <div class="command-hints"><span><kbd>↑</kbd> <kbd>↓</kbd> 移動</span><span><kbd>Enter</kbd> 開く</span><span><kbd>Esc</kbd> 閉じる</span></div>
+ </div>
+ <div class="command-results"><div class="command-results-head"><strong id="command-count">主要項目</strong><span>EDUCATION / ARCHIVE / PEOPLE</span></div><div class="command-results-list" id="command-results-list"></div></div>
+</dialog>
+<script src="education.js?v=20261105-4" defer></script>
 </body>
 </html>
