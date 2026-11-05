@@ -241,7 +241,7 @@ const codexChapters=[
  {key:"future",folio:"FOLIO Ⅳ　／　THE FUTURE",title:"未来を選ぶ",reader:"教育が未来の形を決めるのではない。学びを受け取った者が、自らの意思で未来を選び、その時代を生きていく。",page:"未来を決めるのは、未来を生きる人間自身でしょう。学びは、その選択を支えるためにある。",quote:"「未来を決めるのは、未来を生きる人間自身でしょう。」"}
 ];
 let codexIndex=0;
-const codexButtons=$("[data-codex]");
+const codexButtons=$$("[data-codex]");
 const codexContent=$("#codex-page-content"),codexKicker=$("#codex-page-kicker"),codexPageTitle=$("#codex-page-title"),codexPageText=$("#codex-page-text"),codexPageQuote=$("#codex-page-quote"),codexPageNumber=$("#codex-page-number"),codexReaderTitle=$("#codex-reader-title"),codexReaderText=$("#codex-reader-text"),codexChapterCount=$("#codex-chapter-count");
 function selectCodex(index){
  codexIndex=(index+codexChapters.length)%codexChapters.length;
@@ -286,23 +286,23 @@ if(riteEmblem&&window.matchMedia("(hover:hover) and (pointer:fine)").matches){
 
 /* Reading lamps: a night-colored codex and a vertical Japanese folio */
 function syncToggle(selector,enabled,labelOn,labelOff){
- $(selector).forEach(button=>{
+ $$(selector).forEach(button=>{
   button.setAttribute("aria-pressed",String(enabled));
   const span=$("span",button);
   if(span)span.textContent=enabled?labelOn:labelOff;
  });
 }
-$("[data-night-toggle]").forEach(button=>button.addEventListener("click",()=>{
+$$("[data-night-toggle]").forEach(button=>button.addEventListener("click",()=>{
  const enabled=!document.body.classList.contains("night-codex");
  document.body.classList.toggle("night-codex",enabled);
  syncToggle("[data-night-toggle]",enabled,"OFF","ON");
- $("[data-night-toggle]").forEach(button=>{if(!button.querySelector("span"))button.textContent=enabled?"夜間頁":"燈火";});
+ $$("[data-night-toggle]").forEach(button=>{if(!button.querySelector("span"))button.textContent=enabled?"夜間頁":"燈火";});
 }));
-$("[data-vertical-toggle]").forEach(button=>button.addEventListener("click",()=>{
+$$("[data-vertical-toggle]").forEach(button=>button.addEventListener("click",()=>{
  const enabled=!document.body.classList.contains("vertical-codex");
  document.body.classList.toggle("vertical-codex",enabled);
  syncToggle("[data-vertical-toggle]",enabled,"横書","縦書");
- $("[data-vertical-toggle]").forEach(button=>{if(!button.querySelector("span"))button.textContent=enabled?"横書":"縦書";});
+ $$("[data-vertical-toggle]").forEach(button=>{if(!button.querySelector("span"))button.textContent=enabled?"横書":"縦書";});
 }));
 
 /* Constellation of the educational institutions */
@@ -312,7 +312,7 @@ const orbitRecords={
  academy:{label:"GIRLS' ACADEMY　／　03",title:"日ノ本國立帝都女學院",text:"國語教諭の詩人・中原壱葉、央語教諭の文學者・翻譯家・中原八雲が教壇に立つ。異なる言葉と感性を持つ教師たちが、学生の学びを支えている。"},
  ministry:{label:"PUBLIC EDUCATION　／　04",title:"帝國教育廳",text:"九条院春臣が長官を務める中央行政機關。教育と学問の発展を支え、学ぶ機会と学問の自由、文化の継承を重んじる。"}
 };
-const orbitButtons=$("[data-orbit]"),orbitLabel=$("#orbit-label"),orbitTitle=$("#orbit-title"),orbitDescription=$("#orbit-description");
+const orbitButtons=$$("[data-orbit]"),orbitLabel=$("#orbit-label"),orbitTitle=$("#orbit-title"),orbitDescription=$("#orbit-description");
 function selectOrbit(key){
  const item=orbitRecords[key];if(!item)return;
  orbitButtons.forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.orbit===key)));
@@ -323,7 +323,7 @@ function selectOrbit(key){
 orbitButtons.forEach(button=>button.addEventListener("click",()=>selectOrbit(button.dataset.orbit)));
 
 /* Dual archive: classic learning and modern inquiry */
-const dualButtons=$("[data-dual]"),classicsPane=$("#dual-classics"),modernPane=$("#dual-modern"),dualConclusion=$("#dual-conclusion");
+const dualButtons=$$("[data-dual]"),classicsPane=$("#dual-classics"),modernPane=$("#dual-modern"),dualConclusion=$("#dual-conclusion");
 const dualTexts={
  classics:"古典と漢学を通じて、先人の言葉と思想を受け継ぐ。過去を知ることは、現在を考えるための礎となる。",
  modern:"西洋思想・哲学・自然科学・近代教育学に向き合い、新たな問いを得る。新しさだけを正しさの証明とはしない。",
@@ -355,7 +355,7 @@ const routes={
   ["THIRD GATE","帝國大學","学問と文化を探究する「學問ノ府」を訪ねる。","institutions.html#university","大学を知る　→"]
  ]}
 };
-const routeButtons=$("[data-route]"),routeContainer=$("#pilgrimage-route"),routeSummary=$("#pilgrimage-summary");
+const routeButtons=$$("[data-route]"),routeContainer=$("#pilgrimage-route"),routeSummary=$("#pilgrimage-summary");
 function renderRoute(key){
  const route=routes[key];if(!route||!routeContainer)return;
  routeButtons.forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.route===key)));
