@@ -223,7 +223,9 @@ if(command)command.addEventListener("click",event=>{if(event.target===command)cl
 document.addEventListener("keydown",event=>{
  const target=event.target;
  const editing=target&&(target.isContentEditable||["INPUT","TEXTAREA","SELECT"].includes(target.tagName));
- if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==="k"){
+ if(command?.open&&target===commandInput&&commandLinks.length&&(event.key==="ArrowDown"||event.key==="ArrowUp")){
+  event.preventDefault();commandActive=event.key==="ArrowDown"?0:commandLinks.length-1;commandLinks[commandActive].focus();
+ }else if((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==="k"){
   event.preventDefault();openCommand();
  }else if(event.key==="/"&&!editing&&!command?.open){
   event.preventDefault();openCommand();
