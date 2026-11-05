@@ -65,3 +65,36 @@
 @keyframes empire-unseal{0%{opacity:0;transform:translateY(12px);filter:blur(5px)}100%{opacity:1;transform:none;filter:none}}
 @media(max-width:700px){.imperial-principle-inner{grid-template-columns:1fr;gap:22px}.imperial-principle-seal{width:126px}.empire-constellation{grid-template-columns:repeat(2,1fr)}.empire-route{grid-template-columns:1fr}.empire-compass-trigger{right:13px;bottom:78px;width:46px;height:46px}}
 @media(prefers-reduced-motion:reduce){.imperial-principle-seal,.empire-compass-trigger,.empire-star,.empire-route a{transition:none}.empire-secret.is-open{animation:none}}
+
+/* THE SCHOLAR\'S LEDGER — deeper interactive layer */
+.empire-detail-link{display:inline-flex;align-items:center;margin-top:13px;padding:8px 13px;border:1px solid #b18a4d88;background:#fff9ec;color:#64172e;text-decoration:none;font-size:11px;letter-spacing:.06em;transition:background .25s,color .25s,transform .25s}
+.empire-detail-link:hover{background:#64172e;color:#fff0d6;transform:translateY(-2px)}
+.empire-ledger{margin-top:26px;padding:22px;border:1px solid #b18a4d77;background:linear-gradient(145deg,#fffaf0,#eee1ca);position:relative}
+.empire-ledger:before{content:"";position:absolute;inset:6px;border:1px solid #b18a4d2b;pointer-events:none}
+.empire-ledger-heading small,.empire-notebook small{font:italic 11px "Cormorant Garamond",Georgia,serif;letter-spacing:.2em;color:#8b633b}
+.empire-ledger-heading h3,.empire-notebook h3{margin:5px 0 4px;font:500 20px "Shippori Mincho",serif;color:#64172e;letter-spacing:.08em}
+.empire-ledger-heading p,.empire-notebook p{margin:0;color:#5d4b43;font-size:11px;line-height:1.9}
+.empire-ledger-progress{margin:18px 0 13px}
+.empire-ledger-progress-label{display:flex;justify-content:space-between;gap:12px;color:#6c4a39;font-size:11px}
+.empire-ledger-progress-label strong{font:italic 13px "Cormorant Garamond",Georgia,serif;color:#741b35}
+.empire-ledger-track{height:5px;margin-top:7px;background:#d9c8a9;overflow:hidden}
+.empire-ledger-track i{display:block;width:0;height:100%;background:linear-gradient(90deg,#9c713d,#741b35);transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.empire-ledger-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.empire-ledger-steps li{display:flex;align-items:center;gap:9px;min-width:0;padding:10px;border:1px solid #b18a4d55;background:#fffdf7}
+.empire-ledger-mark{flex:0 0 27px;width:27px;height:27px;display:grid;place-items:center;border:1px solid #c3a675;border-radius:50%;font:italic 12px "Cormorant Garamond",Georgia,serif;color:#9b794b}
+.empire-ledger-steps li.is-complete .empire-ledger-mark{background:#64172e;color:#fff0d6;border-color:#64172e}
+.empire-ledger-steps a{min-width:0;color:#4b2632;text-decoration:none}
+.empire-ledger-steps strong,.empire-ledger-steps small{display:block;overflow-wrap:anywhere}
+.empire-ledger-steps strong{font:600 11px "Shippori Mincho",serif}
+.empire-ledger-steps small{margin-top:3px;font:9px "Cormorant Garamond",Georgia,serif;letter-spacing:.08em;color:#8b7257}
+.empire-notebook{margin-top:22px;padding-top:18px;border-top:1px solid #b18a4d66}
+.empire-notebook textarea{display:block;width:100%;min-height:104px;margin-top:12px;padding:13px 15px;resize:vertical;border:1px solid #b18a4d88;background:#fffdf7;color:#47343a;font:12px/1.9 "Shippori Mincho",serif;outline:none}
+.empire-notebook textarea:focus{border-color:#741b35;box-shadow:0 0 0 3px #b18a4d2b}
+.empire-notebook-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:10px}
+.empire-notebook-actions span{font-size:10px;color:#80694f}
+.empire-notebook-actions div{display:flex;gap:7px;flex-wrap:wrap}
+.empire-notebook-actions button{padding:8px 12px;border:1px solid #b18a4d88;background:#fff9ec;color:#64172e;font-size:10px;cursor:pointer}
+.empire-notebook-actions button:first-child{background:#64172e;color:#fff0d6;border-color:#64172e}
+.empire-notebook-actions button:hover{filter:brightness(.96)}
+@media(max-width:700px){.empire-ledger{padding:17px}.empire-ledger-steps{grid-template-columns:1fr}.empire-notebook-actions{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){.empire-detail-link,.empire-ledger-track i{transition:none}}
