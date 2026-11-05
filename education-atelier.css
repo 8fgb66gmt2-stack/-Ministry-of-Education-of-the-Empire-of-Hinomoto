@@ -1,0 +1,50 @@
+
+/* THE IMPERIAL INQUIRY ATELIER — an interactive chamber of learning */
+.inquiry-atelier{position:relative;isolation:isolate;overflow:hidden;padding:clamp(62px,8vw,108px) 0;background:radial-gradient(ellipse at 14% 50%,#8d5b4928,transparent 35%),radial-gradient(ellipse at 90% 10%,#d8bd8220,transparent 32%),linear-gradient(118deg,#2a101c,#64172e 54%,#351322);color:#f6e8ce}
+.inquiry-atelier:before,.inquiry-atelier:after{content:"";position:absolute;z-index:-1;pointer-events:none;border:1px solid #d8bd8230;border-radius:50%;width:min(75vw,900px);aspect-ratio:1;top:50%;left:8%;transform:translate(-50%,-50%);box-shadow:0 0 0 18px #d8bd8208,0 0 0 48px #d8bd8207,0 0 0 84px #d8bd8205}
+.inquiry-atelier:after{left:auto;right:-30%;width:min(48vw,560px);border-style:dashed;transform:translateY(-50%)}
+.atelier-heading{max-width:760px;margin:0 auto 38px;text-align:center}
+.atelier-heading .kicker{font:italic 11px "Cormorant Garamond",Georgia,serif;letter-spacing:.24em;color:#e0c58c}
+.atelier-heading h2{margin:12px 0;font:500 clamp(25px,4vw,43px)/1.7 "Shippori Mincho",serif;letter-spacing:.1em;color:#fff1d6}
+.atelier-heading p{margin:0;color:#eadbc2;font-size:12px;line-height:2.1;letter-spacing:.04em}
+.atelier-layout{display:grid;grid-template-columns:minmax(250px,.86fr) minmax(0,1.14fr);gap:clamp(22px,4vw,52px);align-items:center}
+.atelier-instrument{min-width:0;display:grid;justify-items:center;align-content:center;gap:22px}
+.atelier-astrolabe{width:min(100%,410px);filter:drop-shadow(0 18px 28px #0b050a70)}
+.atelier-astrolabe svg{display:block;width:100%;height:auto;overflow:visible}
+.atelier-orbit{transform-origin:210px 210px}
+.atelier-orbit-a{animation:atelier-orbit 42s linear infinite}
+.atelier-orbit-b{animation:atelier-orbit-reverse 58s linear infinite}
+.atelier-instrument-caption{text-align:center;display:grid;gap:5px}
+.atelier-instrument-caption small{font:italic 11px "Cormorant Garamond",Georgia,serif;letter-spacing:.28em;color:#d9bd80}
+.atelier-instrument-caption strong{font:500 18px "Shippori Mincho",serif;letter-spacing:.12em;color:#fff0d4}
+.atelier-instrument-caption span{font:10px "Cormorant Garamond",Georgia,serif;letter-spacing:.22em;color:#c9ad78}
+.atelier-form{padding:clamp(20px,3vw,32px);border:1px solid #c7a66b;background:linear-gradient(145deg,#fffaf0,#eee0c8);color:#49313a;box-shadow:0 24px 70px #13070d66,inset 0 0 0 6px #b18a4d12;position:relative}
+.atelier-form:before{content:"";position:absolute;inset:7px;border:1px solid #b18a4d40;pointer-events:none}
+.atelier-form-top{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding-bottom:15px;margin-bottom:17px;border-bottom:1px solid #b18a4d66}
+.atelier-form-top small{font:italic 10px "Cormorant Garamond",Georgia,serif;letter-spacing:.2em;color:#8b633b}
+.atelier-form-top span{font-size:10px;letter-spacing:.1em;color:#805c48}
+.atelier-form label{display:flex;align-items:baseline;gap:12px;margin:14px 0 7px;color:#5a2639}
+.atelier-form label span{font:italic 11px "Cormorant Garamond",Georgia,serif;letter-spacing:.12em;color:#9a7748}
+.atelier-form label strong{font:600 13px "Shippori Mincho",serif}
+.atelier-form select{display:block;width:100%;min-height:44px;padding:9px 38px 9px 13px;border:1px solid #b18a4d88;border-radius:0;background:#fffdf7;color:#49313a;font:12px "Shippori Mincho",serif;outline:none}
+.atelier-form select:focus{border-color:#74172f;box-shadow:0 0 0 3px #b18a4d30}
+.atelier-forge{display:block;width:100%;margin:21px 0 18px;padding:13px;border:1px solid #d8bd82;background:linear-gradient(105deg,#4a1429,#74172f 55%,#4a1429);color:#fff0d6;font:500 13px "Shippori Mincho",serif;letter-spacing:.13em;cursor:pointer;box-shadow:inset 0 0 0 3px #d8bd821f;transition:filter .25s,transform .25s}
+.atelier-forge:hover{filter:brightness(1.12);transform:translateY(-2px)}
+.atelier-forge span{color:#e5c98f}
+.atelier-result{padding:18px 18px 15px;border:1px solid #b18a4d77;background:rgba(255,255,255,.56);position:relative}
+.atelier-result:before{content:"";position:absolute;inset:5px;border:1px solid #b18a4d2c;pointer-events:none}
+.atelier-result>small{font:italic 10px "Cormorant Garamond",Georgia,serif;letter-spacing:.2em;color:#8b633b}
+.atelier-result h3{margin:8px 0 7px;font:500 18px/1.7 "Shippori Mincho",serif;color:#64172e}
+.atelier-result p{margin:0;color:#554344;font-size:12px;line-height:2}
+.atelier-result .atelier-result-method{margin-top:8px;padding-top:8px;border-top:1px dashed #b18a4d66;color:#795f4a;font-size:11px}
+.atelier-result-actions{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:14px}
+.atelier-result-actions a,.atelier-result-actions button{display:inline-flex;align-items:center;justify-content:center;min-height:35px;padding:8px 12px;border:1px solid #b18a4d88;background:#fffaf0;color:#64172e;text-decoration:none;font-size:10px;letter-spacing:.04em;cursor:pointer}
+.atelier-result-actions a{background:#64172e;color:#fff0d6;border-color:#64172e}
+.atelier-result-actions button:disabled{opacity:.42;cursor:not-allowed}
+.atelier-save-status{display:block;min-height:16px;margin-top:7px;color:#80694f;font-size:10px}
+@keyframes atelier-orbit{to{transform:rotate(360deg)}}
+@keyframes atelier-orbit-reverse{to{transform:rotate(-360deg)}}
+.empire-hunt-trigger{display:inline-grid;place-items:center;width:20px;height:20px;margin-left:9px;padding:0;border:1px solid #b18a4d55;border-radius:50%;background:radial-gradient(circle,#fff8e6 0 15%,#d8bd8266 16% 100%);color:#9c7848;font:12px Georgia,serif;cursor:pointer;vertical-align:middle;opacity:.28;transition:opacity .25s,transform .25s,box-shadow .25s}
+.empire-hunt-trigger:hover,.empire-hunt-trigger:focus-visible,.empire-hunt-trigger.is-found{opacity:1;transform:rotate(45deg);box-shadow:0 0 0 4px #b18a4d22;color:#741b35;outline:none}
+@media(max-width:760px){.atelier-layout{grid-template-columns:1fr}.atelier-astrolabe{width:min(78vw,320px)}.atelier-instrument{gap:12px}.atelier-form{padding:20px}.atelier-result-actions{align-items:stretch;flex-direction:column}.atelier-result-actions a,.atelier-result-actions button{width:100%}}
+@media(prefers-reduced-motion:reduce){.atelier-orbit-a,.atelier-orbit-b{animation:none}.atelier-forge{transition:none}}
