@@ -3,88 +3,624 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f4f0e5">
-<meta name="description" content="日ノ本帝國 帝國教育廳の公式網站。子どもから大人まで、學びに關する情報をご案内します。">
-<title>帝國教育廳｜日ノ本帝國</title>
+<meta name="theme-color" content="#681b2a">
+<meta name="description" content="日ノ本帝國 帝國教育廳公式情報網。教育行政、教育機關、学問の自由、九条院春臣の教育思想、帝國の教育史料をご案内します。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="日ノ本帝國 帝國教育廳">
+<meta property="og:title" content="帝國教育廳｜日ノ本帝國 公式情報網">
+<meta property="og:description" content="學びを守り、文化をつなぎ、未来をひらく。">
+<meta property="og:locale" content="ja_JP">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='50' fill='%23681b2a'/%3E%3Ccircle cx='50' cy='50' r='42' fill='none' stroke='%23c9aa70' stroke-width='2'/%3E%3Cpath d='M25 65V32h8l17 22 17-22h8v33h-9V46L50 66 34 46v19z' fill='%23f5ecd9'/%3E%3C/svg%3E">
+<title>帝國教育廳｜日ノ本帝國 公式情報網</title>
 <style>
-:root{--paper:#f4f0e5;--paper2:#fffdf7;--ink:#38372f;--muted:#777263;--red:#8e4b43;--gold:#a38b5c;--line:#ded5c2;--sage:#687568;--shadow:0 12px 35px rgba(65,52,34,.08)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;line-height:1.85}a{color:inherit;text-decoration:none}button{font:inherit}.topline{height:5px;background:linear-gradient(90deg,var(--red),#b28f5b,var(--sage))}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.masthead{padding:22px 0 15px;border-bottom:1px solid var(--line)}.mastrow{display:flex;align-items:center;justify-content:space-between;gap:20px}.eyebrow{font:600 .68rem/1.5 Georgia,serif;letter-spacing:.19em;color:var(--muted)}.brand{display:flex;align-items:center;gap:15px}.seal{width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--red);font-size:1.45rem}.brand h1{font-size:clamp(1.35rem,3vw,1.9rem);letter-spacing:.12em;margin:1px 0 0;font-weight:600}.brand small{display:block;font: .62rem Georgia,serif;letter-spacing:.15em;color:var(--muted)}.utility{display:flex;gap:14px;align-items:center;font-size:.82rem;color:var(--muted)}.utility a:hover,.nav a:hover{color:var(--red)}.nav{display:flex;gap:clamp(12px,3vw,32px);padding:12px 0 0;overflow-x:auto;white-space:nowrap;font-size:.85rem}.nav a{padding:5px 0}.hero{padding:62px 0 42px;position:relative}.hero:before{content:"";position:absolute;right:2%;top:28px;width:240px;height:240px;border:1px solid rgba(163,139,92,.25);border-radius:50%;box-shadow:0 0 0 18px rgba(163,139,92,.035),0 0 0 38px rgba(163,139,92,.025);pointer-events:none}.hero-inner{position:relative;max-width:760px}.kicker{color:var(--red);font-size:.76rem;letter-spacing:.2em}.hero h2{font-size:clamp(2rem,5vw,3.7rem);line-height:1.45;font-weight:500;letter-spacing:.08em;margin:13px 0 14px}.hero h2 em{font-style:normal;color:var(--red)}.hero p{color:#625f54;max-width:620px;margin:0;font-size:1rem}.hero-rule{width:74px;height:2px;background:var(--gold);margin:25px 0}.searchbox{display:flex;gap:10px;max-width:620px;margin-top:25px;background:var(--paper2);border:1px solid var(--line);border-radius:7px;padding:7px;box-shadow:var(--shadow)}.searchbox input{flex:1;min-width:0;border:0;background:transparent;padding:9px 12px;color:var(--ink);font:inherit;outline:none}.searchbox button,.primary{border:0;background:var(--red);color:white;border-radius:5px;padding:9px 20px;cursor:pointer}.searchbox button:hover,.primary:hover{background:#713b35}.section{padding:34px 0 54px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}.section-head h3{font-size:1.45rem;font-weight:500;letter-spacing:.08em;margin:0}.section-head p{margin:0;color:var(--muted);font-size:.82rem}.audience{display:grid;grid-template-columns:1fr 1fr;gap:16px}.audience-card{background:var(--paper2);border:1px solid var(--line);border-radius:9px;padding:25px 26px;box-shadow:var(--shadow);position:relative;overflow:hidden}.audience-card:after{content:"";position:absolute;right:-28px;bottom:-52px;width:150px;height:150px;border:1px solid rgba(163,139,92,.25);border-radius:50%}.audience-card .tag{font-size:.72rem;letter-spacing:.15em;color:var(--red)}.audience-card h4{font-size:1.35rem;font-weight:500;margin:6px 0}.audience-card p{font-size:.88rem;color:var(--muted);margin:0 0 15px}.textlink{font-size:.86rem;color:var(--red);border-bottom:1px solid #c9a49b;padding-bottom:2px}.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.tile{background:rgba(255,253,247,.75);border:1px solid var(--line);border-radius:8px;padding:19px 18px;min-height:145px;transition:transform .2s,border-color .2s}.tile:hover{transform:translateY(-3px);border-color:var(--gold)}.tile-icon{font-size:1.35rem;color:var(--gold)}.tile h4{font-size:1rem;font-weight:600;margin:5px 0}.tile p{font-size:.78rem;color:var(--muted);margin:0}.notice-panel{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.notice,.message{background:var(--paper2);border:1px solid var(--line);border-radius:8px;padding:22px}.notice h3,.message h3{font-size:1.12rem;font-weight:500;margin:0 0 13px}.notice-row{display:grid;grid-template-columns:100px 1fr;gap:12px;padding:10px 0;border-top:1px solid #ebe5d8;font-size:.84rem}.notice-row time{color:var(--muted);font-variant-numeric:tabular-nums}.notice-row span{color:#777263}.message{background:#eae5d7}.message p{font-size:.87rem;color:#625f54;margin:0}.message .signature{text-align:right;margin-top:18px;color:var(--red);font-size:.85rem}.archive{margin:5px 0 55px;background:#e8e1d1;border:1px solid #d6cbb4;border-radius:9px;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:20px}.archive h3{margin:0;font-size:1.2rem;font-weight:500}.archive p{margin:3px 0 0;color:var(--muted);font-size:.82rem}.archive a{border:1px solid var(--gold);padding:9px 15px;border-radius:5px;white-space:nowrap;font-size:.82rem}.footer{background:#e9e3d6;border-top:1px solid var(--line);padding:25px 0 30px}.footer-top{display:flex;justify-content:space-between;gap:20px;align-items:start}.footer strong{font-weight:500;letter-spacing:.08em}.footer p,.footer small{font-size:.75rem;color:var(--muted);margin:5px 0}.footer-links{display:flex;flex-wrap:wrap;gap:15px;font-size:.78rem;color:var(--muted)}.footnote{border-top:1px solid var(--line);margin-top:18px;padding-top:13px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:700px){.wrap{width:min(100% - 28px,1120px)}.utility{display:none}.hero{padding:43px 0 28px}.hero:before{width:150px;height:150px;right:0}.audience,.notice-panel{grid-template-columns:1fr}.tiles{grid-template-columns:repeat(2,1fr)}.section{padding:25px 0 38px}.section-head{display:block}.section-head p{margin-top:4px}.archive{display:block}.archive a{display:inline-block;margin-top:14px}.footer-top{display:block}.footer-links{margin-top:12px}}
-@media(max-width:420px){.tiles{grid-template-columns:1fr 1fr}.tile{padding:14px 12px;min-height:135px}.brand{gap:10px}.seal{width:40px;height:40px}.brand h1{font-size:1.25rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+:root{
+ --paper:#f3ecdd;--paper-hi:#fbf8ef;--paper-deep:#e8ddc9;--ink:#2c2421;--muted:#71675c;
+ --wine:#681b2a;--wine-dark:#3b111b;--wine-soft:#8e3c49;--gold:#ac8950;--gold-light:#d7bd87;
+ --sage:#536558;--line:rgba(94,66,45,.22);--shadow:0 18px 48px rgba(49,31,25,.12);
+ --serif:"Shippori Mincho","Yu Mincho","Hiragino Mincho ProN",serif;
+ --roman:"Cormorant Garamond",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;color:var(--ink);background:
+ radial-gradient(ellipse at 15% 5%,rgba(255,255,255,.78),transparent 34%),
+ repeating-linear-gradient(0deg,rgba(99,73,43,.018) 0,rgba(99,73,43,.018) 1px,transparent 1px,transparent 5px),
+ var(--paper);font-family:var(--serif);line-height:1.9;overflow-x:hidden}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:30;opacity:.11;background:repeating-linear-gradient(90deg,transparent 0,transparent 3px,rgba(73,48,29,.08) 4px);mix-blend-mode:multiply}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+button{color:inherit}
+::selection{background:var(--wine);color:#fff8e9}
+:focus-visible{outline:2px solid var(--wine-soft);outline-offset:4px}
+.skip-link{position:fixed;top:8px;left:8px;z-index:1000;padding:9px 15px;background:var(--paper-hi);color:var(--wine);transform:translateY(-160%);border:1px solid var(--gold)}
+.skip-link:focus{transform:translateY(0)}
+#reading-progress{position:fixed;z-index:80;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),#e2c98f,var(--wine-soft));box-shadow:0 0 9px rgba(172,137,80,.55)}
+.wrap{width:min(1200px,calc(100% - 56px));margin-inline:auto}
+.roman{font-family:var(--roman)}
+.micro{font:600 9px/1.5 var(--roman);letter-spacing:.22em;text-transform:uppercase}
+.gold-rule{display:block;width:66px;height:1px;background:var(--gold);margin:22px 0}
+.eyebrow{font-size:10px;letter-spacing:.22em;color:var(--wine-soft)}
+.site-topline{height:7px;background:linear-gradient(90deg,var(--wine-dark),var(--wine) 35%,var(--gold) 72%,var(--sage))}
+.utility-bar{background:#2a2020;color:#e9ddc8;font-size:10px;letter-spacing:.12em}
+.utility-inner{min-height:34px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.utility-inner span:last-child{color:#cbb98f}
+.masthead{position:relative;z-index:50;background:linear-gradient(118deg,#32141c 0%,#5a1927 52%,#351820 100%);color:#f7efdf;border-bottom:3px double var(--gold);box-shadow:0 9px 30px rgba(46,21,24,.18)}
+.masthead:before,.masthead:after{content:"";position:absolute;top:12px;bottom:12px;width:1px;background:linear-gradient(transparent,rgba(215,189,135,.42),transparent)}
+.masthead:before{left:18px}.masthead:after{right:18px}
+.masthead-inner{min-height:112px;display:flex;align-items:center;justify-content:space-between;gap:28px;padding-block:20px}
+.brand{display:flex;align-items:center;gap:17px;min-width:0}
+.brand-seal{width:64px;height:64px;flex:none}
+.brand-copy small{display:block;color:#d6c49e;font:600 9px/1.5 var(--roman);letter-spacing:.2em}
+.brand-copy strong{display:block;font-size:clamp(22px,3vw,31px);font-weight:600;letter-spacing:.2em;line-height:1.35}
+.brand-copy em{display:block;margin-top:2px;font:italic 12px var(--roman);letter-spacing:.16em;color:#d8c49e}
+.masthead-note{text-align:right;max-width:280px;border-right:1px solid rgba(215,189,135,.42);padding-right:20px}
+.masthead-note .micro{color:var(--gold-light)}
+.masthead-note p{margin:6px 0 0;font-size:12px;letter-spacing:.08em;color:#f0e5d2}
+.primary-nav{position:relative;z-index:55;background:rgba(250,246,236,.97);border-bottom:1px solid var(--line);box-shadow:0 4px 12px rgba(60,43,31,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:51px}
+.nav-label{font:600 9px var(--roman);letter-spacing:.2em;color:var(--wine);white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:clamp(15px,2.4vw,31px)}
+.nav-links a{font-size:11px;letter-spacing:.06em;padding:16px 0;position:relative;white-space:nowrap}
+.nav-links a:after{content:"";position:absolute;left:0;right:100%;bottom:10px;height:1px;background:var(--gold);transition:right .25s}
+.nav-links a:hover:after,.nav-links a:focus-visible:after{right:0}
+.nav-toggle{display:none;border:1px solid var(--line);background:transparent;color:var(--wine);padding:8px 12px;font-size:11px;letter-spacing:.12em}
+.agency-network{position:relative;z-index:10;background:linear-gradient(90deg,#e9dfcc,#faf6ec 48%,#e9dfcc);border-bottom:1px solid rgba(172,137,80,.35)}
+.agency-inner{min-height:41px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 20px;padding:7px 0}
+.agency-caption{font:600 9px var(--roman);letter-spacing:.16em;color:var(--wine)}
+.agency-link{display:inline-flex;align-items:center;gap:7px;font-size:10px;letter-spacing:.07em;color:#51453b;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.agency-link:after{content:"↗";font:12px var(--roman);color:var(--gold)}
+.agency-link:hover{color:var(--wine);border-color:var(--gold)}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:
+ linear-gradient(90deg,rgba(247,241,226,.98) 0%,rgba(247,241,226,.93) 52%,rgba(234,220,196,.72) 100%),
+ repeating-linear-gradient(135deg,rgba(113,79,45,.04) 0,rgba(113,79,45,.04) 1px,transparent 1px,transparent 8px);
+ border-bottom:1px solid var(--line)}
+.hero:before{content:"";position:absolute;z-index:-1;width:720px;height:720px;border:1px solid rgba(172,137,80,.23);border-radius:50%;right:-170px;top:-295px;box-shadow:0 0 0 20px rgba(172,137,80,.035),0 0 0 42px rgba(172,137,80,.025),0 0 0 74px rgba(172,137,80,.018)}
+.hero:after{content:"";position:absolute;z-index:-1;right:0;bottom:0;width:48%;height:100%;background:linear-gradient(135deg,transparent 55%,rgba(104,27,42,.035));clip-path:polygon(22% 0,100% 0,100% 100%,0 100%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(310px,.75fr);align-items:center;gap:54px;padding:72px 0 76px;min-height:490px}
+.hero-copy{position:relative;z-index:1}
+.hero-overline{display:flex;align-items:center;gap:14px;color:var(--wine);font:600 10px var(--roman);letter-spacing:.22em}
+.hero-overline:before{content:"";width:36px;height:1px;background:var(--gold)}
+.hero h1{margin:19px 0 16px;font-size:clamp(42px,6vw,76px);font-weight:500;letter-spacing:.18em;line-height:1.33;color:#3b2926}
+.hero h1 span{color:var(--wine)}
+.hero-lead{font-size:clamp(15px,1.5vw,18px);line-height:2.15;letter-spacing:.06em;color:#55483f;max-width:630px}
+.hero-description{font-size:12px;color:var(--muted);max-width:580px;margin:18px 0 0;line-height:2}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+.action-primary,.action-secondary{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:46px;padding:10px 19px;font-size:11px;letter-spacing:.12em;transition:transform .2s,background .2s,color .2s,border-color .2s}
+.action-primary{background:var(--wine);color:#fff8eb;border:1px solid var(--wine);box-shadow:0 8px 22px rgba(104,27,42,.15)}
+.action-primary:after{content:"→";font:17px var(--roman)}
+.action-primary:hover{background:var(--wine-dark);transform:translateY(-2px)}
+.action-secondary{border:1px solid rgba(104,27,42,.42);color:var(--wine);background:rgba(255,252,244,.44)}
+.action-secondary:after{content:"＋";font:15px var(--roman)}
+.action-secondary:hover{background:var(--paper-hi);border-color:var(--gold);transform:translateY(-2px)}
+.hero-art{position:relative;min-height:330px;display:grid;place-items:center}
+.seal-orbit{position:relative;width:min(100%,340px);aspect-ratio:1;border:1px solid rgba(172,137,80,.62);border-radius:50%;display:grid;place-items:center}
+.seal-orbit:before,.seal-orbit:after{content:"";position:absolute;inset:16px;border:1px solid rgba(172,137,80,.35);border-radius:50%}
+.seal-orbit:after{inset:34px;border-style:dashed;opacity:.55}
+.orbit-label{position:absolute;top:1px;left:50%;transform:translate(-50%,-50%);padding:0 12px;background:var(--paper);font:600 9px var(--roman);letter-spacing:.26em;color:var(--wine);white-space:nowrap}
+.seal-core{width:59%;aspect-ratio:1;background:radial-gradient(circle at 35% 28%,#8f3b48,#5b1725 68%,#3b111b);border:6px double var(--gold-light);border-radius:50%;display:grid;place-items:center;box-shadow:0 18px 38px rgba(72,28,35,.22),inset 0 0 0 8px rgba(255,255,255,.045);color:#f3e7d1}
+.seal-core svg{width:75%;height:75%}
+.orbit-small{position:absolute;background:var(--paper-hi);border:1px solid var(--gold);border-radius:50%;width:42px;height:42px;display:grid;place-items:center;color:var(--wine);font-size:15px;box-shadow:0 5px 18px rgba(70,45,30,.1)}
+.orbit-small.one{top:13%;left:13%}.orbit-small.two{right:9%;top:35%}.orbit-small.three{bottom:10%;left:27%}
+.art-caption{position:absolute;bottom:0;right:0;font:italic 13px var(--roman);letter-spacing:.11em;color:#796b57}
+.hero-index{position:absolute;left:0;bottom:20px;font:10px var(--roman);letter-spacing:.22em;color:#95856c}
+.quick-access{position:relative;z-index:3;margin-top:-1px;background:#eee5d4;border-block:1px solid rgba(172,137,80,.4)}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.quick-item{min-height:100px;display:flex;align-items:center;gap:14px;padding:17px 20px;border-right:1px solid rgba(172,137,80,.28);transition:background .2s}
+.quick-item:first-child{border-left:1px solid rgba(172,137,80,.28)}
+.quick-item:hover{background:rgba(255,255,255,.43)}
+.quick-number{font:italic 28px var(--roman);color:var(--gold);line-height:1}
+.quick-item strong{display:block;font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--wine)}
+.quick-item small{display:block;margin-top:4px;font-size:9px;color:var(--muted);letter-spacing:.04em}
+.section{padding:82px 0;position:relative}
+.section.alt{background:rgba(255,252,245,.55);border-block:1px solid rgba(172,137,80,.18)}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:33px}
+.section-heading-main{max-width:720px}
+.section-kicker{font:600 10px var(--roman);letter-spacing:.25em;text-transform:uppercase;color:var(--wine-soft)}
+.section-heading h2{margin:7px 0 0;font-size:clamp(26px,3vw,38px);font-weight:500;letter-spacing:.12em;line-height:1.5}
+.section-heading p{max-width:410px;margin:0;color:var(--muted);font-size:11px;line-height:2}
+.heading-mark{display:flex;align-items:center;gap:9px;color:var(--gold);font:italic 15px var(--roman);white-space:nowrap}
+.heading-mark:before{content:"";width:34px;height:1px;background:var(--gold)}
+.intro-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px}
+.intro-panel{position:relative;background:linear-gradient(145deg,#471723,#2f171e);color:#f2e6d2;padding:34px 35px;min-height:310px;overflow:hidden}
+.intro-panel:before{content:"學";position:absolute;right:-18px;bottom:-100px;font-size:260px;line-height:1;color:rgba(255,255,255,.035)}
+.intro-panel .micro{color:var(--gold-light)}
+.intro-panel h3{position:relative;margin:25px 0 13px;font-size:24px;font-weight:500;letter-spacing:.1em;line-height:1.7}
+.intro-panel p{position:relative;color:#dfd1bd;font-size:11px;line-height:2.2;margin:0}
+.intro-panel .small-link{position:relative;display:inline-flex;margin-top:24px;color:var(--gold-light);font-size:10px;letter-spacing:.12em;border-bottom:1px solid rgba(215,189,135,.5);padding-bottom:3px}
+.intro-text{padding:27px 30px;background:rgba(255,253,247,.65);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+.intro-text .dropcap{font-size:17px;line-height:2.1;letter-spacing:.04em}
+.intro-text p{font-size:12px;color:#64594e;line-height:2.25;margin:14px 0 0}
+.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:22px}
+.principle{border-top:2px solid var(--gold);background:rgba(255,253,247,.58);padding:18px 17px 20px;min-height:174px}
+.principle .num{font:italic 22px var(--roman);color:var(--gold)}
+.principle h4{font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--wine);margin:8px 0}
+.principle p{font-size:10px;color:var(--muted);line-height:1.95;margin:0}
+.quote-band{position:relative;background:linear-gradient(100deg,#32141c,#671b2a 55%,#3c171f);color:#f7edda;padding:40px 0;border-block:1px solid var(--gold)}
+.quote-band:before,.quote-band:after{content:"❖";position:absolute;top:50%;transform:translateY(-50%);font-size:26px;color:rgba(215,189,135,.35)}
+.quote-band:before{left:5%}.quote-band:after{right:5%}
+.quote-inner{text-align:center;max-width:880px}
+.quote-inner blockquote{margin:0;font-size:clamp(17px,2.6vw,25px);line-height:1.9;letter-spacing:.1em}
+.quote-inner cite{display:block;margin-top:13px;font:italic 12px var(--roman);letter-spacing:.2em;color:var(--gold-light);font-style:normal}
+.director-layout{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);gap:55px;align-items:center}
+.director-portrait{position:relative;min-height:410px;background:linear-gradient(145deg,#e8ddc9,#d7c5a8);border:1px solid rgba(172,137,80,.55);display:grid;place-items:center;overflow:hidden}
+.director-portrait:before{content:"";position:absolute;inset:16px;border:1px solid rgba(104,27,42,.28)}
+.director-portrait:after{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(104,27,42,.13);border-radius:50%;box-shadow:0 0 0 22px rgba(104,27,42,.025),0 0 0 44px rgba(104,27,42,.02)}
+.portrait-seal{position:relative;z-index:1;width:160px;height:160px;border-radius:50%;background:linear-gradient(145deg,#792738,#3c111b);border:7px double var(--gold-light);display:grid;place-items:center;color:#f1e6d3;font-size:70px;box-shadow:0 16px 40px rgba(70,30,32,.18)}
+.portrait-caption{position:absolute;z-index:2;bottom:34px;left:0;right:0;text-align:center}
+.portrait-caption strong{display:block;font-size:15px;letter-spacing:.24em;color:var(--wine)}
+.portrait-caption small{font:italic 11px var(--roman);letter-spacing:.15em;color:#76654e}
+.director-copy .section-kicker{margin-bottom:7px}
+.director-copy h3{font-size:clamp(29px,4vw,44px);font-weight:500;letter-spacing:.16em;margin:0;color:#392725}
+.director-copy .role{font-size:11px;letter-spacing:.13em;color:var(--wine);margin:6px 0 23px}
+.director-copy p{font-size:12px;line-height:2.25;color:#62574c}
+.director-quote{margin:25px 0;padding:19px 22px;border-left:3px solid var(--gold);background:rgba(232,221,201,.52);font-size:15px;line-height:2;color:var(--wine)}
+.director-quote small{display:block;font:italic 11px var(--roman);letter-spacing:.12em;color:var(--muted);margin-top:7px}
+.fact-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.fact-list span{border:1px solid rgba(172,137,80,.45);padding:6px 10px;font-size:9px;letter-spacing:.08em;color:#695a49;background:rgba(255,253,247,.35)}
+.institution-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.institution-card{position:relative;display:flex;flex-direction:column;min-height:285px;background:var(--paper-hi);border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden;transition:transform .25s,border-color .25s}
+.institution-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.institution-top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 21px;background:#ede3d1;border-bottom:1px solid rgba(172,137,80,.33)}
+.institution-top span:first-child{font:600 9px var(--roman);letter-spacing:.2em;color:var(--wine)}
+.institution-top span:last-child{font-size:9px;color:#88765d;letter-spacing:.1em}
+.institution-body{padding:24px 25px 25px;display:flex;flex-direction:column;flex:1}
+.institution-symbol{font-size:28px;color:var(--gold);line-height:1}
+.institution-body h3{font-size:20px;font-weight:500;letter-spacing:.08em;margin:11px 0 4px}
+.institution-body .sub{font:italic 11px var(--roman);letter-spacing:.1em;color:var(--wine-soft)}
+.institution-body p{font-size:11px;color:var(--muted);line-height:2.1;margin:14px 0 20px;flex:1}
+.card-link{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;color:var(--wine);font-size:10px;letter-spacing:.1em;border-bottom:1px solid rgba(104,27,42,.4);padding-bottom:4px}
+.card-link:after{content:"↗";font:14px var(--roman);color:var(--gold)}
+.institution-footnote{font-size:10px;color:var(--muted);margin-top:18px}
+.archive-layout{display:grid;grid-template-columns:1fr .72fr;gap:22px}
+.archive-feature{background:linear-gradient(140deg,#e9dfcd,#f8f3e8);border:1px solid rgba(172,137,80,.4);padding:31px 32px;position:relative;overflow:hidden}
+.archive-feature:after{content:"文";position:absolute;right:3px;bottom:-82px;font-size:235px;line-height:1;color:rgba(104,27,42,.045)}
+.archive-feature .micro{color:var(--wine)}
+.archive-feature h3{position:relative;z-index:1;font-size:24px;font-weight:500;letter-spacing:.1em;margin:13px 0}
+.archive-feature p{position:relative;z-index:1;font-size:11px;color:#65594d;line-height:2.2;max-width:650px}
+.archive-index{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.archive-link{display:flex;flex-direction:column;justify-content:space-between;min-height:130px;padding:17px 18px;background:rgba(255,253,247,.74);border:1px solid var(--line);transition:background .2s,border-color .2s}
+.archive-link:hover{background:#fffdf8;border-color:var(--gold)}
+.archive-link small{font:italic 20px var(--roman);color:var(--gold)}
+.archive-link strong{font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--wine)}
+.archive-link span{font-size:9px;color:var(--muted)}
+.archive-note{margin-top:18px;padding:12px 15px;border-left:2px solid var(--sage);background:rgba(83,101,88,.07);font-size:10px;color:#5c6258;line-height:1.9}
+.info-layout{display:grid;grid-template-columns:1fr .8fr;gap:18px}
+.info-panel{border:1px solid var(--line);background:var(--paper-hi);padding:24px 25px}
+.info-panel h3{margin:0 0 17px;font-size:15px;font-weight:500;letter-spacing:.1em;display:flex;align-items:center;justify-content:space-between}
+.info-panel h3 small{font:italic 11px var(--roman);color:var(--gold)}
+.info-row{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:12px 0;border-top:1px solid rgba(94,66,45,.14);font-size:10px;line-height:1.8}
+.info-row time{color:var(--wine);font:10px var(--roman);letter-spacing:.08em}
+.info-row p{margin:0;color:#6f665c}
+.info-aside{background:#e8e0d0;border:1px solid rgba(172,137,80,.35);padding:24px 26px}
+.info-aside .micro{color:var(--wine)}
+.info-aside h3{font-size:19px;font-weight:500;letter-spacing:.08em;margin:13px 0}
+.info-aside p{font-size:10px;line-height:2.1;color:#665b4f}
+.info-aside a{display:inline-flex;margin-top:10px;font-size:10px;color:var(--wine);border-bottom:1px solid var(--gold);padding-bottom:3px}
+.search-section{background:#eee5d5;border-block:1px solid rgba(172,137,80,.35);padding:38px 0}
+.search-layout{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:25px}
+.search-copy .micro{color:var(--wine)}
+.search-copy h2{font-size:21px;font-weight:500;letter-spacing:.12em;margin:5px 0}
+.search-copy p{font-size:10px;color:var(--muted);margin:0}
+.search-form{display:flex;background:var(--paper-hi);border:1px solid rgba(172,137,80,.5);padding:6px;box-shadow:0 5px 16px rgba(57,39,28,.06)}
+.search-form input{width:100%;min-width:0;border:0;background:transparent;padding:9px 12px;font:12px var(--serif);outline:none;color:var(--ink)}
+.search-form button{flex:none;border:0;background:var(--wine);color:#fff7e9;padding:9px 20px;font-size:10px;letter-spacing:.12em;cursor:pointer}
+.search-form button:hover{background:var(--wine-dark)}
+#search-results{grid-column:1/-1;display:none;margin-top:4px;background:rgba(255,253,247,.8);border:1px solid var(--line);padding:16px 19px}
+#search-results.visible{display:block}
+.search-results-head{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:10px;color:var(--wine);margin-bottom:9px}
+.search-results-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.search-result{display:block;padding:8px 10px;border:1px solid rgba(172,137,80,.25);font-size:10px;background:#fffdf8}
+.search-result:hover{border-color:var(--gold);color:var(--wine)}
+.search-empty{font-size:10px;color:var(--muted);margin:0}
+.site-footer{background:#281b1c;color:#e8ddc9;border-top:4px double var(--gold)}
+.footer-main{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;padding:37px 0 30px}
+.footer-brand{display:flex;gap:15px;align-items:center}
+.footer-brand .seal-small{width:49px;height:49px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold-light);font-size:23px}
+.footer-brand strong{display:block;font-size:17px;font-weight:500;letter-spacing:.16em}
+.footer-brand small{display:block;font:italic 10px var(--roman);letter-spacing:.15em;color:#cbb98f}
+.footer-description{font-size:10px;color:#bfb19e;line-height:2;margin:16px 0 0;max-width:460px}
+.footer-links{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 20px;align-content:center}
+.footer-links a{font-size:10px;color:#ded2bd;padding:6px 0;border-bottom:1px solid rgba(215,189,135,.17)}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-bottom{border-top:1px solid rgba(215,189,135,.22);padding:13px 0 17px;display:flex;justify-content:space-between;gap:15px;align-items:center;font:9px var(--roman);letter-spacing:.12em;color:#a99a84}
+.back-top{color:var(--gold-light)}
+dialog{width:min(620px,calc(100% - 32px));max-height:min(78vh,720px);border:1px solid var(--gold);padding:0;background:var(--paper-hi);color:var(--ink);box-shadow:0 28px 90px rgba(25,12,13,.35)}
+dialog::backdrop{background:rgba(26,17,18,.62);backdrop-filter:blur(3px)}
+.dialog-head{background:linear-gradient(120deg,var(--wine-dark),var(--wine));color:#f4ead7;padding:18px 23px;display:flex;justify-content:space-between;gap:15px;align-items:center}
+.dialog-head small{font:italic 11px var(--roman);color:var(--gold-light);letter-spacing:.16em}
+.dialog-head button{width:32px;height:32px;border:1px solid rgba(215,189,135,.55);background:transparent;color:#fff4df;cursor:pointer;font-size:17px}
+.dialog-body{padding:25px 27px 29px;overflow:auto}
+.dialog-body h2{font-size:21px;font-weight:500;letter-spacing:.1em;margin:0 0 14px}
+.dialog-body p{font-size:12px;color:#62574d;line-height:2.2}
+.dialog-body .dialog-note{padding:12px 14px;background:#eee5d5;border-left:2px solid var(--gold);font-size:10px;color:#695a49}
+.no-script{margin:0;padding:8px 14px;background:#f2e6cf;color:var(--wine);font-size:11px;text-align:center}
+@media(max-width:900px){
+ .hero-grid{gap:25px;grid-template-columns:1fr .72fr}.hero-art{min-height:270px}.seal-orbit{width:280px}
+ .nav-label{display:none}.nav-links{gap:16px}.intro-layout{grid-template-columns:1fr 1fr}.principles{grid-template-columns:repeat(2,1fr)}
+ .director-layout{gap:30px}.director-portrait{min-height:350px}.archive-layout{grid-template-columns:1fr}.archive-index{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:680px){
+ .wrap{width:min(100% - 32px,1200px)}
+ .utility-inner{justify-content:center;min-height:31px}.utility-inner span:first-child{display:none}
+ .masthead-inner{min-height:88px;padding-block:14px}.brand{gap:11px}.brand-seal{width:50px;height:50px}.brand-copy strong{font-size:21px}.brand-copy small{font-size:8px}.brand-copy em{font-size:10px}
+ .masthead-note{display:none}
+ .nav-inner{min-height:48px}.nav-toggle{display:inline-flex;align-items:center;gap:9px}
+ .nav-links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper-hi);padding:8px 18px 16px;border-bottom:1px solid var(--gold);box-shadow:0 14px 24px rgba(45,30,25,.12);flex-direction:column;align-items:stretch;gap:0}
+ .nav-links.open{display:flex}.nav-links a{padding:10px 3px;border-bottom:1px solid rgba(94,66,45,.12)}.nav-links a:after{display:none}
+ .agency-inner{gap:7px 13px}.agency-caption{width:100%;text-align:center}
+ .hero-grid{grid-template-columns:1fr;padding:48px 0 56px;gap:20px}.hero h1{font-size:clamp(39px,10vw,59px);margin-top:15px}.hero-art{min-height:205px;place-items:center end;padding-right:8px}
+ .seal-orbit{width:205px}.orbit-small{width:32px;height:32px;font-size:12px}.art-caption{bottom:-2px;font-size:11px}
+ .hero-index{bottom:13px}
+ .quick-grid{grid-template-columns:repeat(2,1fr)}.quick-item{min-height:83px;padding:13px;border-bottom:1px solid rgba(172,137,80,.24)}.quick-item:nth-child(odd){border-left:1px solid rgba(172,137,80,.28)}.quick-item:nth-child(even){border-right:1px solid rgba(172,137,80,.28)}
+ .section{padding:58px 0}.section-heading{display:block;margin-bottom:25px}.section-heading p{margin-top:10px}.heading-mark{margin-top:12px}
+ .intro-layout,.director-layout,.info-layout,.search-layout,.footer-main{grid-template-columns:1fr}
+ .intro-panel{min-height:250px;padding:27px}.intro-text{padding:24px}.principles{gap:9px}
+ .quote-band{padding:31px 0}.quote-band:before{left:10px}.quote-band:after{right:10px}
+ .director-layout{gap:22px}.director-portrait{min-height:275px}.portrait-seal{width:120px;height:120px;font-size:52px}
+ .institution-grid{grid-template-columns:1fr}.institution-card{min-height:245px}
+ .archive-index{grid-template-columns:repeat(2,1fr)}.archive-feature{padding:25px}
+ .info-panel,.info-aside{padding:20px}
+ .search-section{padding:30px 0}.search-results-list{grid-template-columns:1fr}
+ .footer-main{gap:23px;padding:29px 0}.footer-bottom{align-items:flex-start;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}
+}
 </style>
 </head>
 <body>
-<div class="topline"></div>
+<a class="skip-link" href="#main">本文へ移動</a>
+<div id="reading-progress" aria-hidden="true"></div>
+<div class="site-topline"></div>
+<div class="utility-bar">
+ <div class="wrap utility-inner"><span>THE EMPIRE OF HINOMOTO　／　中央行政機關</span><span>玲瓏百八年　　帝國教育廳公式情報網</span></div>
+</div>
 <header class="masthead">
- <div class="wrap">
-  <div class="mastrow">
-   <a class="brand" href="#top" aria-label="帝國教育廳 首頁">
-    <span class="seal" aria-hidden="true">文</span>
-    <span><span class="eyebrow">THE EMPIRE OF HINOMOTO</span><h1>帝國教育廳</h1><small>IMPERIAL MINISTRY OF EDUCATION</small></span>
-   </a>
-   <div class="utility"><a href="#children">こども向け</a><a href="#adults">一般向け</a><a href="#archive">史料・研究</a></div>
-  </div>
-  <nav class="nav" aria-label="主要メニュー">
-   <a href="#about">教育廳について</a><a href="#guide">教育案内</a><a href="#schools">學校・教育機關</a><a href="#policy">教育行政</a><a href="#statistics">教育統計</a><a href="#news">お知らせ</a>
-  </nav>
+ <div class="wrap masthead-inner">
+  <a class="brand" href="#top" aria-label="帝國教育廳 首頁">
+   <svg class="brand-seal" viewBox="0 0 100 100" role="img" aria-label="帝國教育廳紋章">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#cbb17d" stroke-width="1.5"/>
+    <circle cx="50" cy="50" r="39" fill="none" stroke="#cbb17d" stroke-width=".7" stroke-dasharray="2 3"/>
+    <path d="M50 14 C44 27 43 35 50 43 C57 35 56 27 50 14Z M50 86 C44 73 43 65 50 57 C57 65 56 73 50 86Z M14 50 C27 44 35 43 43 50 C35 57 27 56 14 50Z M86 50 C73 44 65 43 57 50 C65 57 73 56 86 50Z" fill="#cbb17d" opacity=".8"/>
+    <circle cx="50" cy="50" r="14" fill="#6e1d2c" stroke="#e0c998"/>
+    <path d="M42 57V42h3l5 7 5-7h3v15h-3V47l-5 7-5-7v10Z" fill="#fff1d9"/>
+   </svg>
+   <span class="brand-copy"><small>THE IMPERIAL MINISTRY OF EDUCATION</small><strong>帝國教育廳</strong><em>日ノ本帝國　公式情報網</em></span>
+  </a>
+  <div class="masthead-note"><span class="micro">LEARNING / CULTURE / FREEDOM</span><p>學びを守り、文化をつなぎ、<br>未来をひらく。</p></div>
  </div>
 </header>
-<main id="top">
- <section class="hero">
-  <div class="wrap hero-inner">
-   <div class="kicker">LEARNING FOR EVERY GENERATION</div>
-   <h2>學ぶことは、<em>未来</em>を<br>拓くこと。</h2>
-   <div class="hero-rule"></div>
-   <p>子どもから大人まで。學びたいと思うすべての人へ。<br>帝國教育廳は、日ノ本帝國の教育に關する情報をお屆けします。</p>
-   <form class="searchbox" role="search" onsubmit="event.preventDefault();const q=this.elements.q.value.trim();if(q){document.getElementById('search-result').textContent='「'+q+'」に關する情報は、各案内ページをご確認ください。';document.getElementById('search-result').hidden=false;}">
-    <label class="sr-only" for="site-search">サイト内検索</label><input id="site-search" name="q" type="search" placeholder="知りたいことばを入力してください"><button type="submit">検索</button>
-   </form>
-   <p id="search-result" role="status" hidden style="font-size:.82rem;margin-top:8px"></p>
+<nav class="primary-nav" aria-label="主要導航">
+ <div class="wrap nav-inner">
+  <span class="nav-label">MINISTRY INDEX　／　廳務案内</span>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span>案内をひらく</span><span aria-hidden="true">＋</span></button>
+  <div class="nav-links" id="nav-links">
+   <a href="#about">教育廳について</a><a href="#philosophy">教育理念</a><a href="#director">長官紹介</a><a href="#institutions">教育機關</a><a href="#archive">教育史料室</a><a href="#information">告示・公表</a>
   </div>
- </section>
- <section class="section" id="guide">
-  <div class="wrap">
-   <div class="section-head"><h3>あなたに合った學びの案内</h3><p>目的に合わせて、必要な情報をお探しいただけます。</p></div>
-   <div class="audience">
-    <article class="audience-card" id="children"><div class="tag">FOR CHILDREN</div><h4>こどものみなさんへ</h4><p>學校のこと、勉強のこと。知りたいことを、やさしい言葉と図で紹介します。</p><a class="textlink" href="#schools">學校や勉強について知る　→</a></article>
-    <article class="audience-card" id="adults"><div class="tag">FOR EVERYONE</div><h4>保護者・一般のみなさんへ</h4><p>教育制度、學校生活、學び直しなど、暮らしに關わる教育情報をご案内します。</p><a class="textlink" href="#policy">教育制度・行政情報を見る　→</a></article>
-   </div>
-  </div>
- </section>
- <section class="section" id="schools">
-  <div class="wrap">
-   <div class="section-head"><h3>教育案内</h3><p>日ノ本帝國の學びを知るための入口です。</p></div>
-   <div class="tiles">
-    <a class="tile" href="#policy"><div class="tile-icon" aria-hidden="true">⌂</div><h4>帝國の學制</h4><p>教育制度と學びの道筋について</p></a>
-    <a class="tile" href="#schools"><div class="tile-icon" aria-hidden="true">▤</div><h4>學校・教育機關</h4><p>各種學校や教育機關の案内</p></a>
-    <a class="tile" href="#policy"><div class="tile-icon" aria-hidden="true">✧</div><h4>高等教育・帝國大學</h4><p>高等教育と専門的な學びについて</p></a>
-    <a class="tile" href="#policy"><div class="tile-icon" aria-hidden="true">◇</div><h4>奨學・學習支援</h4><p>學びを支える制度と支援情報</p></a>
-    <a class="tile" href="#statistics"><div class="tile-icon" aria-hidden="true">▥</div><h4>教育統計</h4><p>帝國の教育に關する統計資料</p></a>
-    <a class="tile" href="#archive"><div class="tile-icon" aria-hidden="true">❖</div><h4>教育史・史料</h4><p>教育の歩みと歴史的記録</p></a>
-   </div>
-  </div>
- </section>
- <section class="section" id="news">
-  <div class="wrap notice-panel">
-   <div class="notice"><h3>お知らせ　<span class="eyebrow">INFORMATION</span></h3>
-    <div class="notice-row"><time>—</time><span>現在、お知らせはありません。</span></div>
-    <div class="notice-row"><time>ご案内</time><span>本網站は開設準備中です。掲載内容は順次整備いたします。</span></div>
-   </div>
-   <aside class="message" id="about"><h3>帝國教育廳より</h3><p>學びは、年齢や立場にかかわらず、人々の世界をひらくものです。本廳は、誰もが教育に關する情報へたどり着けるよう、分かりやすく確かな案内を目指します。</p><div class="signature">帝國教育廳</div></aside>
-  </div>
- </section>
- <section class="wrap archive" id="archive">
-  <div><h3>教育の歴史をたどる</h3><p>帝國の教育思想、學術の歩み、歴史的史料を紹介する資料室です。</p></div>
-  <a href="#archive">教育史料室　準備中</a>
- </section>
- <div id="policy" class="sr-only">教育行政案内は整備中です。</div><div id="statistics" class="sr-only">教育統計は整備中です。</div>
-</main>
-<footer class="footer">
- <div class="wrap">
-  <div class="footer-top"><div><strong>日ノ本帝國　帝國教育廳</strong><p>IMPERIAL MINISTRY OF EDUCATION</p></div><div class="footer-links"><a href="#about">本廳について</a><a href="#guide">教育案内</a><a href="#news">お知らせ</a><a href="#top">ページ上部へ ↑</a></div></div>
-  <div class="footnote"><small>© 帝國教育廳　THE EMPIRE OF HINOMOTO</small></div>
  </div>
+</nav>
+<section class="agency-network" aria-label="日ノ本帝國中央行政機關連絡網">
+ <div class="wrap agency-inner">
+  <span class="agency-caption">CENTRAL GOVERNMENT　／　中央行政機關連絡網</span>
+  <a class="agency-link" href="https://8fgb66gmt2-stack.github.io/-web-Shikicho/">四季廳</a>
+  <a class="agency-link" href="https://8fgb66gmt2-stack.github.io/-Bungeicho-offical-web-site-/">文藝廳</a>
+  <a class="agency-link" href="https://8fgb66gmt2-stack.github.io/https-8fgb66gmt2-stack.github.io-nippon-imperial-university-/">日ノ本帝國國立帝國大學</a>
+ </div>
+</section>
+<main id="main">
+<section class="hero" id="top">
+ <div class="wrap hero-grid">
+  <div class="hero-copy">
+   <div class="hero-overline">EDUCATION　／　THE EMPIRE OF HINOMOTO</div>
+   <h1>學びは、<span>未来</span>を<br>ひらく。</h1>
+   <div class="gold-rule"></div>
+   <div class="hero-lead">知ることから、考えることへ。<br>そして、自分自身の人生を選び取る力へ。</div>
+   <p class="hero-description">帝國教育廳は、日ノ本帝國の教育に關する情報を集約し、學びの機會と学問の自由、そして次代へ受け継がれる文化の礎をご案内します。</p>
+   <div class="hero-actions"><a class="action-primary" href="#about">本廳の役割を知る</a><a class="action-secondary" href="#institutions">教育機關を探す</a></div>
+  </div>
+  <div class="hero-art" aria-label="帝國教育廳の象徴意匠">
+   <div class="seal-orbit">
+    <span class="orbit-label">THE ART OF LEARNING</span>
+    <span class="orbit-small one" aria-hidden="true">文</span><span class="orbit-small two" aria-hidden="true">學</span><span class="orbit-small three" aria-hidden="true">知</span>
+    <div class="seal-core">
+     <svg viewBox="0 0 180 180" role="img" aria-label="開かれた書物の意匠">
+      <path d="M90 137C69 120 45 119 25 125V49C48 43 71 48 90 63C109 48 132 43 155 49V125C135 119 111 120 90 137Z" fill="none" stroke="#e5cc97" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M90 63V137M38 66C55 65 70 70 80 79M38 86C55 85 70 90 80 99M142 66C125 65 110 70 100 79M142 86C125 85 110 90 100 99" fill="none" stroke="#e5cc97" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M90 23V43M80 33H100" stroke="#d6b775" stroke-width="2"/>
+      <circle cx="90" cy="22" r="4" fill="#d6b775"/>
+     </svg>
+    </div>
+   </div>
+   <div class="art-caption">Sapientia · Libertas · Cultura</div>
+  </div>
+ </div>
+ <div class="wrap hero-index">01　／　THE IMPERIAL EDUCATION PORTAL</div>
+</section>
+<section class="quick-access" aria-label="主な案内">
+ <div class="wrap quick-grid">
+  <a class="quick-item" href="#about"><span class="quick-number">01</span><span><strong>本廳について</strong><small>教育行政と本廳の役割</small></span></a>
+  <a class="quick-item" href="#philosophy"><span class="quick-number">02</span><span><strong>教育理念</strong><small>学びと自由のために</small></span></a>
+  <a class="quick-item" href="#institutions"><span class="quick-number">03</span><span><strong>教育機關案内</strong><small>學校・高等教育機關</small></span></a>
+  <a class="quick-item" href="#archive"><span class="quick-number">04</span><span><strong>教育史料室</strong><small>思想・記録・刊行物</small></span></a>
+ </div>
+</section>
+
+<section class="section" id="about">
+ <div class="wrap">
+  <div class="section-heading">
+   <div class="section-heading-main"><div class="section-kicker">01　/　ABOUT THE MINISTRY</div><h2>教育を、国家の未来を支える文化として。</h2></div>
+   <div class="heading-mark">The Ministry</div>
+  </div>
+  <div class="intro-layout">
+   <div class="intro-panel">
+    <span class="micro">IMPERIAL MINISTRY OF EDUCATION</span>
+    <h3>學ぶ者のために。<br>學び続ける社会のために。</h3>
+    <p>教育は、知識を授けるだけの営みではありません。人が自ら考え、選び、他者と共に生きるための土壌です。</p>
+    <a class="small-link" href="#director">教育廳長官について　→</a>
+   </div>
+   <div class="intro-text">
+    <div class="dropcap">帝國教育廳は、日ノ本帝國における教育と学問の発展を支える中央行政機關です。</div>
+    <p>本廳が重んじるのは、古い知識をただ守ることでも、新しい思想を無条件に受け入れることでもありません。先人の積み重ねを知り、その上で何を受け継ぎ、何を選び取るのかを、一人ひとりが考えられる環境を整えることです。</p>
+    <p>身分や家柄、性別、年齢によって学ぶ価値を決めず、学びたいと願う者に学ぶ場所をひらく。その理念を、教育行政と文化の継承の根幹に据えています。</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section alt" id="philosophy">
+ <div class="wrap">
+  <div class="section-heading">
+   <div class="section-heading-main"><div class="section-kicker">02　/　EDUCATIONAL PHILOSOPHY</div><h2>教えることは、支配することではない。</h2></div>
+   <p>九条院春臣の教育思想を手がかりに、帝國教育廳が大切にする学びの姿勢を紹介します。</p>
+  </div>
+  <div class="principles">
+   <article class="principle"><span class="num">I</span><h4>自ら考える力</h4><p>答えを与えるだけでなく、問いを持ち、自分の頭で考えることを尊重します。</p></article>
+   <article class="principle"><span class="num">II</span><h4>学ぶ機会のひらかれた場</h4><p>身分・家柄・性別・年齢によって、学問に向かう意志を妨げないこと。</p></article>
+   <article class="principle"><span class="num">III</span><h4>古きものと新しきもの</h4><p>古典を知り、西洋の学問にも向き合い、比較しながら自ら選び取ること。</p></article>
+   <article class="principle"><span class="num">IV</span><h4>学問の自由</h4><p>教育を国家に都合のよい人間を作る道具とせず、思想と探究の自由を守ること。</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="quote-band">
+ <div class="wrap quote-inner">
+  <blockquote>「人を作るのが教育ではありません。<br>その人が、自分自身になれるようにすることが教育です。」</blockquote>
+  <cite>— 九條院 春臣　／　教育思想</cite>
+ </div>
+</section>
+
+<section class="section" id="director">
+ <div class="wrap director-layout">
+  <div class="director-portrait">
+   <div class="portrait-seal">春</div>
+   <div class="portrait-caption"><strong>九條院 春臣</strong><small>THE EDUCATOR　／　FOUNDER</small></div>
+  </div>
+  <div class="director-copy">
+   <div class="section-kicker">03　/　MINISTER &amp; EDUCATOR</div>
+   <h3>九條院 春臣</h3>
+   <div class="role">帝國教育廳長官　／　日ノ本帝國國立帝國大學 創設者</div>
+   <p>教育者・思想家・文学者。近代日ノ本帝國における教育制度の礎を築き、「日ノ本帝國教育の祖」と称される人物です。</p>
+   <p>教育を国家に都合のよい人間を育てるための制度ではなく、人が自ら考え、自らの人生を選び取るための営みと捉えました。古典と近代学問の双方に学び、学問の自由と文化の継承を重んじています。</p>
+   <div class="director-quote">「私が吉田松陰先生？　まさか。私はただの子ども好きな教師ですよ。」<small>九條院春臣　／　本人の言葉</small></div>
+   <div class="fact-list"><span>教育者</span><span>思想家</span><span>文学者</span><span>『教育侖』著者</span><span>帝國大學創設者</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="section alt" id="institutions">
+ <div class="wrap">
+  <div class="section-heading">
+   <div class="section-heading-main"><div class="section-kicker">04　/　EDUCATIONAL INSTITUTIONS</div><h2>學びを担う教育機關</h2></div>
+   <p>本頁では、設定上確認されている教育機關を掲載しています。機關の詳細情報は各公式案内をご確認ください。</p>
+  </div>
+  <div class="institution-grid">
+   <article class="institution-card">
+    <div class="institution-top"><span>HIGHER EDUCATION</span><span>01　／　帝都</span></div>
+    <div class="institution-body">
+     <span class="institution-symbol" aria-hidden="true">✧</span>
+     <h3>日ノ本帝國國立帝國大學</h3>
+     <span class="sub">NIPPON IMPERIAL UNIVERSITY</span>
+     <p>九條院春臣が創設した高等教育・学術研究機關。学問そのものを探究する「學問ノ府、文化ノ源流」の精神を掲げる。</p>
+     <a class="card-link" href="https://8fgb66gmt2-stack.github.io/https-8fgb66gmt2-stack.github.io-nippon-imperial-university-/" target="_blank" rel="noopener">公式サイトを閲覧する</a>
+    </div>
+   </article>
+   <article class="institution-card">
+    <div class="institution-top"><span>SECONDARY EDUCATION</span><span>02　／　帝都</span></div>
+    <div class="institution-body">
+     <span class="institution-symbol" aria-hidden="true">❖</span>
+     <h3>日ノ本國立帝都女學院</h3>
+     <span class="sub">IMPERIAL CAPITAL GIRLS' ACADEMY</span>
+     <p>國語・央語をはじめとする教育を担う學校。教員には詩人・中原壱葉、外国文学者・中原八雲らがいる。</p>
+     <button class="card-link" type="button" data-dialog="academy">機關案内を読む</button>
+    </div>
+   </article>
+  </div>
+  <p class="institution-footnote">※掲載内容は、現在確認されている設定に基づく案内です。未確認の学校名・制度・所在地等は補っていません。</p>
+ </div>
+</section>
+
+<section class="section" id="archive">
+ <div class="wrap">
+  <div class="section-heading">
+   <div class="section-heading-main"><div class="section-kicker">05　/　EDUCATION ARCHIVES</div><h2>教育の思想と、その歩みを記録する。</h2></div>
+   <div class="heading-mark">Archive &amp; Records</div>
+  </div>
+  <div class="archive-layout">
+   <article class="archive-feature">
+    <span class="micro">FOUNDATIONAL TEXT　／　教育思想</span>
+    <h3>『教育侖』</h3>
+    <p>九條院春臣による代表的著作。教育と自由、教師と学生、古典教育と近代教育、人格形成、国家と教育、学問の自由、文化継承などを論じる。帝國大學における必読書の一つとして知られる。</p>
+    <button class="card-link" type="button" data-dialog="education-theory">書誌案内を読む</button>
+   </article>
+   <div class="archive-index">
+    <button class="archive-link" type="button" data-dialog="history"><small>01 / HISTORY</small><strong>帝國教育史</strong><span>教育思想と制度の歩み</span></button>
+    <button class="archive-link" type="button" data-dialog="people"><small>02 / PERSONS</small><strong>教育人物録</strong><span>教育に携わった人々</span></button>
+    <button class="archive-link" type="button" data-dialog="publications"><small>03 / BOOKS</small><strong>刊行物・著作</strong><span>教育に關する著作と記録</span></button>
+    <button class="archive-link" type="button" data-dialog="research"><small>04 / RESEARCH</small><strong>学術・研究資料</strong><span>学問と文化の継承</span></button>
+   </div>
+  </div>
+  <div class="archive-note">史料室は、正史として確認できる記録と未詳の事項を混同しない方針で編成します。未確認の年代・制度・統計値は掲載せず、確認できた資料から順次整理します。</div>
+ </div>
+</section>
+
+<section class="section alt" id="information">
+ <div class="wrap">
+  <div class="section-heading">
+   <div class="section-heading-main"><div class="section-kicker">06　/　PUBLIC INFORMATION</div><h2>告示・公表資料</h2></div>
+   <p>教育行政に關する公表資料をまとめるための窓口です。</p>
+  </div>
+  <div class="info-layout">
+   <div class="info-panel">
+    <h3>公開情報の案内 <small>PUBLIC INDEX</small></h3>
+    <div class="info-row"><time>行政情報</time><p>教育制度・行政に關する資料を整理して掲載します。</p></div>
+    <div class="info-row"><time>教育統計</time><p>出典と対象期間を明記した統計資料を掲載します。</p></div>
+    <div class="info-row"><time>告示・通達</time><p>教育廳からの告示・公表文書を確認できる形で収録します。</p></div>
+    <div class="info-row"><time>刊行物</time><p>教育に關する刊行物・研究資料の案内を整備します。</p></div>
+   </div>
+   <aside class="info-aside">
+    <span class="micro">EDITORIAL PRINCIPLE</span>
+    <h3>正史と未詳を、混同しない。</h3>
+    <p>行政情報・統計・史料は、内容と出典が確かめられたものを掲載します。まだ設定が定まっていない事項を、もっともらしい数字や制度で埋めることはしません。</p>
+    <a href="#archive">教育史料室の編集方針を見る　→</a>
+   </aside>
+  </div>
+ </div>
+</section>
+
+<section class="search-section" id="site-search">
+ <div class="wrap search-layout">
+  <div class="search-copy"><span class="micro">SITE SEARCH　／　SITE INDEX</span><h2>知りたいことを、探す。</h2><p>本サイト内の案内・教育機關・史料項目を検索できます。</p></div>
+  <form class="search-form" id="search-form" role="search">
+   <label for="search-input" class="sr-only">サイト内検索</label>
+   <input id="search-input" name="q" type="search" placeholder="例：九條院春臣、帝國大學、教育侖" autocomplete="off">
+   <button type="submit">検索する</button>
+  </form>
+  <div id="search-results" aria-live="polite">
+   <div class="search-results-head"><strong id="search-count">検索結果</strong><button type="button" id="search-close" aria-label="検索結果を閉じる" style="border:0;background:transparent;color:var(--wine);cursor:pointer">閉じる ×</button></div>
+   <div class="search-results-list" id="search-list"></div>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="site-footer">
+ <div class="wrap footer-main">
+  <div>
+   <div class="footer-brand"><span class="seal-small">學</span><span><strong>帝國教育廳</strong><small>THE IMPERIAL MINISTRY OF EDUCATION</small></span></div>
+   <p class="footer-description">日ノ本帝國の教育と学問の自由、そして文化の継承を支える中央行政機關。學びたいと願うすべての者に、知るための扉を。</p>
+  </div>
+  <div class="footer-links"><a href="#about">教育廳について</a><a href="#philosophy">教育理念</a><a href="#director">長官紹介</a><a href="#institutions">教育機關</a><a href="#archive">教育史料室</a><a href="#information">告示・公表資料</a></div>
+ </div>
+ <div class="wrap footer-bottom"><span>© THE EMPIRE OF HINOMOTO　／　IMPERIAL MINISTRY OF EDUCATION</span><a class="back-top" href="#top">PAGE TOP　↑</a></div>
 </footer>
+
+<dialog id="detail-dialog" aria-labelledby="dialog-title">
+ <div class="dialog-head"><div><small>IMPERIAL EDUCATION ARCHIVE</small><div id="dialog-kicker" style="font-size:11px;letter-spacing:.12em;margin-top:3px">資料案内</div></div><button type="button" id="dialog-close" aria-label="閉じる">×</button></div>
+ <div class="dialog-body"><h2 id="dialog-title">資料案内</h2><div id="dialog-content"></div></div>
+</dialog>
+<noscript><p class="no-script">JavaScriptが無効のため、サイト内検索・詳細表示はご利用いただけません。各案内はページ内リンクからご覧いただけます。</p></noscript>
+<script>
+(function(){
+ "use strict";
+ const progress=document.getElementById("reading-progress");
+ const updateProgress=function(){
+  const doc=document.documentElement;
+  const max=doc.scrollHeight-doc.clientHeight;
+  const ratio=max>0?doc.scrollTop/max:0;
+  progress.style.width=(ratio*100)+"%";
+ };
+ window.addEventListener("scroll",updateProgress,{passive:true});
+ window.addEventListener("resize",updateProgress);
+ updateProgress();
+
+ const navButton=document.querySelector(".nav-toggle");
+ const nav=document.getElementById("nav-links");
+ if(navButton&&nav){
+  navButton.addEventListener("click",function(){
+   const open=nav.classList.toggle("open");
+   navButton.setAttribute("aria-expanded",String(open));
+   navButton.querySelector("span:last-child").textContent=open?"－":"＋";
+  });
+  nav.querySelectorAll("a").forEach(function(link){
+   link.addEventListener("click",function(){
+    nav.classList.remove("open");
+    navButton.setAttribute("aria-expanded","false");
+    navButton.querySelector("span:last-child").textContent="＋";
+   });
+  });
+ }
+
+ const dialog=document.getElementById("detail-dialog");
+ const dialogTitle=document.getElementById("dialog-title");
+ const dialogKicker=document.getElementById("dialog-kicker");
+ const dialogContent=document.getElementById("dialog-content");
+ const entries={
+  academy:{title:"日ノ本國立帝都女學院",kicker:"EDUCATIONAL INSTITUTION",html:"<p>日ノ本帝國の帝都に置かれた教育機關。國語教諭の中原壱葉、央語教諭の中原八雲らが教壇に立つ。</p><p>中原壱葉は詩人としても知られ、古典文学から近代文学までを扱い、生徒自身の言葉を見つけることを重んじる。中原八雲は外国語と外国文学・民間伝承に通じ、言葉の向こうにある文化や人々の感情を伝える。</p><div class='dialog-note'>本案内は確認済みの人物・機關情報に基づく概要です。未確認の設立年・所在地・学制等は記載していません。</div>"},
+  "education-theory":{title:"『教育侖』",kicker:"FOUNDATIONAL TEXT",html:"<p>九條院春臣による教育思想の代表的著作。教育と自由、教師と学生、古典教育と近代教育、人格形成、国家と教育、学問の自由、文化継承などを論じる。</p><p>帝國大學の必読書の一つとして知られ、春臣の教育思想を理解する上で重要な著作とされる。</p>"},
+  history:{title:"帝國教育史",kicker:"HISTORY & SYSTEM",html:"<p>日ノ本帝國における教育思想と制度の歩みを記録する資料分類です。九條院春臣が教育そのものを国家文化の中心に据え、教育制度の礎を築いたことを重要な節目として扱います。</p><div class='dialog-note'>年代・制度の詳細は、正史として確定した資料に基づき追記します。</div>"},
+  people:{title:"教育人物録",kicker:"PERSONS & EDUCATORS",html:"<p>教育・学術・文化の発展に携わった人物を紹介する資料分類です。現時点では、教育廳長官・帝國大學創設者である九條院春臣を中心に整理しています。</p>"},
+  publications:{title:"刊行物・著作",kicker:"BOOKS & PUBLICATIONS",html:"<p>教育思想・教育史・学術に關する著作を収録するための案内です。代表的著作として、九條院春臣の『教育侖』を掲載しています。</p>"},
+  research:{title:"学術・研究資料",kicker:"ACADEMIC RECORDS",html:"<p>学問と文化の継承に關する研究・記録を整理するための資料分類です。古典研究、近代学問、学問の自由、文化継承など、確認された資料を主題別に収録します。</p>"}
+ };
+ document.querySelectorAll("[data-dialog]").forEach(function(button){
+  button.addEventListener("click",function(){
+   const item=entries[button.getAttribute("data-dialog")];
+   if(!item)return;
+   dialogTitle.textContent=item.title;
+   dialogKicker.textContent=item.kicker;
+   dialogContent.innerHTML=item.html;
+   if(typeof dialog.showModal==="function")dialog.showModal();
+   else{dialog.setAttribute("open","");}
+  });
+ });
+ function closeDialog(){if(typeof dialog.close==="function")dialog.close();else dialog.removeAttribute("open");}
+ document.getElementById("dialog-close").addEventListener("click",closeDialog);
+ dialog.addEventListener("click",function(event){if(event.target===dialog)closeDialog();});
+
+ const searchable=[
+  {title:"帝國教育廳について",desc:"本廳の役割・教育行政・基本方針",id:"about",text:"教育廳 本廳 役割 教育行政 中央行政機關"},
+  {title:"教育理念",desc:"自ら考える力・学ぶ機会・学問の自由",id:"philosophy",text:"理念 自由 古典 西洋 学問 人格形成 教師 学生"},
+  {title:"九條院春臣",desc:"教育廳長官・帝國大學創設者",id:"director",text:"長官 教育者 思想家 文学者 教育侖 吉田松陰 子ども好き 教師"},
+  {title:"日ノ本帝國國立帝國大學",desc:"九條院春臣が創設した高等教育・学術研究機關",id:"institutions",text:"大学 帝國大學 高等教育 学術 文化 源流"},
+  {title:"日ノ本國立帝都女學院",desc:"中原壱葉・中原八雲らが教壇に立つ教育機關",id:"institutions",text:"女學院 学校 國語 央語 中原壱葉 中原八雲"},
+  {title:"『教育侖』",desc:"九條院春臣による教育思想の代表的著作",id:"archive",text:"教育論 教育侖 著作 自由 国家 文化継承"},
+  {title:"教育史料室",desc:"教育史・人物録・刊行物・研究資料",id:"archive",text:"史料 資料 歴史 人物録 書籍 研究"},
+  {title:"告示・公表資料",desc:"行政情報・教育統計・告示・刊行物の案内",id:"information",text:"告示 統計 公表 通達 行政情報 刊行物"}
+ ];
+ const form=document.getElementById("search-form");
+ const input=document.getElementById("search-input");
+ const panel=document.getElementById("search-results");
+ const count=document.getElementById("search-count");
+ const list=document.getElementById("search-list");
+ form.addEventListener("submit",function(event){
+  event.preventDefault();
+  const query=input.value.trim().toLocaleLowerCase();
+  list.replaceChildren();
+  if(!query){count.textContent="検索語を入力してください";panel.classList.add("visible");return;}
+  const terms=query.split(/\s+/).filter(Boolean);
+  const matches=searchable.filter(function(item){
+   const haystack=(item.title+" "+item.desc+" "+item.text).toLocaleLowerCase();
+   return terms.every(function(term){return haystack.includes(term);});
+  });
+  count.textContent="「"+input.value.trim()+"」の検索結果："+matches.length+"件";
+  if(matches.length){
+   matches.forEach(function(item){
+    const a=document.createElement("a");
+    a.className="search-result";
+    a.href="#"+item.id;
+    a.textContent=item.title+"　—　"+item.desc;
+    a.addEventListener("click",function(){panel.classList.remove("visible");});
+    list.appendChild(a);
+   });
+  }else{
+   const p=document.createElement("p");p.className="search-empty";p.textContent="該当する案内は見つかりませんでした。別の言葉でもう一度お試しください。";list.appendChild(p);
+  }
+  panel.classList.add("visible");
+ });
+ document.getElementById("search-close").addEventListener("click",function(){panel.classList.remove("visible");});
+})();
+</script>
 </body>
 </html>
