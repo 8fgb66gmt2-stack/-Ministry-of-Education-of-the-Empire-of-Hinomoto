@@ -146,7 +146,7 @@ if(nextQuote)nextQuote.addEventListener("click",()=>showQuote(quoteIndex+1));
 const records=[
  {title:"帝國教育廳について",desc:"本廳の役割・教育行政・基本理念",url:"about.html",keywords:"教育廳 本廳 役割 教育行政 中央行政機關"},
  {title:"教育理念",desc:"学ぶ自由、自ら考える力、文化の継承",url:"about.html#philosophy",keywords:"理念 自由 古典 西洋 学問 人格形成 教師 学生"},
- {title:"九条院春臣",desc:"教育廳長官・帝國大學創設者",url:"about.html#director",keywords:"長官 教育者 思想家 文学者 教育侖 吉田松陰 教師"},
+ {title:"九条院春臣",desc:"教育廳長官・帝國大學創設者",url:"about.html#director",keywords:"長官 教育者 思想家 文学者 教育侖 吉田松陽 教師"},
  {title:"日ノ本帝國國立帝國大學",desc:"九条院春臣が創設した高等教育・学術研究機關",url:"institutions.html#university",keywords:"大学 帝國大學 高等教育 学術 文学 哲学 歴史 医学 美術"},
  {title:"日ノ本帝國國立帝都女學院",desc:"六條杠葉が創設した教育機關。中原壱葉・中原八雲らが教壇に立つ",url:"institutions.html#academy",keywords:"女學院 学校 創設者 六條杠葉 帝國大學 國語 央語 中原壱葉 中原八雲"},
  {title:"六條杠葉",desc:"帝都女學院創設者・帝國大學初の女性學生",url:"archives.html#sixjo-yuzuriha",keywords:"六條 杠葉 ろくじょう ゆずりは 教育者 女性教育 女子教育 帝都女學院 歌人 詩人 評論家 隨筆家"},
