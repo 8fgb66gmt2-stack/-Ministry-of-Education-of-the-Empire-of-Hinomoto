@@ -31,6 +31,7 @@ body{margin:0;color:var(--ink);background:
  var(--paper);font-family:var(--serif);line-height:1.9;overflow-x:hidden}
 body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:30;opacity:.11;background:repeating-linear-gradient(90deg,transparent 0,transparent 3px,rgba(73,48,29,.08) 4px);mix-blend-mode:multiply}
 a{color:inherit;text-decoration:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 button,input{font:inherit}
 button{color:inherit}
 ::selection{background:var(--wine);color:#fff8e9}
@@ -388,7 +389,7 @@ dialog::backdrop{background:rgba(26,17,18,.62);backdrop-filter:blur(3px)}
 <section class="quote-band">
  <div class="wrap quote-inner">
   <blockquote>「人を作るのが教育ではありません。<br>その人が、自分自身になれるようにすることが教育です。」</blockquote>
-  <cite>— 九條院 春臣　／　教育思想</cite>
+  <cite>— 九条院 春臣　／　教育思想</cite>
  </div>
 </section>
 
@@ -396,15 +397,15 @@ dialog::backdrop{background:rgba(26,17,18,.62);backdrop-filter:blur(3px)}
  <div class="wrap director-layout">
   <div class="director-portrait">
    <div class="portrait-seal">春</div>
-   <div class="portrait-caption"><strong>九條院 春臣</strong><small>THE EDUCATOR　／　FOUNDER</small></div>
+   <div class="portrait-caption"><strong>九条院 春臣</strong><small>THE EDUCATOR　／　FOUNDER</small></div>
   </div>
   <div class="director-copy">
    <div class="section-kicker">03　/　MINISTER &amp; EDUCATOR</div>
-   <h3>九條院 春臣</h3>
+   <h3>九条院 春臣</h3>
    <div class="role">帝國教育廳長官　／　日ノ本帝國國立帝國大學 創設者</div>
    <p>教育者・思想家・文学者。近代日ノ本帝國における教育制度の礎を築き、「日ノ本帝國教育の祖」と称される人物です。</p>
    <p>教育を国家に都合のよい人間を育てるための制度ではなく、人が自ら考え、自らの人生を選び取るための営みと捉えました。古典と近代学問の双方に学び、学問の自由と文化の継承を重んじています。</p>
-   <div class="director-quote">「私が吉田松陰先生？　まさか。私はただの子ども好きな教師ですよ。」<small>九條院春臣　／　本人の言葉</small></div>
+   <div class="director-quote">「私が吉田松陰先生？　まさか。私はただの子ども好きな教師ですよ。」<small>九条院春臣　／　本人の言葉</small></div>
    <div class="fact-list"><span>教育者</span><span>思想家</span><span>文学者</span><span>『教育侖』著者</span><span>帝國大學創設者</span></div>
   </div>
  </div>
@@ -423,7 +424,7 @@ dialog::backdrop{background:rgba(26,17,18,.62);backdrop-filter:blur(3px)}
      <span class="institution-symbol" aria-hidden="true">✧</span>
      <h3>日ノ本帝國國立帝國大學</h3>
      <span class="sub">NIPPON IMPERIAL UNIVERSITY</span>
-     <p>九條院春臣が創設した高等教育・学術研究機關。学問そのものを探究する「學問ノ府、文化ノ源流」の精神を掲げる。</p>
+     <p>九条院春臣が創設した高等教育・学術研究機關。学問そのものを探究する「學問ノ府、文化ノ源流」の精神を掲げる。</p>
      <a class="card-link" href="https://8fgb66gmt2-stack.github.io/https-8fgb66gmt2-stack.github.io-nippon-imperial-university-/" target="_blank" rel="noopener">公式サイトを閲覧する</a>
     </div>
    </article>
@@ -452,7 +453,7 @@ dialog::backdrop{background:rgba(26,17,18,.62);backdrop-filter:blur(3px)}
    <article class="archive-feature">
     <span class="micro">FOUNDATIONAL TEXT　／　教育思想</span>
     <h3>『教育侖』</h3>
-    <p>九條院春臣による代表的著作。教育と自由、教師と学生、古典教育と近代教育、人格形成、国家と教育、学問の自由、文化継承などを論じる。帝國大學における必読書の一つとして知られる。</p>
+    <p>九条院春臣による代表的著作。教育と自由、教師と学生、古典教育と近代教育、人格形成、国家と教育、学問の自由、文化継承などを論じる。帝國大學における必読書の一つとして知られる。</p>
     <button class="card-link" type="button" data-dialog="education-theory">書誌案内を読む</button>
    </article>
    <div class="archive-index">
@@ -495,7 +496,7 @@ dialog::backdrop{background:rgba(26,17,18,.62);backdrop-filter:blur(3px)}
   <div class="search-copy"><span class="micro">SITE SEARCH　／　SITE INDEX</span><h2>知りたいことを、探す。</h2><p>本サイト内の案内・教育機關・史料項目を検索できます。</p></div>
   <form class="search-form" id="search-form" role="search">
    <label for="search-input" class="sr-only">サイト内検索</label>
-   <input id="search-input" name="q" type="search" placeholder="例：九條院春臣、帝國大學、教育侖" autocomplete="off">
+   <input id="search-input" name="q" type="search" placeholder="例：九条院春臣、帝國大學、教育侖" autocomplete="off">
    <button type="submit">検索する</button>
   </form>
   <div id="search-results" aria-live="polite">
@@ -558,10 +559,10 @@ dialog::backdrop{background:rgba(26,17,18,.62);backdrop-filter:blur(3px)}
  const dialogContent=document.getElementById("dialog-content");
  const entries={
   academy:{title:"日ノ本國立帝都女學院",kicker:"EDUCATIONAL INSTITUTION",html:"<p>日ノ本帝國の帝都に置かれた教育機關。國語教諭の中原壱葉、央語教諭の中原八雲らが教壇に立つ。</p><p>中原壱葉は詩人としても知られ、古典文学から近代文学までを扱い、生徒自身の言葉を見つけることを重んじる。中原八雲は外国語と外国文学・民間伝承に通じ、言葉の向こうにある文化や人々の感情を伝える。</p><div class='dialog-note'>本案内は確認済みの人物・機關情報に基づく概要です。未確認の設立年・所在地・学制等は記載していません。</div>"},
-  "education-theory":{title:"『教育侖』",kicker:"FOUNDATIONAL TEXT",html:"<p>九條院春臣による教育思想の代表的著作。教育と自由、教師と学生、古典教育と近代教育、人格形成、国家と教育、学問の自由、文化継承などを論じる。</p><p>帝國大學の必読書の一つとして知られ、春臣の教育思想を理解する上で重要な著作とされる。</p>"},
-  history:{title:"帝國教育史",kicker:"HISTORY & SYSTEM",html:"<p>日ノ本帝國における教育思想と制度の歩みを記録する資料分類です。九條院春臣が教育そのものを国家文化の中心に据え、教育制度の礎を築いたことを重要な節目として扱います。</p><div class='dialog-note'>年代・制度の詳細は、正史として確定した資料に基づき追記します。</div>"},
-  people:{title:"教育人物録",kicker:"PERSONS & EDUCATORS",html:"<p>教育・学術・文化の発展に携わった人物を紹介する資料分類です。現時点では、教育廳長官・帝國大學創設者である九條院春臣を中心に整理しています。</p>"},
-  publications:{title:"刊行物・著作",kicker:"BOOKS & PUBLICATIONS",html:"<p>教育思想・教育史・学術に關する著作を収録するための案内です。代表的著作として、九條院春臣の『教育侖』を掲載しています。</p>"},
+  "education-theory":{title:"『教育侖』",kicker:"FOUNDATIONAL TEXT",html:"<p>九条院春臣による教育思想の代表的著作。教育と自由、教師と学生、古典教育と近代教育、人格形成、国家と教育、学問の自由、文化継承などを論じる。</p><p>帝國大學の必読書の一つとして知られ、春臣の教育思想を理解する上で重要な著作とされる。</p>"},
+  history:{title:"帝國教育史",kicker:"HISTORY & SYSTEM",html:"<p>日ノ本帝國における教育思想と制度の歩みを記録する資料分類です。九条院春臣が教育そのものを国家文化の中心に据え、教育制度の礎を築いたことを重要な節目として扱います。</p><div class='dialog-note'>年代・制度の詳細は、正史として確定した資料に基づき追記します。</div>"},
+  people:{title:"教育人物録",kicker:"PERSONS & EDUCATORS",html:"<p>教育・学術・文化の発展に携わった人物を紹介する資料分類です。現時点では、教育廳長官・帝國大學創設者である九条院春臣を中心に整理しています。</p>"},
+  publications:{title:"刊行物・著作",kicker:"BOOKS & PUBLICATIONS",html:"<p>教育思想・教育史・学術に關する著作を収録するための案内です。代表的著作として、九条院春臣の『教育侖』を掲載しています。</p>"},
   research:{title:"学術・研究資料",kicker:"ACADEMIC RECORDS",html:"<p>学問と文化の継承に關する研究・記録を整理するための資料分類です。古典研究、近代学問、学問の自由、文化継承など、確認された資料を主題別に収録します。</p>"}
  };
  document.querySelectorAll("[data-dialog]").forEach(function(button){
@@ -582,10 +583,10 @@ dialog::backdrop{background:rgba(26,17,18,.62);backdrop-filter:blur(3px)}
  const searchable=[
   {title:"帝國教育廳について",desc:"本廳の役割・教育行政・基本方針",id:"about",text:"教育廳 本廳 役割 教育行政 中央行政機關"},
   {title:"教育理念",desc:"自ら考える力・学ぶ機会・学問の自由",id:"philosophy",text:"理念 自由 古典 西洋 学問 人格形成 教師 学生"},
-  {title:"九條院春臣",desc:"教育廳長官・帝國大學創設者",id:"director",text:"長官 教育者 思想家 文学者 教育侖 吉田松陰 子ども好き 教師"},
-  {title:"日ノ本帝國國立帝國大學",desc:"九條院春臣が創設した高等教育・学術研究機關",id:"institutions",text:"大学 帝國大學 高等教育 学術 文化 源流"},
+  {title:"九条院春臣",desc:"教育廳長官・帝國大學創設者",id:"director",text:"長官 教育者 思想家 文学者 教育侖 吉田松陰 子ども好き 教師"},
+  {title:"日ノ本帝國國立帝國大學",desc:"九条院春臣が創設した高等教育・学術研究機關",id:"institutions",text:"大学 帝國大學 高等教育 学術 文化 源流"},
   {title:"日ノ本國立帝都女學院",desc:"中原壱葉・中原八雲らが教壇に立つ教育機關",id:"institutions",text:"女學院 学校 國語 央語 中原壱葉 中原八雲"},
-  {title:"『教育侖』",desc:"九條院春臣による教育思想の代表的著作",id:"archive",text:"教育論 教育侖 著作 自由 国家 文化継承"},
+  {title:"『教育侖』",desc:"九条院春臣による教育思想の代表的著作",id:"archive",text:"教育論 教育侖 著作 自由 国家 文化継承"},
   {title:"教育史料室",desc:"教育史・人物録・刊行物・研究資料",id:"archive",text:"史料 資料 歴史 人物録 書籍 研究"},
   {title:"告示・公表資料",desc:"行政情報・教育統計・告示・刊行物の案内",id:"information",text:"告示 統計 公表 通達 行政情報 刊行物"}
  ];
