@@ -286,3 +286,38 @@ body:not(.arg-body) main .sealed-archive .kicker{
 body.arg-body .arg-hero p{color:#f1e4ce !important}
 body.arg-body .arg-panel p{color:#302629 !important;font-size:14px}
 body.arg-body .arg-panel small{color:#69451f !important}
+
+
+/* ASTRA DETAIL PANEL — focused legibility correction */
+body:not(.arg-body) main .atlas-detail,
+body:not(.arg-body) main .atlas-detail *{
+  opacity:1 !important;
+  text-shadow:none !important;
+}
+body:not(.arg-body) main .atlas-detail{
+  color:#241820 !important;
+}
+body:not(.arg-body) main .atlas-detail #atlas-title{
+  color:#321321 !important;
+  font-weight:600;
+}
+body:not(.arg-body) main .atlas-detail #atlas-description{
+  color:#302629 !important;
+  font-size:15px !important;
+  line-height:2.15 !important;
+}
+body:not(.arg-body) main .atlas-detail .detail-kicker,
+body:not(.arg-body) main .atlas-detail .detail-index,
+body:not(.arg-body) main .atlas-detail .detail-index span,
+body:not(.arg-body) main .atlas-detail .atlas-hint{
+  color:#59434a !important;
+  font-size:12px !important;
+  font-weight:600 !important;
+  opacity:1 !important;
+}
+body:not(.arg-body) main .atlas-detail .detail-quote{
+  color:#65172d !important;
+  font-size:17px !important;
+  font-weight:600 !important;
+  opacity:1 !important;
+}
