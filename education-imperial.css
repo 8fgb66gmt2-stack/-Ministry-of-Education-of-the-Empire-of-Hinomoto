@@ -155,3 +155,74 @@ body:after{content:"";position:fixed;inset:0;z-index:49;pointer-events:none;opac
 .arg-error{color:#8b263f!important}
 @media(max-width:760px){.instrument-grid{grid-template-columns:1fr}.astral-instrument{min-height:360px}.imperial-instruments,.sealed-archive{padding:68px 0}.hero{min-height:0}.hero-grid{min-height:0}.arg-top{font-size:9px}.arg-hero{padding:50px 0 30px}}
 @media(prefers-reduced-motion:reduce){.topline,.imperial-instruments:before,.astral-instrument:after{animation:none!important}*{scroll-behavior:auto!important}}
+
+
+/* READABILITY RESTORATION — contrast first, ornament second */
+:root{
+ --muted:#51413f;
+ --wine3:#713246;
+ --gold:#89612f;
+ --imperial-gold:#98703a;
+ --imperial-mist:#695653;
+}
+body:not(.arg-body){-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body:not(.arg-body) .portal-card p,
+body:not(.arg-body) .directory-intro p,
+body:not(.arg-body) .directory-item span,
+body:not(.arg-body) .timeline-step p,
+body:not(.arg-body) .board-row p,
+body:not(.arg-body) .board-aside p,
+body:not(.arg-body) .search-copy p,
+body:not(.arg-body) .search-empty,
+body:not(.arg-body) .subhero p,
+body:not(.arg-body) .subsection p,
+body:not(.arg-body) .subpanel p,
+body:not(.arg-body) .subpanel li,
+body:not(.arg-body) .pilgrimage-heading p,
+body:not(.arg-body) .pilgrimage-step p,
+body:not(.arg-body) .dual-pane p,
+body:not(.arg-body) .sealed-card p{
+ color:#493b39;
+}
+body:not(.arg-body) .portal-card p,
+body:not(.arg-body) .timeline-step p,
+body:not(.arg-body) .board-row p,
+body:not(.arg-body) .board-aside p,
+body:not(.arg-body) .subhero p,
+body:not(.arg-body) .subsection p,
+body:not(.arg-body) .subpanel p,
+body:not(.arg-body) .pilgrimage-step p,
+body:not(.arg-body) .dual-pane p{font-size:12px;line-height:2.05}
+body:not(.arg-body) .directory-item span,
+body:not(.arg-body) .search-copy p,
+body:not(.arg-body) .search-empty,
+body:not(.arg-body) .pilgrimage-heading p{font-size:11px;line-height:2}
+body:not(.arg-body) .directory-item small,
+body:not(.arg-body) .board-title small,
+body:not(.arg-body) .board-aside .roman,
+body:not(.arg-body) .subhero .breadcrumb,
+body:not(.arg-body) .subpanel small,
+body:not(.arg-body) .pilgrimage-step small,
+body:not(.arg-body) .sealed-card small{color:#765126}
+body:not(.arg-body) .portal-card .en,
+body:not(.arg-body) .ribbon-item,
+body:not(.arg-body) .directory-intro .roman{color:#713246}
+body:not(.arg-body) .network a{color:#49302f}
+body:not(.arg-body) .nav-links a{color:#432b30}
+body:not(.arg-body) .nav-links a:hover{color:#741b31}
+body:not(.arg-body) .sealed-card p{font-size:13px;line-height:2.2}
+body:not(.arg-body) .sealed-card h2{color:#451326}
+body:not(.arg-body) .instrument-heading p,
+body:not(.arg-body) .instrument-reading p,
+body:not(.arg-body) .imperial-instruments p{color:#f0e4d0}
+body:not(.arg-body) .hero-copy>p{color:#f4eadb}
+body.arg-body .arg-hero p,
+body.arg-body .arg-panel p{color:#493b39}
+body.arg-body .arg-panel small{color:#765126}
+body.arg-body .arg-feedback{color:#65172d}
+body.arg-body .arg-foot{color:#d1bd9c}
+@media(max-width:680px){
+ body:not(.arg-body) .portal-card p,
+ body:not(.arg-body) .subsection p,
+ body:not(.arg-body) .subpanel p{font-size:12px}
+}
