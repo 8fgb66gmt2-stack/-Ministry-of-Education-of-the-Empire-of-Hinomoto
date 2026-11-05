@@ -154,6 +154,7 @@ const records=[
  {title:"中原八雲",desc:"文學者・翻譯家・日ノ本國立帝都女學院央語教諭",url:"institutions.html#academy",keywords:"小泉八雲 ヘルン 央語 怪談 妖怪 神武國"},
  {title:"『教育侖』",desc:"九条院春臣による教育思想の代表的著作",url:"archives.html#education-theory",keywords:"教育論 教育侖 著作 自由 国家 文化継承"},
  {title:"帝國教育史",desc:"教育思想と教育制度の歩み",url:"archives.html#history",keywords:"史料 資料 歴史 教育制度"},
+ {title:"封緘文庫",desc:"教育史料を辿り、三つの鍵を解く探索頁",url:"sealed-folio.html",keywords:"封緘文庫 探索 暗号 書架 封緘 鍵 ARG"},
  {title:"教育人物録",desc:"教育・学術・文化に携わる人々",url:"archives.html#persons",keywords:"人物録 人物 教師 春臣 壱葉 八雲"},
  {title:"刊行物・研究資料",desc:"教育思想・学術・文化継承に關する記録",url:"archives.html#publications",keywords:"刊行物 研究 資料 学術"},
  {title:"告示・公表資料",desc:"教育行政情報・公表文書・統計・刊行物",url:"notices.html",keywords:"告示 統計 公表 通達 行政情報"}
