@@ -147,3 +147,9 @@
 .empire-hunt-trigger:hover,.empire-hunt-trigger:focus-visible,.empire-hunt-trigger.is-found{opacity:1;transform:rotate(45deg);box-shadow:0 0 0 4px #b18a4d22;color:#741b35;outline:none}
 @media(max-width:760px){.atelier-layout{grid-template-columns:1fr}.atelier-astrolabe{width:min(78vw,320px)}.atelier-instrument{gap:12px}.atelier-form{padding:20px}.atelier-result-actions{align-items:stretch;flex-direction:column}.atelier-result-actions a,.atelier-result-actions button{width:100%}}
 @media(prefers-reduced-motion:reduce){.atelier-orbit-a,.atelier-orbit-b{animation:none}.atelier-forge{transition:none}}
+
+/* SEALED FOLIO — persistent progress controls */
+.arg-tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px}
+.arg-tools button{border:0;padding:4px 0;background:transparent;color:#7b5c38;text-decoration:underline;font:inherit;font-size:11px;cursor:pointer}
+.arg-tools button:focus-visible{outline:2px solid #c5a36a;outline-offset:4px}
+.arg-tools span{font-size:10px;color:#80694f}
