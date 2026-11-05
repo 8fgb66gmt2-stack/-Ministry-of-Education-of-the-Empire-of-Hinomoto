@@ -136,6 +136,7 @@ function showQuote(index){
  },140);}
  if(quoteSource)quoteSource.textContent=item.source;
  if(quoteCount)quoteCount.textContent=String(quoteIndex+1).padStart(2,"0")+" / "+String(quotations.length).padStart(2,"0");
+ if(typeof renderBookmarks==="function")renderBookmarks();
 }
 const prevQuote=$("[data-quote-prev]"),nextQuote=$("[data-quote-next]");
 if(prevQuote)prevQuote.addEventListener("click",()=>showQuote(quoteIndex-1));
@@ -295,11 +296,13 @@ $("[data-night-toggle]").forEach(button=>button.addEventListener("click",()=>{
  const enabled=!document.body.classList.contains("night-codex");
  document.body.classList.toggle("night-codex",enabled);
  syncToggle("[data-night-toggle]",enabled,"OFF","ON");
+ $("[data-night-toggle]").forEach(button=>{if(!button.querySelector("span"))button.textContent=enabled?"夜間頁":"燈火";});
 }));
 $("[data-vertical-toggle]").forEach(button=>button.addEventListener("click",()=>{
  const enabled=!document.body.classList.contains("vertical-codex");
  document.body.classList.toggle("vertical-codex",enabled);
  syncToggle("[data-vertical-toggle]",enabled,"横書","縦書");
+ $("[data-vertical-toggle]").forEach(button=>{if(!button.querySelector("span"))button.textContent=enabled?"横書":"縦書";});
 }));
 
 /* Constellation of the educational institutions */
