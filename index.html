@@ -26,7 +26,7 @@
 <a class="skip-link" href="#main">本文へ移動</a>
 <div id="reading-progress" aria-hidden="true"></div>
 <div class="topline"></div>
-<div class="utility"><div class="wrap"><span>THE EMPIRE OF HINOMOTO　／　CENTRAL GOVERNMENT</span><strong>玲瓏百八年　｜　帝國教育廳公式情報網</strong></div></div>
+<div class="utility"><div class="wrap"><span>THE EMPIRE OF HINOMOTO　／　CENTRAL GOVERNMENT</span><strong>玲瓏百八年　｜　帝國教育廳公式情報網</strong><div class="utility-tools"><button type="button" data-night-toggle aria-pressed="false">閲覧燈 <span>ON</span></button><button type="button" data-vertical-toggle aria-pressed="false">縦書き <span>OFF</span></button></div></div></div>
 
 <header class="masthead">
  <div class="wrap masthead-inner">
@@ -56,7 +56,7 @@
    <a href="archives.html">教育史料室</a>
    <a href="notices.html">告示・公表資料</a>
   </div>
-  <button class="nav-index" type="button" data-open-search>総合索引 <kbd>⌘ K</kbd></button>
+  <div class="grand-utility"><button class="ceremony-trigger" type="button" data-open-rite>入場儀典</button><button class="nav-index" type="button" data-open-search>総合索引 <kbd>⌘ K</kbd></button></div>
  </div>
 </nav>
 
@@ -193,12 +193,39 @@
      <button type="button" data-codex="classics" aria-pressed="false"><small>CHAPTER 03</small>古典と近代</button>
      <button type="button" data-codex="future" aria-pressed="false"><small>CHAPTER 04</small>未来を選ぶ</button>
     </div>
-    <div class="codex-turn"><span id="codex-chapter-count">FOLIO 01 / 04</span><button type="button" id="codex-next">次の頁をひらく　→</button></div>
+    <div class="codex-turn"><span id="codex-chapter-count">FOLIO 01 / 04</span><div style="display:flex;gap:7px;align-items:center"><button class="reader-toggle" type="button" data-night-toggle aria-pressed="false">燈火</button><button class="reader-toggle" type="button" data-vertical-toggle aria-pressed="false">縦書</button><button type="button" id="codex-next">次の頁をひらく　→</button></div></div>
    </div>
   </div>
  </div>
 </section>
 
+<section class="dual-archive" id="two-libraries">
+ <div class="wrap">
+  <div class="dual-heading reveal">
+   <small>THE DIALOGUE OF KNOWLEDGE　／　知の対話</small>
+   <h2>古き知と、新しき知。</h2>
+   <p>九条院春臣が大切にしたのは、どちらか一方を選び、もう一方を捨てることではありませんでした。</p>
+  </div>
+  <div class="dual-switch reveal" role="group" aria-label="学問の視点を切り替える">
+   <button type="button" data-dual="classics" aria-pressed="true">古典・漢学</button>
+   <span class="dual-emblem">✧</span>
+   <button type="button" data-dual="modern" aria-pressed="false">近代学問</button>
+   <span class="dual-emblem">✧</span>
+   <button type="button" data-dual="harmony" aria-pressed="false">対話と選択</button>
+  </div>
+  <div class="dual-panes">
+   <article class="dual-pane is-emphasized" id="dual-classics">
+    <small>THE INHERITED WISDOM</small><h3>古典・漢学</h3>
+    <p>先人の言葉、歴史、文学、思想。古典は過去に閉じたものではなく、時代を越えて読み直し、現在を考えるための知の源泉である。</p>
+   </article>
+   <article class="dual-pane" id="dual-modern">
+    <small>THE NEW INQUIRY</small><h3>近代学問</h3>
+    <p>西洋思想・哲学・自然科学・近代教育学。新しい知の体系に向き合い、観察し、比較し、問いを深めることで世界の見方を広げる。</p>
+   </article>
+  </div>
+  <div class="dual-conclusion" id="dual-conclusion" aria-live="polite">古きを知る者こそ、新しきを選ぶことができる。受け継ぐことと選び取ること、その両方に学びの自由がある。</div>
+ </div>
+</section>
 <section class="quote-engine" aria-label="九条院春臣の言葉">
  <div class="wrap quote-engine-inner">
   <div class="kicker">THE WORDS OF KŌJŌIN HARUOMI　／　教育思想</div>
@@ -244,6 +271,26 @@
  </div>
 </section>
 
+<section class="network-constellation" id="institutions-orbit">
+ <div class="wrap">
+  <div class="constellation-heading reveal">
+   <small>THE IMPERIAL NETWORK OF LEARNING　／　學びを結ぶ星図</small>
+   <h2>学びは、人から人へと受け継がれる。</h2>
+   <p>九条院塾から帝國大學へ。教師と学生、学問と文化を結ぶ場所を辿ってみてください。</p>
+  </div>
+  <div class="institution-orbit reveal" aria-label="教育機關と学びの系譜">
+   <button class="orbit-node one" type="button" data-orbit="juku" aria-pressed="true"><small>PRIVATE ACADEMY</small><strong>九条院塾</strong><span>春臣の私塾</span></button>
+   <button class="orbit-node two" type="button" data-orbit="university" aria-pressed="false"><small>HIGHER EDUCATION</small><strong>帝國大學</strong><span>學問ノ府、文化ノ源流</span></button>
+   <div class="orbit-core"><div><strong>學</strong><small>THE IMPERIAL LEARNING</small></div></div>
+   <button class="orbit-node three" type="button" data-orbit="academy" aria-pressed="false"><small>GIRLS' ACADEMY</small><strong>帝都女學院</strong><span>壱葉・八雲が教壇に立つ</span></button>
+   <button class="orbit-node four" type="button" data-orbit="ministry" aria-pressed="false"><small>PUBLIC EDUCATION</small><strong>帝國教育廳</strong><span>教育行政と文化継承</span></button>
+  </div>
+  <div class="orbit-detail reveal" aria-live="polite">
+   <div><small id="orbit-label">PRIVATE ACADEMY　／　01</small><h3 id="orbit-title">九条院塾</h3></div>
+   <p id="orbit-description">九条院春臣が開いた私塾。春臣は塾生たちと学問を共にし、問いを持つことや、自ら考えることを大切にした。中原壱葉もかつてこの塾で学んだ。</p>
+  </div>
+ </div>
+</section>
 <section class="section" id="directory">
  <div class="wrap">
   <div class="section-heading reveal"><div><div class="kicker">05　/　QUICK DIRECTORY</div><h2>目的から探す。</h2></div><p>学びの目的に沿って、教育行政・教育機關・思想と史料の入口を辿れます。</p></div>
@@ -313,6 +360,17 @@
  </div>
  <div class="wrap footer-bottom"><span>© THE EMPIRE OF HINOMOTO　／　IMPERIAL MINISTRY OF EDUCATION</span><a href="#top">PAGE TOP　↑</a></div>
 </footer>
+<dialog class="rite-dialog" id="rite-dialog" aria-labelledby="rite-title">
+ <button class="rite-close" type="button" data-rite-close aria-label="儀典を閉じる">×</button>
+ <div class="rite-scene"><div class="rite-content">
+  <div class="rite-emblem"><img src="education-rose-window.svg" alt="" style="width:100%;display:block"></div>
+  <div class="rite-overline">THE IMPERIAL MINISTRY OF EDUCATION</div>
+  <h2 id="rite-title">學びの門を、ひらく。</h2>
+  <p>知を敬い、問いを愛し、文化を未来へ。<br>日ノ本帝國教育廳の扉へ、ようこそ。</p>
+  <div class="rite-rule"></div>
+  <button class="rite-enter" type="button" data-rite-enter>入場する　／　ENTER</button>
+ </div></div>
+</dialog>
 <dialog class="command-dialog" id="command-dialog" aria-labelledby="command-title">
  <div class="command-top"><button class="command-close" type="button" data-command-close aria-label="索引を閉じる">×</button><small>THE IMPERIAL KNOWLEDGE INDEX</small><h2 id="command-title">帝國教育廳　総合索引</h2>
   <form class="command-search" id="command-search-form"><label class="sr-only" for="command-search-input">検索語</label><input id="command-search-input" type="search" placeholder="人物・學校・思想・著作を検索" autocomplete="off"><button type="submit">探す</button></form>
@@ -320,6 +378,6 @@
  </div>
  <div class="command-results"><div class="command-results-head"><strong id="command-count">主要項目</strong><span>EDUCATION / ARCHIVE / PEOPLE</span></div><div class="command-results-list" id="command-results-list"></div></div>
 </dialog>
-<script src="education.js?v=20261105-5" defer></script>
+<script src="education.js?v=20261105-6" defer></script>
 </body>
 </html>
