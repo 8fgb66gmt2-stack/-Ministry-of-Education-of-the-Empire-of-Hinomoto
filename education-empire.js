@@ -32,7 +32,8 @@ const safeWrite=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value)
 let state=safeRead(STORE,{journey:"thinker",visited:[]});
 if(!state||typeof state!=="object")state={journey:"thinker",visited:[]};
 if(!Array.isArray(state.visited))state.visited=[];
-if(!state.visited.includes(page)){state.visited.push(page);safeWrite(STORE,state)}
+const currentVisit=page+(location.hash||"");
+if(!state.visited.includes(currentVisit)){state.visited.push(currentVisit);safeWrite(STORE,state)}
 let collected=safeRead(HUNT,[]);
 if(!Array.isArray(collected))collected=[];
 const root=document.createElement("div");
@@ -97,7 +98,7 @@ function renderJourney(key){
 function renderLedger(key){
  const journey=journeys[key]||journeys.thinker;
  const names=journey.steps.map(href=>href.split("#")[0]);
- const done=names.map(name=>state.visited.includes(name));
+ const done=journey.steps.map(href=>state.visited.includes(href));
  const count=done.filter(Boolean).length;
  ledger.querySelector("#empire-ledger-route").textContent=journey.label;
  ledger.querySelector("#empire-ledger-count").textContent=count+" / 3";
@@ -113,6 +114,7 @@ function renderLedger(key){
   a.append(strong,small);li.append(mark,a);list.appendChild(li);
  });
 }
+window.addEventListener("hashchange",()=>{const current=(location.pathname.split("/").pop()||"index.html")+(location.hash||"");if(!state.visited.includes(current)){state.visited.push(current);safeWrite(STORE,state)}renderLedger(state.journey||"thinker")});
 root.querySelectorAll("[data-empire-journey]").forEach(button=>button.addEventListener("click",()=>renderJourney(button.dataset.empireJourney)));
 function open(){renderLedger(state.journey||"thinker");if(typeof dialog.showModal==="function")dialog.showModal();else dialog.setAttribute("open","");}
 function close(){if(typeof dialog.close==="function"&&dialog.open)dialog.close();else dialog.removeAttribute("open")}
