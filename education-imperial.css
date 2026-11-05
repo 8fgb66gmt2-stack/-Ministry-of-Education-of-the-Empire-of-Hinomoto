@@ -321,3 +321,40 @@ body:not(.arg-body) main .atlas-detail .detail-quote{
   font-weight:600 !important;
   opacity:1 !important;
 }
+
+
+/* FINAL OVERRIDE: selected knowledge-field panel */
+html body .atlas-detail#imperial-astrarium-detail {
+  background: #fffaf0 !important;
+  color: #241820 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+html body .atlas-detail#imperial-astrarium-detail #atlas-kicker,
+html body .atlas-detail#imperial-astrarium-detail #atlas-position,
+html body .atlas-detail#imperial-astrarium-detail .detail-index,
+html body .atlas-detail#imperial-astrarium-detail .atlas-hint {
+  color: #49343a !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+html body .atlas-detail#imperial-astrarium-detail #atlas-title {
+  color: #321321 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+html body .atlas-detail#imperial-astrarium-detail #atlas-description {
+  color: #241820 !important;
+  opacity: 1 !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 2.15 !important;
+  filter: none !important;
+}
+html body .atlas-detail#imperial-astrarium-detail #atlas-quote {
+  color: #64172e !important;
+  opacity: 1 !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  filter: none !important;
+}
