@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://8fgb66gmt2-stack.github.io/-Ministry-of-Education-of-the-Empire-of-Hinomoto/sitemap.xml
