@@ -19,6 +19,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="education.css?v=20261105-5">
 <link rel="stylesheet" href="education-rococo.css?v=20261105-1">
+<link rel="stylesheet" href="education-eidolon.css?v=20261105-1"">
 <title>帝國教育廳｜日ノ本帝國 公式情報網</title>
 </head>
 <body>
@@ -55,6 +56,7 @@
    <a href="archives.html">教育史料室</a>
    <a href="notices.html">告示・公表資料</a>
   </div>
+  <button class="nav-index" type="button" data-open-search>総合索引 <kbd>⌘ K</kbd></button>
  </div>
 </nav>
 
@@ -124,7 +126,48 @@
  </div>
 </section>
 
-<section class="quote-band"><div class="wrap"><blockquote>「人を作るのが教育ではありません。<br>その人が、自分自身になれるようにすることが教育です。」</blockquote><cite>— 九条院 春臣　／　教育思想</cite></div></section>
+<section class="knowledge-atlas" id="atlas">
+ <div class="wrap">
+  <div class="atlas-heading reveal">
+   <div class="kicker">THE CONSTELLATION OF KNOWLEDGE　／　知の星図</div>
+   <h2>ひとつの問いから、世界はひらく。</h2>
+   <p>九条院春臣が学び、思索を深めた知の領域。星を選ぶように、ひとつずつ辿ってみてください。</p>
+  </div>
+  <div class="atlas-layout">
+   <div class="atlas-map reveal" id="knowledge-map" aria-label="九条院春臣の学問的関心を示す知の星図">
+    <div class="atlas-orbit" aria-hidden="true"></div><div class="atlas-crosshair" aria-hidden="true"></div>
+    <div class="atlas-core"><div><div class="core-symbol">春</div><small>THE SEEKER</small></div></div>
+    <button class="atlas-node n1" type="button" data-study="classics" aria-pressed="true"><small>01 / TEXTS</small><strong>古典・漢学</strong></button>
+    <button class="atlas-node n2" type="button" data-study="history" aria-pressed="false"><small>02 / MEMORY</small><strong>歴史・文学</strong></button>
+    <button class="atlas-node n3" type="button" data-study="western" aria-pressed="false"><small>03 / THOUGHT</small><strong>西洋思想・哲学</strong></button>
+    <button class="atlas-node n4" type="button" data-study="science" aria-pressed="false"><small>04 / NATURE</small><strong>自然科学</strong></button>
+    <button class="atlas-node n5" type="button" data-study="education" aria-pressed="false"><small>05 / PEDAGOGY</small><strong>近代教育学</strong></button>
+    <button class="atlas-node n6" type="button" data-study="arts" aria-pressed="false"><small>06 / AESTHETICS</small><strong>美術・美意識</strong></button>
+   </div>
+   <article class="atlas-detail reveal" aria-live="polite">
+    <div class="detail-kicker" id="atlas-kicker">01　/　TEXTS & CLASSICS</div>
+    <h3 id="atlas-title">古典・漢学</h3>
+    <p id="atlas-description">春臣は幼少期から古典・漢学に親しみ、先人たちが遺した言葉と思想を学んだ。古典を絶対視するのではなく、時代を越えて読み直し、自ら考えるための礎として向き合っている。</p>
+    <div class="detail-quote" id="atlas-quote">「古きを知る者こそ、新しきを選ぶことができる。」</div>
+    <div class="detail-index"><span>SELECTED FIELD</span><span id="atlas-position">01　／　06</span></div>
+    <div class="atlas-hint">星を選択すると、解説が切り替わります。</div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="quote-engine" aria-label="九条院春臣の言葉">
+ <div class="wrap quote-engine-inner">
+  <div class="kicker">THE WORDS OF KŌJŌIN HARUOMI　／　教育思想</div>
+  <blockquote id="quote-text" aria-live="polite">「人を作るのが教育ではありません。その人が、自分自身になれるようにすることが教育です。」</blockquote>
+  <cite id="quote-source">— 九条院 春臣</cite>
+  <div class="quote-controls">
+   <button type="button" data-quote-prev aria-label="前の言葉">‹</button>
+   <span class="quote-count" id="quote-count">01 / 06</span>
+   <button type="button" data-quote-next aria-label="次の言葉">›</button>
+  </div>
+ </div>
+</section>
 
 <section class="section" id="director">
  <div class="wrap profile-grid">
@@ -160,7 +203,7 @@
 
 <section class="section" id="directory">
  <div class="wrap">
-  <div class="section-heading reveal"><div><div class="kicker">05　/　QUICK DIRECTORY</div><h2>目的から探す。</h2></div><p>分類を選ぶと、関連する案内だけを表示します。項目の追加に合わせて索引も拡張できます。</p></div>
+  <div class="section-heading reveal"><div><div class="kicker">05　/　QUICK DIRECTORY</div><h2>目的から探す。</h2></div><p>学びの目的に沿って、教育行政・教育機關・思想と史料の入口を辿れます。</p></div>
   <div class="directory-layout">
    <div class="directory-intro reveal"><div class="roman">THE LEARNING INDEX</div><h3>學びの入口を、<br>迷わずに。</h3><p>教育制度や機關を知りたい方、教育思想を読みたい方、史料を探したい方。それぞれの目的に合わせた入口を用意しました。</p></div>
    <div class="directory-controls reveal">
@@ -206,7 +249,7 @@
     <div class="board-row"><time>告示・通達</time><p>教育廳からの告示・公表文書を確認できる形で収録します。</p></div>
     <div class="board-row"><time>刊行物</time><p>教育に關する刊行物・研究資料の案内を整備します。</p></div>
    </div>
-   <aside class="board-aside reveal"><div class="roman">EDITORIAL PRINCIPLE</div><h3>正史と未詳を、<br>混同しない。</h3><p>未確認の制度・年代・統計値をもっともらしい数字で埋めず、確認できた記録と未詳の事項を分けて公開します。これは教育史料室および本廳サイト全体の編集方針です。</p><a class="back-link" href="notices.html">公表資料の編集方針を読む　→</a></aside>
+   <aside class="board-aside reveal"><div class="roman">EDITORIAL PRINCIPLE</div><h3>知を受け継ぎ、<br>次の時代へ。</h3><p>古典に宿る先人の思索も、新しい学問がひらく未知の世界も、学ぶ者の手に渡ってこそ生き続けます。帝國教育廳は、学問と文化を次代へつなぐ道をひらきます。</p><a class="back-link" href="notices.html">公表資料の編集方針を読む　→</a></aside>
   </div>
  </div>
 </section>
