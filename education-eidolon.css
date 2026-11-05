@@ -279,3 +279,17 @@ body.vertical-codex .codex-page-content{height:100%}
 .rite-emblem img{pointer-events:none}
 @media(max-width:720px){.pilgrimage{padding:60px 0}.pilgrimage-route{grid-template-columns:1fr;gap:10px}.pilgrimage-route:before{left:17px;top:25px;bottom:25px;width:1px;height:auto}.pilgrimage-step{min-height:0;padding:17px 18px 17px 62px}.pilgrimage-step .step-number{position:absolute;left:14px;top:16px}.pilgrimage-tabs button{min-width:0;flex:1 1 30%}}
 @media(prefers-reduced-motion:reduce){.pilgrimage-step{animation:none}.rite-emblem{transition:none}}
+
+
+@media(max-width:680px){
+ .nav-inner{gap:7px}
+ .grand-utility{gap:5px;flex:none}
+ .grand-utility .nav-index{width:auto;margin:0;padding:7px 8px;font-size:8px}
+ .grand-utility .nav-index kbd{margin-left:3px}
+ .grand-utility .ceremony-trigger{padding:7px 8px;font-size:8px;letter-spacing:.08em}
+}
+@media(max-width:390px){
+ .grand-utility .ceremony-trigger{font-size:0;gap:0}
+ .grand-utility .ceremony-trigger:before{font-size:15px}
+ .grand-utility .nav-index{font-size:8px}
+}
