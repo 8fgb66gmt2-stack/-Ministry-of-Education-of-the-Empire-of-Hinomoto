@@ -99,3 +99,62 @@
  .hero h1,.hero-subtitle,.hero-copy>p,.hero-buttons{animation:none!important}
  .atlas-orbit:before,.atlas-orbit:after{animation:none!important}
 }
+
+
+/* THE LIVING CODEX / tactile reading chamber */
+.codex-gallery{position:relative;overflow:hidden;padding:92px 0;background:
+ radial-gradient(ellipse at 15% 60%,rgba(165,81,96,.21),transparent 40%),
+ radial-gradient(ellipse at 100% 0,rgba(178,139,78,.13),transparent 35%),
+ linear-gradient(125deg,#211019,#421321 52%,#25121b);color:#f4ead8;border-block:5px double #ad874e}
+.codex-gallery:before,.codex-gallery:after{content:"";position:absolute;pointer-events:none;inset:12px;border:1px solid rgba(221,190,129,.16)}
+.codex-gallery:after{inset:20px;border:1px solid rgba(221,190,129,.07)}
+.codex-heading{position:relative;z-index:1;text-align:center;margin-bottom:40px}
+.codex-heading .kicker{font:italic 11px var(--roman);letter-spacing:.25em;color:#dec18c}
+.codex-heading h2{font-size:clamp(27px,3.6vw,41px);font-weight:500;letter-spacing:.17em;color:#fff1dc;margin:10px 0}
+.codex-heading p{max-width:680px;margin:0 auto;color:#cdbca2;font-size:11px;line-height:2.1}
+.codex-layout{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
+.codex-stage{perspective:1800px;padding:20px 4px}
+.codex-book{position:relative;display:grid;grid-template-columns:1fr 1fr;width:100%;min-height:365px;transform-style:preserve-3d;filter:drop-shadow(0 24px 26px rgba(0,0,0,.3));transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.codex-book:hover{transform:rotateX(1deg) rotateY(-2deg) translateY(-3px)}
+.codex-cover-page,.codex-open-page{position:relative;min-height:365px;overflow:hidden}
+.codex-cover-page{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:
+ radial-gradient(circle at 50% 45%,rgba(182,128,78,.2),transparent 55%),
+ repeating-linear-gradient(45deg,rgba(221,190,129,.04) 0 1px,transparent 1px 6px),
+ linear-gradient(145deg,#7b253e,#3c111f 70%);border:1px solid #c4a16a;box-shadow:inset 0 0 0 8px rgba(224,195,139,.05),inset 0 0 0 10px rgba(224,195,139,.14)}
+.codex-cover-page:before{content:"";position:absolute;inset:15px;border:1px solid rgba(230,205,154,.6);outline:1px solid rgba(230,205,154,.17);outline-offset:5px}
+.codex-cover-page:after{content:"❧";position:absolute;top:24px;font:38px var(--roman);color:rgba(230,205,154,.52)}
+.codex-cover-seal{width:86px;height:86px;border:3px double #e0c996;border-radius:50%;display:grid;place-items:center;color:#f0dfbd;font-size:39px;box-shadow:0 0 0 7px rgba(224,201,150,.07),0 0 36px rgba(224,201,150,.12);margin-bottom:24px}
+.codex-cover-page h3{font-size:28px;font-weight:500;letter-spacing:.28em;color:#fff1dc;margin:0 0 8px}
+.codex-cover-page p{font:italic 11px var(--roman);letter-spacing:.2em;color:#dfc590;margin:0}
+.codex-cover-page small{position:absolute;bottom:31px;font:9px var(--roman);letter-spacing:.18em;color:#d1b27a}
+.codex-open-page{padding:34px 29px 27px;background:
+ radial-gradient(ellipse at 50% 0,rgba(255,255,255,.8),transparent 45%),
+ repeating-linear-gradient(0deg,rgba(108,78,42,.025) 0 1px,transparent 1px 5px),
+ linear-gradient(90deg,#dfd0b2,#f5ecd9 7%,#f9f1e2 100%);
+ color:#42322d;border:1px solid #b69660;box-shadow:inset 8px 0 18px rgba(71,44,28,.12)}
+.codex-open-page:before{content:"";position:absolute;inset:12px;border:1px solid rgba(169,128,69,.28);pointer-events:none}
+.codex-open-page:after{content:"";position:absolute;left:0;top:0;bottom:0;width:12px;background:linear-gradient(90deg,rgba(80,45,30,.14),transparent)}
+.codex-page-content{position:relative;z-index:1;transition:opacity .2s,transform .2s}
+.codex-page-content.turning{opacity:0;transform:translateX(12px)}
+.codex-page-kicker{font:italic 10px var(--roman);letter-spacing:.17em;color:#9a7344}
+.codex-open-page h3{font-size:19px;letter-spacing:.12em;font-weight:500;color:#661c31;margin:14px 0 13px;line-height:1.6}
+.codex-open-page p{font-size:10px;line-height:2.15;color:#695a49}
+.codex-page-quote{margin-top:18px;padding:12px 0 0;border-top:1px solid rgba(153,112,59,.4);font-size:11px;line-height:2;color:#741b31}
+.codex-page-number{position:absolute;right:24px;bottom:17px;font:italic 10px var(--roman);color:#96764b;letter-spacing:.13em}
+.codex-reader{padding:26px 25px;background:linear-gradient(145deg,rgba(255,249,236,.09),rgba(255,249,236,.025));border:1px solid rgba(224,195,139,.42);box-shadow:inset 0 0 0 6px rgba(224,195,139,.035)}
+.codex-reader .reader-kicker{font:italic 11px var(--roman);letter-spacing:.2em;color:#dfc28d}
+.codex-reader h3{font-size:24px;font-weight:500;letter-spacing:.13em;color:#fff1dc;margin:10px 0}
+.codex-reader p{font-size:11px;line-height:2.15;color:#d3c1a5}
+.codex-chapters{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:22px}
+.codex-chapters button{border:1px solid rgba(224,195,139,.35);background:rgba(255,248,232,.035);color:#ead9bb;padding:10px 11px;text-align:left;font-size:10px;letter-spacing:.09em;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.codex-chapters button small{display:block;font:italic 10px var(--roman);color:#d4b57d;margin-bottom:3px}
+.codex-chapters button:hover,.codex-chapters button[aria-pressed=true]{background:linear-gradient(135deg,#c8a46b,#9c7541);border-color:#ead3a0;color:#2e111d;transform:translateY(-2px)}
+.codex-chapters button:hover small,.codex-chapters button[aria-pressed=true] small{color:#4b1728}
+.codex-turn{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:17px;padding-top:13px;border-top:1px solid rgba(224,195,139,.2)}
+.codex-turn span{font:italic 10px var(--roman);letter-spacing:.15em;color:#c1ab83}
+.codex-turn button{border:1px solid rgba(224,195,139,.52);background:transparent;color:#f1dfbf;padding:7px 12px;font-size:10px;cursor:pointer}
+.codex-turn button:hover{background:#e0c18b;color:#32121e}
+@media(max-width:900px){.codex-layout{grid-template-columns:1fr;gap:24px}.codex-stage{max-width:650px;width:100%;margin:auto}.codex-reader{max-width:650px;width:100%;margin:auto}}
+@media(max-width:680px){.codex-gallery{padding:62px 0}.codex-heading{margin-bottom:25px}.codex-book{min-height:300px}.codex-cover-page,.codex-open-page{min-height:300px}.codex-cover-seal{width:58px;height:58px;font-size:27px;margin-bottom:15px}.codex-cover-page h3{font-size:20px}.codex-cover-page p{font-size:9px}.codex-cover-page small{font-size:7px;bottom:22px}.codex-open-page{padding:24px 17px 24px}.codex-open-page h3{font-size:15px;margin:9px 0}.codex-open-page p{font-size:9px}.codex-page-quote{font-size:9px;margin-top:10px}.codex-page-number{right:15px;bottom:12px}.codex-reader{padding:22px 18px}.codex-reader h3{font-size:20px}.codex-chapters button{padding:9px 8px;font-size:9px}}
+@media(max-width:380px){.codex-book{grid-template-columns:.88fr 1.12fr}.codex-open-page{padding-inline:13px}.codex-cover-page h3{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.codex-book,.codex-page-content,.codex-chapters button{transition:none}}
