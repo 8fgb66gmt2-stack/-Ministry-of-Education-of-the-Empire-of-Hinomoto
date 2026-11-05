@@ -46,6 +46,7 @@ root.querySelector(".empire-dialog-body").appendChild(ledger);
 const NOTE_KEY="hinomoto-imperial-scholar-notebook-v1";
 const noteField=ledger.querySelector("#empire-notebook-text");
 const noteStatus=ledger.querySelector("#empire-notebook-status");
+window.addEventListener("imperial:notebook:update",event=>{if(typeof event.detail?.value==="string"){noteField.value=event.detail.value;noteStatus.textContent="問いの錬成室から記録を受け取りました。"}});
 try{noteField.value=localStorage.getItem(NOTE_KEY)||""}catch(_){}
 ledger.querySelector("#empire-notebook-save").addEventListener("click",()=>{
  try{localStorage.setItem(NOTE_KEY,noteField.value);noteStatus.textContent="記録をこの端末に保存しました。";toast("學問手帖に記録を収めた。")}
