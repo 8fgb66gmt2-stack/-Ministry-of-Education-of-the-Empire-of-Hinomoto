@@ -57,7 +57,10 @@ function installCabinet(){
  const trigger=document.createElement("button");trigger.type="button";trigger.className="dock-main";trigger.textContent="學";trigger.setAttribute("aria-label","帝國教育廳・閲覧書架をひらく");trigger.title="閲覧書架";
  const dialog=document.createElement("dialog");dialog.className="renaissance-dialog";dialog.id="renaissance-dialog";
  dialog.innerHTML='<div class="renaissance-dialog-head"><button class="renaissance-dialog-close" type="button" aria-label="閉じる">×</button><small>THE IMPERIAL READING CABINET</small><h2>帝國教育廳　閲覧書架</h2></div><div class="renaissance-dialog-body"><div class="renaissance-status"><div class="renaissance-stat"><strong id="renaissance-fragments">0 / 03</strong><span>星章の蒐集</span></div><div class="renaissance-stat"><strong id="renaissance-pages">0 / 06</strong><span>頁の巡覧</span></div></div><nav class="renaissance-links" aria-label="閲覧書架"><a href="index.html"><strong>首頁</strong><small>THE PORTAL</small></a><a href="about.html"><strong>教育廳について</strong><small>THE MINISTRY</small></a><a href="institutions.html"><strong>教育機關案内</strong><small>INSTITUTIONS</small></a><a href="archives.html"><strong>教育史料室</strong><small>ARCHIVES</small></a><a href="notices.html"><strong>告示・公表資料</strong><small>PUBLIC RECORDS</small></a><a href="sealed-folio.html"><strong>封緘文庫</strong><small>THE SEALED FOLIO</small></a></nav><div class="renaissance-clue">頁のあいだには、三つの星章が隠されている。各頁を読み、星章を見つけて収めよ。三つ揃えば、もう一つの頁がひらかれる。<br><a id="renaissance-secret" href="marginalia.html" hidden>余白の書をひらく　✧</a></div></div>';
- dock.appendChild(trigger);document.body.append(dock,dialog);
+ const lantern=document.createElement("button");lantern.type="button";lantern.className="renaissance-lantern-toggle";lantern.textContent="燈火";lantern.setAttribute("aria-label","燈火の閲覧モードを切り替える");lantern.setAttribute("aria-pressed","false");lantern.title="燈火の閲覧モード";
+ dock.append(trigger,lantern);document.body.append(dock,dialog);
+ lantern.addEventListener("click",()=>{const on=document.body.classList.toggle("lantern-reading");lantern.setAttribute("aria-pressed",String(on));safeWrite("hinomoto-education-lantern-v1",on);toast(on?"燈火をともした。":"燈火を静めた。")});
+ const savedLantern=safeRead("hinomoto-education-lantern-v1",false);document.body.classList.toggle("lantern-reading",!!savedLantern);lantern.setAttribute("aria-pressed",String(!!savedLantern));
  trigger.addEventListener("click",()=>{renderCabinet();openDialog(dialog)});
  $(".renaissance-dialog-close",dialog).addEventListener("click",()=>closeDialog(dialog));
  dialog.addEventListener("click",e=>{if(e.target===dialog)closeDialog(dialog)});
@@ -72,6 +75,28 @@ function installTransitions(){
   const url=new URL(a.href,location.href);
   if(url.origin!==location.origin||!url.pathname.endsWith(".html")||url.pathname===location.pathname||url.hash)return;
   event.preventDefault();veil.classList.add("is-active");window.setTimeout(()=>location.href=url.href,330);
+ });
+}
+function installProgressRail(){
+ const rail=document.createElement("div");rail.className="renaissance-progress";rail.setAttribute("aria-hidden","true");
+ const fill=document.createElement("span");rail.appendChild(fill);document.body.appendChild(rail);
+ let pending=false;
+ const update=()=>{const max=document.documentElement.scrollHeight-window.innerHeight;const value=max>0?Math.min(100,Math.max(0,window.scrollY/max*100)):0;fill.style.transform="scaleX("+(value/100)+")";pending=false};
+ const request=()=>{if(!pending){pending=true;window.requestAnimationFrame(update)}};
+ window.addEventListener("scroll",request,{passive:true});window.addEventListener("resize",request);update();
+}
+function installPetalRitual(){
+ document.addEventListener("click",event=>{
+  if(event.target.closest("input,textarea,select,option"))return;
+  const x=event.clientX||window.innerWidth/2,y=event.clientY||window.innerHeight/2;
+  for(let i=0;i<7;i++){
+   const petal=document.createElement("i");petal.className="renaissance-petal";petal.setAttribute("aria-hidden","true");
+   const angle=(Math.PI*2*i/7)+(Math.random()-.5)*.45,distance=28+Math.random()*54;
+   petal.style.left=x+"px";petal.style.top=y+"px";
+   petal.style.setProperty("--petal-x",Math.cos(angle)*distance+"px");petal.style.setProperty("--petal-y",Math.sin(angle)*distance+"px");
+   petal.style.setProperty("--petal-turn",(Math.random()*170-85)+"deg");
+   document.body.appendChild(petal);window.setTimeout(()=>petal.remove(),1450);
+  }
  });
 }
 function installMarginaliaPuzzle(){
@@ -89,6 +114,8 @@ function installMarginaliaPuzzle(){
 }
 installMarks();
 installCabinet();
+installProgressRail();
+installPetalRitual();
 installTransitions();
 installMarginaliaPuzzle();
 })();
