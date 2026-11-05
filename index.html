@@ -226,11 +226,33 @@
   <div class="dual-conclusion" id="dual-conclusion" aria-live="polite">古きを知る者こそ、新しきを選ぶことができる。受け継ぐことと選び取ること、その両方に学びの自由がある。</div>
  </div>
 </section>
+<section class="pilgrimage" id="pilgrimage">
+ <div class="wrap">
+  <div class="pilgrimage-heading reveal">
+   <small>THE PILGRIMAGE OF KNOWLEDGE　／　知の巡礼</small>
+   <h2>あなたの知的探訪を、ここから。</h2>
+   <p>関心に合わせて、教育廳の頁を巡る道筋をご案内します。</p>
+  </div>
+  <div class="pilgrimage-tabs reveal" role="group" aria-label="閲覧の目的">
+   <button type="button" data-route="thinker" aria-pressed="true">思想を深める</button>
+   <button type="button" data-route="teacher" aria-pressed="false">教えることを知る</button>
+   <button type="button" data-route="culture" aria-pressed="false">文化を辿る</button>
+  </div>
+  <div class="pilgrimage-route" id="pilgrimage-route" aria-live="polite">
+   <article class="pilgrimage-step"><div class="step-number">Ⅰ</div><small>FIRST GATE</small><h3>教育理念</h3><p>九条院春臣が大切にした、学びと自由の思想にふれる。</p><a href="about.html#philosophy">理念を読む　→</a></article>
+   <article class="pilgrimage-step"><div class="step-number">Ⅱ</div><small>SECOND GATE</small><h3>『教育侖』</h3><p>教育と自由、教師と学生、古典と近代を読み解く。</p><a href="archives.html#education-theory">書をひらく　→</a></article>
+   <article class="pilgrimage-step"><div class="step-number">Ⅲ</div><small>THIRD GATE</small><h3>知の星図</h3><p>春臣の学問的関心を六つの領域から辿る。</p><a href="#atlas">星図を巡る　→</a></article>
+  </div>
+  <div class="pilgrimage-summary" id="pilgrimage-summary">A PATH OF INQUIRY　／　問いを深める道</div>
+ </div>
+</section>
+
 <section class="quote-engine" aria-label="九条院春臣の言葉">
  <div class="wrap quote-engine-inner">
   <div class="kicker">THE WORDS OF KŌJŌIN HARUOMI　／　教育思想</div>
   <blockquote id="quote-text" aria-live="polite">「人を作るのが教育ではありません。その人が、自分自身になれるようにすることが教育です。」</blockquote>
   <cite id="quote-source">— 九条院 春臣</cite>
+  <div class="quote-save-row"><button type="button" id="save-quote" aria-pressed="false">この言葉を栞にする　✧</button><button type="button" id="open-bookmarks">栞の書架をひらく　／　0</button></div>
   <div class="quote-controls">
    <button type="button" data-quote-prev aria-label="前の言葉">‹</button>
    <span class="quote-count" id="quote-count">01 / 06</span>
@@ -360,6 +382,10 @@
  </div>
  <div class="wrap footer-bottom"><span>© THE EMPIRE OF HINOMOTO　／　IMPERIAL MINISTRY OF EDUCATION</span><a href="#top">PAGE TOP　↑</a></div>
 </footer>
+<dialog class="bookmark-dialog" id="bookmark-dialog" aria-labelledby="bookmark-title">
+ <div class="bookmark-head"><strong id="bookmark-title">栞の書架　／　MY FOLIO</strong><button type="button" id="bookmark-close" aria-label="閉じる">×</button></div>
+ <div class="bookmark-list" id="bookmark-list" aria-live="polite"><p class="bookmark-empty">まだ栞はありません。心に残った言葉を、ここへ収めてください。</p></div>
+</dialog>
 <dialog class="rite-dialog" id="rite-dialog" aria-labelledby="rite-title">
  <button class="rite-close" type="button" data-rite-close aria-label="儀典を閉じる">×</button>
  <div class="rite-scene"><div class="rite-content">
@@ -378,6 +404,6 @@
  </div>
  <div class="command-results"><div class="command-results-head"><strong id="command-count">主要項目</strong><span>EDUCATION / ARCHIVE / PEOPLE</span></div><div class="command-results-list" id="command-results-list"></div></div>
 </dialog>
-<script src="education.js?v=20261105-6" defer></script>
+<script src="education.js?v=20261105-7" defer></script>
 </body>
 </html>
