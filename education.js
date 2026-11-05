@@ -229,4 +229,37 @@ document.addEventListener("keydown",event=>{
   event.preventDefault();openCommand();
  }else if(event.key==="Escape"&&command?.open)closeCommand();
 });
+
+/* Living Codex: select and turn through four chapters */
+const codexChapters=[
+ {key:"freedom",folio:"FOLIO Ⅰ　／　FREEDOM",title:"教育と自由",reader:"教育を、他者を理想の形へ作り替えるための技術にしない。学ぶ者が自ら考え、自身の人生を選択するための力を育む。",page:"教育は、国家に都合のよい人間を製造するための制度ではない。人が自ら考え、自分の人生を選び取るための営みである。",quote:"「その人が、自分自身になれるようにすることが教育です。」"},
+ {key:"teacher",folio:"FOLIO Ⅱ　／　TEACHER & STUDENT",title:"教師と学生",reader:"教師と学生の間にあるのは、身分の上下ではない。教師は少し先に学んだ者として、学生の問いに向き合い、ともに考える。",page:"教師が生徒より偉いのではありません。教師は少し先に勉強しただけです。問いを持つことを恐れず、互いに学ぶことを大切にする。",quote:"「君はどう思うのです？」"},
+ {key:"classics",folio:"FOLIO Ⅲ　／　CLASSICS & MODERNITY",title:"古典と近代",reader:"古典を絶対視せず、新しい思想を無条件に正しいともしない。先人の知を学び、近代の学問と照らし合わせ、自ら選び取る。",page:"古いものを捨てて新しいものを取るのではない。古きを知る者こそ、新しきを選ぶことができる。",quote:"「古きを知る者こそ、新しきを選ぶことができる。」"},
+ {key:"future",folio:"FOLIO Ⅳ　／　THE FUTURE",title:"未来を選ぶ",reader:"教育が未来の形を決めるのではない。学びを受け取った者が、自らの意思で未来を選び、その時代を生きていく。",page:"未来を決めるのは、未来を生きる人間自身でしょう。学びは、その選択を支えるためにある。",quote:"「未来を決めるのは、未来を生きる人間自身でしょう。」"}
+];
+let codexIndex=0;
+const codexButtons=$("[data-codex]");
+const codexContent=$("#codex-page-content"),codexKicker=$("#codex-page-kicker"),codexPageTitle=$("#codex-page-title"),codexPageText=$("#codex-page-text"),codexPageQuote=$("#codex-page-quote"),codexPageNumber=$("#codex-page-number"),codexReaderTitle=$("#codex-reader-title"),codexReaderText=$("#codex-reader-text"),codexChapterCount=$("#codex-chapter-count");
+function selectCodex(index){
+ codexIndex=(index+codexChapters.length)%codexChapters.length;
+ const chapter=codexChapters[codexIndex];
+ codexButtons.forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.codex===chapter.key)));
+ if(codexContent){
+  codexContent.classList.add("turning");
+  window.setTimeout(()=>{
+   if(codexKicker)codexKicker.textContent=chapter.folio;
+   if(codexPageTitle)codexPageTitle.textContent=chapter.title;
+   if(codexPageText)codexPageText.textContent=chapter.page;
+   if(codexPageQuote)codexPageQuote.textContent=chapter.quote;
+   codexContent.classList.remove("turning");
+  },150);
+ }
+ if(codexPageNumber)codexPageNumber.textContent=String(codexIndex+1).padStart(2,"0")+"　／　04";
+ if(codexReaderTitle)codexReaderTitle.textContent=chapter.title;
+ if(codexReaderText)codexReaderText.textContent=chapter.reader;
+ if(codexChapterCount)codexChapterCount.textContent="FOLIO "+String(codexIndex+1).padStart(2,"0")+" / 04";
+}
+codexButtons.forEach(button=>button.addEventListener("click",()=>selectCodex(codexChapters.findIndex(chapter=>chapter.key===button.dataset.codex))));
+const codexNext=$("#codex-next");if(codexNext)codexNext.addEventListener("click",()=>selectCodex(codexIndex+1));
+
 })();
