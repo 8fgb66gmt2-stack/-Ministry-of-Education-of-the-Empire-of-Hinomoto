@@ -1,0 +1,67 @@
+/* IMPERIAL LUMINOUS CODEX — 玲瓏浪漫の追加意匠 */
+:root{--emp-wine:#64172e;--emp-wine-deep:#2a101c;--emp-gold:#c5a36a;--emp-gold-light:#ead7aa;--emp-ivory:#fff9ec;--emp-ink:#392b2b}
+.imperial-principle{position:relative;isolation:isolate;overflow:hidden;padding:clamp(52px,7vw,92px) 0;background:radial-gradient(ellipse at 50% 0,rgba(255,255,255,.82),transparent 57%),linear-gradient(112deg,#e8dbc2,#fbf6e9 48%,#e9dcc6);border-block:1px solid #b18a4d88}
+.imperial-principle:before,.imperial-principle:after{content:"";position:absolute;z-index:-1;pointer-events:none;border:1px solid #b18a4d55;border-radius:50%;width:min(68vw,760px);aspect-ratio:1;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 16px #b18a4d0b,0 0 0 42px #b18a4d09,0 0 0 76px #b18a4d07}
+.imperial-principle:after{width:min(48vw,540px);border-style:dashed;transform:translate(-50%,-50%) rotate(18deg)}
+.imperial-principle-inner{width:min(1050px,calc(100% - 44px));margin:auto;display:grid;grid-template-columns:minmax(150px,.55fr) minmax(0,1.45fr);gap:clamp(24px,5vw,70px);align-items:center}
+.imperial-principle-seal{width:clamp(130px,17vw,190px);aspect-ratio:1;margin:auto;display:grid;place-items:center;position:relative;border-radius:50%;background:radial-gradient(circle at 34% 28%,#fff9e8 0 4%,#d8bd83 5% 7%,#741b35 8% 68%,#2b101c 100%);color:#f9e9c7;box-shadow:0 16px 45px #3a17252c,inset 0 0 0 5px #e8d2a0,inset 0 0 0 9px #64172e,inset 0 0 0 10px #d7b77d;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.imperial-principle-seal:before,.imperial-principle-seal:after{content:"";position:absolute;inset:15px;border:1px solid #e7d3a5;border-radius:50%;transform:rotate(45deg) scaleX(.72)}
+.imperial-principle-seal:after{transform:rotate(-45deg) scaleX(.72);border-color:#d7b77d88}
+.imperial-principle-seal span{font:500 clamp(42px,6vw,64px) "Shippori Mincho",serif;text-shadow:0 2px 12px #180a12}
+.imperial-principle:hover .imperial-principle-seal{transform:rotate(22deg)}
+.imperial-principle-copy{text-align:center;position:relative}
+.imperial-principle-copy small{font:italic 12px "Cormorant Garamond",Georgia,serif;letter-spacing:.3em;color:#805c36}
+.imperial-principle-copy h2{margin:15px 0 13px;font:500 clamp(27px,4.2vw,49px)/1.8 "Shippori Mincho",serif;letter-spacing:.13em;color:#58192f;text-shadow:0 1px #fff}
+.imperial-principle-copy p{max-width:680px;margin:0 auto;color:#5d4b43;font-size:12px;line-height:2.25;letter-spacing:.07em}
+.imperial-principle-copy .emp-translation{display:block;margin-top:18px;font:italic 13px "Cormorant Garamond",Georgia,serif;letter-spacing:.2em;color:#98764a}
+.imperial-principle-rule{width:90px;height:1px;margin:20px auto;background:linear-gradient(90deg,transparent,#b18a4d,transparent)}
+.empire-compass-trigger{position:fixed;right:18px;bottom:88px;z-index:181;width:52px;height:52px;border:1px solid #d8bd82;border-radius:50%;background:radial-gradient(circle at 35% 28%,#fff8e6 0 8%,#d8bd82 9% 11%,#64172e 12% 68%,#260d19 100%);color:#fff0cf;box-shadow:0 8px 24px #210c174a,inset 0 0 0 4px #f2dfb52b;cursor:pointer;font:23px Georgia,serif;transition:transform .35s,box-shadow .35s}
+.empire-compass-trigger:before{content:"";position:absolute;inset:6px;border:1px solid #e9d4a1;border-radius:50%;transform:rotate(-24deg) scaleX(.72)}
+.empire-compass-trigger:hover{transform:rotate(30deg) scale(1.08);box-shadow:0 12px 34px #210c1770,0 0 25px #d9b86c55}
+.empire-dialog{width:min(980px,calc(100% - 24px));max-width:980px;max-height:min(90vh,900px);padding:0;border:1px solid #c7a66b;background:#f7efdf;color:#34232a;box-shadow:0 35px 120px #13070dc9}
+.empire-dialog::backdrop{background:#160911df;backdrop-filter:blur(8px)}
+.empire-shell{position:relative;max-height:min(90vh,900px);overflow:auto;background:radial-gradient(ellipse at 50% 0,#fffdf5 0,transparent 48%),linear-gradient(145deg,#f8f0df,#e9dbc0)}
+.empire-dialog-head{position:relative;padding:clamp(23px,4vw,42px);text-align:center;background:linear-gradient(120deg,#2b101c,#64172e 55%,#32121f);color:#f6e7c9;border-bottom:3px double #c4a36a}
+.empire-dialog-head:after{content:"";position:absolute;inset:9px;border:1px solid #d7b77d55;pointer-events:none}
+.empire-dialog-head small{font:italic 11px "Cormorant Garamond",Georgia,serif;letter-spacing:.28em;color:#e4c88e}
+.empire-dialog-head h2{margin:8px 0 3px;font:500 clamp(25px,4vw,38px) "Shippori Mincho",serif;letter-spacing:.16em}
+.empire-dialog-head p{margin:0;color:#eadbc2;font-size:11px;letter-spacing:.1em}
+.empire-dialog-close{position:absolute;right:18px;top:17px;z-index:2;width:36px;height:36px;border:1px solid #d7b77d88;background:transparent;color:#f6e7c9;font-size:22px;cursor:pointer}
+.empire-dialog-body{padding:clamp(18px,4vw,38px)}
+.empire-statusbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid #b18a4d66}
+.empire-statusbar small{font:italic 11px "Cormorant Garamond",Georgia,serif;letter-spacing:.18em;color:#805b37}
+.empire-progress{display:flex;gap:6px;align-items:center}
+.empire-progress i{display:block;width:9px;height:9px;border:1px solid #ad8952;border-radius:50%;background:#fff9ec}
+.empire-progress i.is-found{background:#741b35;box-shadow:0 0 0 3px #c7a66b44}
+.empire-constellation{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+.empire-star{position:relative;min-height:112px;padding:15px 12px;border:1px solid #b18a4d66;background:linear-gradient(145deg,#fffaf0,#eee1ca);color:#4b2632;text-align:left;cursor:pointer;transition:transform .25s,border-color .25s,box-shadow .25s}
+.empire-star:hover,.empire-star[aria-pressed=true]{transform:translateY(-3px);border-color:#9c713d;box-shadow:0 9px 22px #4b263214}
+.empire-star .star-glyph{display:block;font:25px Georgia,serif;color:#a17b45}
+.empire-star strong{display:block;margin-top:6px;font:600 13px "Shippori Mincho",serif}
+.empire-star small{display:block;margin-top:3px;font:10px "Cormorant Garamond",Georgia,serif;letter-spacing:.13em;color:#876b4c}
+.empire-star[aria-pressed=true] .star-glyph{color:#741b35;text-shadow:0 0 12px #c49b5b88}
+.empire-detail{min-height:124px;padding:22px 24px;border:1px solid #b18a4d66;background:rgba(255,253,246,.72);position:relative}
+.empire-detail:before{content:"";position:absolute;inset:6px;border:1px solid #b18a4d30;pointer-events:none}
+.empire-detail small{font:italic 11px "Cormorant Garamond",Georgia,serif;letter-spacing:.18em;color:#8b633b}
+.empire-detail h3{margin:6px 0;font:500 21px "Shippori Mincho",serif;color:#64172e}
+.empire-detail p{margin:0;font-size:12px;line-height:2;color:#554344}
+.empire-journeys{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 12px}
+.empire-journeys button{padding:9px 14px;border:1px solid #b18a4d77;background:#fffaf0;color:#562236;font-size:11px;cursor:pointer}
+.empire-journeys button[aria-pressed=true]{background:#64172e;color:#fff0d6;border-color:#64172e}
+.empire-route{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.empire-route a{padding:14px;border:1px solid #b18a4d55;background:#fffaf0;color:#4b1c2d;transition:.25s}
+.empire-route a:hover{background:#68172f;color:#fff1d7;transform:translateY(-2px)}
+.empire-route strong{display:block;font-size:12px}.empire-route small{display:block;margin-top:4px;font:10px "Cormorant Garamond",Georgia,serif;letter-spacing:.12em}
+.empire-secret{display:none;margin-top:22px;padding:25px;border:1px solid #a98249;background:linear-gradient(145deg,#f4e7ce,#fffaf0);text-align:center;box-shadow:inset 0 0 0 5px #b18a4d1a}
+.empire-secret.is-open{display:block;animation:empire-unseal .8s ease both}
+.empire-secret small{font:italic 11px "Cormorant Garamond",Georgia,serif;letter-spacing:.22em;color:#805b37}
+.empire-secret h3{font:500 23px "Shippori Mincho",serif;color:#64172e;margin:8px 0}
+.empire-secret p{font-size:12px;line-height:2;color:#554344}
+.empire-secret .secret-motto{font:500 clamp(19px,3vw,27px) "Shippori Mincho",serif;letter-spacing:.13em;color:#64172e}
+.empire-hunt-trigger{margin-left:12px;border:0;background:transparent;color:#9c7848;font:18px Georgia,serif;cursor:pointer;vertical-align:middle;opacity:.56;transition:opacity .2s,transform .2s}
+.empire-hunt-trigger:hover,.empire-hunt-trigger.is-found{opacity:1;transform:rotate(30deg);color:#741b35}
+.empire-toast{position:fixed;left:50%;bottom:28px;z-index:300;max-width:calc(100% - 32px);transform:translate(-50%,18px);opacity:0;pointer-events:none;padding:12px 20px;border:1px solid #c4a36a;background:#2b101b;color:#f6e7c9;box-shadow:0 12px 36px #0004;font-size:12px;letter-spacing:.08em;transition:.3s}
+.empire-toast.is-shown{opacity:1;transform:translate(-50%,0)}
+@keyframes empire-unseal{0%{opacity:0;transform:translateY(12px);filter:blur(5px)}100%{opacity:1;transform:none;filter:none}}
+@media(max-width:700px){.imperial-principle-inner{grid-template-columns:1fr;gap:22px}.imperial-principle-seal{width:126px}.empire-constellation{grid-template-columns:repeat(2,1fr)}.empire-route{grid-template-columns:1fr}.empire-compass-trigger{right:13px;bottom:78px;width:46px;height:46px}}
+@media(prefers-reduced-motion:reduce){.imperial-principle-seal,.empire-compass-trigger,.empire-star,.empire-route a{transition:none}.empire-secret.is-open{animation:none}}
