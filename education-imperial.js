@@ -23,13 +23,20 @@ if(panel&&form&&field&&feedback){
   {label:"FOLIO II　／　THE FOUNDER",title:"第二の鍵　—　門をひらいた人",prompt:"帝國大學で最初の女性學生となり、日ノ本帝國國立帝都女學院を創設した人物。その姓名を記せ。",answers:["六條杠葉","杠葉"],hint:"教育機關案内と教育人物録を辿る。"},
   {label:"FOLIO III　／　THE FIRST LEARNING",title:"第三の鍵　—　知のはじまり",prompt:"九条院春臣の「知の星図」。その第一に掲げられた学問領域を記せ。",answers:["古典漢学","古典・漢学","古典 漢学"],hint:"首頁の「知の星図」で、最初の星を選ぶ。"}
  ];
- let current=0,cleared=[];
+ const ARG_KEY="hinomoto-sealed-folio-progress-v1";
+ let saved={current:0,cleared:[]};
+ try{saved=JSON.parse(localStorage.getItem(ARG_KEY)||"null")||saved}catch(_){}
+ let current=Math.max(0,Math.min(stages.length,Number(saved.current)||0));
+ let cleared=Array.isArray(saved.cleared)?saved.cleared.slice(0,stages.length):[];
+ const saveProgress=()=>{try{localStorage.setItem(ARG_KEY,JSON.stringify({current,cleared,complete:current>=stages.length}))}catch(_){}};
  const norm=s=>String(s||"").normalize("NFKC").replace(/[\s　・･「」『』。、]/g,"").toLowerCase();
- function render(){const s=stages[current];if(heading)heading.textContent=s.title;if(prompt)prompt.textContent=s.prompt;if(stepLabel)stepLabel.textContent=s.label;if(feedback)feedback.textContent="";if(field){field.value="";field.focus({preventScroll:true});}if(progress)$$("span",progress).forEach((x,i)=>x.classList.toggle("done",i<current));}
- function finish(){if(progress)$$("span",progress).forEach(x=>x.classList.add("done"));form.hidden=true;if(panel)panel.classList.add("completed");if(reward)reward.classList.add("is-open");}
- form.addEventListener("submit",e=>{e.preventDefault();const answer=norm(field.value);if(!answer){feedback.textContent="鍵となる言葉を記してください。";return;}if(stages[current].answers.some(x=>norm(x)===answer)){cleared[current]=true;current++;if(current>=stages.length){finish();return;}render();}else{feedback.textContent="その言葉では封緘は解けない。史料をもう一度辿られよ。";feedback.classList.add("arg-error");}});
- const hint=$("#arg-hint");if(hint)hint.addEventListener("click",()=>{feedback.textContent=stages[current].hint;feedback.classList.remove("arg-error");});
- render();
+ const hint=$("#arg-hint");
+ function render(){if(current>=stages.length){finish();return;}const stage=stages[current];if(heading)heading.textContent=stage.title;if(prompt)prompt.textContent=stage.prompt;if(stepLabel)stepLabel.textContent=stage.label;if(feedback){feedback.textContent="";feedback.classList.remove("arg-error");}if(field){field.value="";field.focus({preventScroll:true});}if(progress)$$("span",progress).forEach((x,i)=>x.classList.toggle("done",i<current));if(hint)hint.hidden=false;}
+ function finish(){saveProgress();if(progress)$$("span",progress).forEach(x=>x.classList.add("done"));form.hidden=true;if(hint)hint.hidden=true;if(panel)panel.classList.add("completed");if(reward)reward.classList.add("is-open");}
+ form.addEventListener("submit",e=>{e.preventDefault();const answer=norm(field.value);if(!answer){feedback.textContent="鍵となる言葉を記してください。";return;}if(stages[current].answers.some(x=>norm(x)===answer)){cleared[current]=true;current++;saveProgress();if(current>=stages.length){finish();return;}render();}else{feedback.textContent="その言葉では封緘は解けない。史料をもう一度辿られよ。";feedback.classList.add("arg-error");}});
+ if(hint)hint.addEventListener("click",()=>{if(stages[current]){feedback.textContent=stages[current].hint;feedback.classList.remove("arg-error");}});
+ const reset=$("#arg-reset");if(reset)reset.addEventListener("click",()=>{current=0;cleared=[];saveProgress();form.hidden=false;if(panel)panel.classList.remove("completed");if(reward)reward.classList.remove("is-open");if(hint)hint.hidden=false;render();});
+ if(current>=stages.length)finish();else render();
 }
 /* small engraved seal opens the exploration without disrupting the official portal */
 const seal=$("[data-open-sealed]");if(seal)seal.addEventListener("click",()=>{location.href="sealed-folio.html";});
