@@ -1,21 +1,5 @@
 (function(){
 "use strict";
-if(document.querySelector(".imperial-palace-dock"))return;
-const key="hinomoto-imperial-lantern-v1";
-let lantern=false;try{lantern=localStorage.getItem(key)==="on"}catch(_){}
-document.body.classList.toggle("imperial-lantern-on",lantern);
-const dock=document.createElement("aside");dock.className="imperial-palace-dock";dock.setAttribute("aria-label","帝國教育廳 補助器具");
-dock.innerHTML='<button type="button" class="dock-seal" data-dock-compass aria-label="帝國學問羅針盤をひらく" title="帝國學問羅針盤">✥</button><button type="button" class="dock-label" data-dock-lantern aria-pressed="false">閲覧燈</button><button type="button" class="dock-seal" data-dock-top aria-label="頁の先頭へ戻る" title="頁の先頭へ">⌃</button>';
-document.body.appendChild(dock);
-const lamp=dock.querySelector("[data-dock-lantern]");
-function sync(){lamp.setAttribute("aria-pressed",String(lantern));lamp.textContent=lantern?"閲覧燈 ON":"閲覧燈"}
-sync();
-lamp.addEventListener("click",()=>{lantern=!lantern;document.body.classList.toggle("imperial-lantern-on",lantern);try{localStorage.setItem(key,lantern?"on":"off")}catch(_){}sync()});
-dock.querySelector("[data-dock-compass]").addEventListener("click",()=>{
- const trigger=document.querySelector(".empire-compass-trigger");
- if(trigger)trigger.click();else window.location.href="index.html#atlas";
-});
-dock.querySelector("[data-dock-top]").addEventListener("click",()=>window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}));
 const folio=document.querySelector("#empire-secret");
 if(folio&&!folio.querySelector("[data-palimpsest-link]")){
  const link=document.createElement("a");link.href="palimpsest.html";link.className="empire-detail-link";link.dataset.palimpsestLink="true";link.textContent="失われた余白をひらく　／　THE IMPERIAL PALIMPSEST　✧";link.style.display="inline-block";link.style.marginTop="12px";link.style.borderBottom="1px solid #b18a4d";folio.appendChild(link);
