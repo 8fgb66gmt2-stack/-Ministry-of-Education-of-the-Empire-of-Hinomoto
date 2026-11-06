@@ -193,16 +193,19 @@ body.imperial-lantern-on:after{content:"";position:fixed;inset:0;z-index:45;poin
 @media(max-width:560px){.palimpsest-top{font-size:8px}.palimpsest-form{flex-direction:column}.palimpsest-form button{min-height:46px}.palimpsest-hero{padding-top:48px}}
 @media(prefers-reduced-motion:reduce){.palimpsest-final.is-open{animation:none}.palimpsest-progress i{transition:none}}
 
-
-/* Keep the knowledge compass clear of the reading-cabinet dock */
+/* Place the knowledge compass on the opposite side from the reading-cabinet dock */
 body .empire-compass-trigger{
-  right:22px !important;
-  bottom:190px !important;
+  position:fixed !important;
+  left:22px !important;
+  right:auto !important;
+  bottom:22px !important;
+  top:auto !important;
   z-index:10010 !important;
 }
 @media(max-width:700px){
   body .empire-compass-trigger{
-    right:16px !important;
-    bottom:178px !important;
+    left:14px !important;
+    right:auto !important;
+    bottom:18px !important;
   }
 }
