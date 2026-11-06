@@ -172,7 +172,21 @@ const records=[
  {title:"封緘文庫",desc:"教育史料を辿り、三つの鍵を解く探索頁",url:"sealed-folio.html",keywords:"封緘文庫 探索 暗号 書架 封緘 鍵 ARG"},
  {title:"教育人物録",desc:"教育・学術・文化に携わる人々",url:"archives.html#persons",keywords:"人物録 人物 教師 春臣 壱葉 八雲"},
  {title:"刊行物・研究資料",desc:"教育思想・学術・文化継承に關する記録",url:"archives.html#publications",keywords:"刊行物 研究 資料 学術"},
- {title:"告示・公表資料",desc:"教育行政情報・公表文書・統計・刊行物",url:"notices.html",keywords:"告示 統計 公表 通達 行政情報"}
+ {title:"告示・公表資料",desc:"教育行政情報・公表文書・統計・刊行物",url:"notices.html",keywords:"告示 統計 公表 通達 行政情報"},
+ {title:"知の星図",desc:"九条院春臣の学問的関心を六つの領域から辿る",url:"index.html#atlas",keywords:"星図 学問領域 古典 漢学 歴史 文学 哲学 自然科学 教育学 美術"},
+ {title:"知の錬成室",desc:"学問領域と問いの方法を組み合わせ、探究の入口をひらく",url:"index.html#inquiry-atelier",keywords:"錬成室 探究 問い 方法 学問手帖"},
+ {title:"教育思想閲覧室",desc:"九条院春臣の教育思想『教育侖』を四つの章から読む",url:"index.html#codex",keywords:"思想閲覧室 教育侖 九条院春臣 教育 自由 教師 学生 古典 近代"},
+ {title:"知の対話",desc:"古典・漢学と近代学問を照らし合わせる",url:"index.html#two-libraries",keywords:"対話 古典 近代学問 西洋思想 比較 選択"},
+ {title:"知の巡礼",desc:"思想・教育・文化の三つの巡路を辿る",url:"index.html#pilgrimage",keywords:"巡礼 巡路 思索 教育 文化 探訪"},
+ {title:"教育機關の系譜",desc:"九条院塾、帝國大學、帝都女學院、教育廳の連なり",url:"index.html#institutions-orbit",keywords:"系譜 教育機關 九条院塾 帝國大學 帝都女學院 教育廳"},
+ {title:"知識天象儀",desc:"四方位から古典・歴史・自然・藝術の知を巡る",url:"index.html#imperial-instruments",keywords:"知識天象儀 天象儀 星盤 方位 古典 歴史 自然 藝術"},
+ {title:"閲覧者証",desc:"関心に応じた知の航路と巡覧記録を整える",url:"index.html#reader-registry",keywords:"閲覧者証 閲覧者 登録 航路 巡覧 學印"},
+ {title:"重層文書閲覧室",desc:"薔薇窓、知の星図、知識天象儀に残された學印を辿る",url:"index.html#palimpsest",keywords:"重層文書閲覧室 重層文書 學印 封緘 記録"},
+ {title:"封緘文庫",desc:"教育史料を辿り、三つの鍵を解く探索頁",url:"sealed-folio.html",keywords:"封緘文庫 探索 暗号 書架 封緘 鍵 ARG"},
+ {title:"學問手帖",desc:"問いの錬成室や帝國學問羅針盤から学びの記録を書き留める",url:"index.html#inquiry-atelier",keywords:"學問手帖 手帖 記録 メモ ノート 巡覧"},
+ {title:"余白の書",desc:"三つの星章を集めた者にひらかれる隠された閲覧頁",url:"marginalia.html",keywords:"余白の書 星章 秘密 閲覧書架"},
+ {title:"星辰大書架",desc:"四つの断章から帝國教育廳の理念を辿る",url:"astral-vault.html",keywords:"星辰大書架 断章 知識天象儀"},
+ {title:"失われた余白",desc:"四つの學印と三つの問いを結ぶ最終閲覧頁",url:"palimpsest.html",keywords:"失われた余白 學印 重層 文書 封緘"}
 ];
 function searchRecords(query){
  const terms=String(query||"").trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
