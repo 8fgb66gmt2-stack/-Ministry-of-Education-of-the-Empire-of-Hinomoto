@@ -1,6 +1,8 @@
 /* THE IMPERIAL KNOWLEDGE COMPASS — education portal expansion */
 (function(){
 "use strict";
+if(window.__hinomotoKnowledgeCompassInstalled || document.getElementById("empire-knowledge-dialog"))return;
+window.__hinomotoKnowledgeCompassInstalled=true;
 if(document.getElementById("empire-knowledge-dialog"))return;
 const STORE="hinomoto-imperial-knowledge-v1";
 const HUNT="hinomoto-imperial-seals-v1";
