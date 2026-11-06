@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="education-empire.css?v=20261106-5">
 <link rel="stylesheet" href="education-atelier.css?v=20261105-1">
 <link rel="stylesheet" href="education-home-layout.css?v=20261106-1">
+<link rel="stylesheet" href="education-ceremony.css?v=20261106-1">
 <title>帝國教育廳｜日ノ本帝國 公式情報網</title>
 </head>
 <body>
@@ -456,6 +457,41 @@
   </div>
  </div>
 </section>
+<section class="reader-pass-section" id="reader-registry" aria-labelledby="reader-pass-heading">
+ <div class="wrap">
+  <div class="reader-pass-heading reveal">
+   <small>THE IMPERIAL READER REGISTRY　／　閲覧者登録</small>
+   <h2 id="reader-pass-heading">あなたの知の航路を、ここから。</h2>
+   <p>関心をひとつ選び、知の門に名を刻む。学問の星々を結び、あなた自身の閲覧航路をひらきます。</p>
+  </div>
+  <div class="reader-pass-grid">
+   <article class="reader-pass-card reveal">
+    <small>YOUR IMPERIAL READER PASS</small>
+    <h3>知を敬い、問いを愛す。</h3>
+    <p>閲覧者証を登録すると、選んだ関心領域に沿って、教育廳の書架を巡るための道筋が整えられます。</p>
+    <div class="reader-pass-current" id="reader-pass-current" aria-live="polite">
+     <strong>閲覧者証は、まだ刻まれていません。</strong>
+     <span>関心分野を選ぶと、あなたのための知の航路がひらかれます。</span>
+    </div>
+    <button class="reader-pass-open" type="button" data-open-reader-pass>閲覧者証を登録する　✧</button>
+   </article>
+   <article class="reader-pass-card reveal">
+    <small>YOUR PERSONAL READING ROUTE</small>
+    <h3 id="reader-route-title">古典の書架から、知の源流へ。</h3>
+    <p id="reader-route-description">学問の関心に合わせて、次に訪れる頁を三つご案内します。</p>
+    <nav class="reader-route-recommendation" id="reader-route-recommendation" aria-label="あなたの知の航路">
+     <a href="index.html#atlas"><strong>01　知の星図</strong><small>OPEN FOLIO　↗</small></a>
+     <a href="index.html#codex"><strong>02　教育思想閲覧室</strong><small>OPEN FOLIO　↗</small></a>
+     <a href="archives.html#education-theory"><strong>03　『教育侖』</strong><small>OPEN FOLIO　↗</small></a>
+    </nav>
+    <div class="reader-pass-stats">
+     <div class="reader-pass-stat"><strong id="reader-visit-count">00</strong><span>巡覧した頁</span></div>
+     <div class="reader-pass-stat"><strong id="reader-seal-count">00</strong><span>蒐めた學印</span></div>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
 <section class="sealed-archive" id="sealed-archive"><div class="wrap"><div class="sealed-card reveal"><div class="sealed-emblem">封</div><small>THE SEALED FOLIO　／　封緘文庫</small><h2>頁の奥に、もうひとつの入口。</h2><p>書架のあいだに残された三つの問い。教育廳の記録を読み、言葉を辿り、封じられた頁をひらかれよ。知ることそのものが、鍵となる。</p><a class="sealed-link" href="sealed-folio.html">封緘文庫の探索を開始する <span>✧</span></a></div></div></section>
 <section class="search-zone" id="search">
  <div class="wrap search-row">
@@ -501,5 +537,6 @@
 <script src="education-celestial.js?v=20261105-1" defer></script>
 <script src="education-empire.js?v=20261106-3" defer></script>
 <script src="education-atelier.js?v=20261105-1" defer></script>
+<script src="education-ceremony.js?v=20261106-1" defer></script>
 </body>
 </html>
