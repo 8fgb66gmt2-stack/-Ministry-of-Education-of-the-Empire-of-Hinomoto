@@ -209,3 +209,26 @@ body .empire-compass-trigger{
     bottom:18px !important;
   }
 }
+
+
+/* FINAL FLOATING CONTROL LAYOUT — vertically separated, independent of dock flow */
+body .empire-compass-trigger{
+  position:fixed !important;
+  top:42vh !important;
+  right:18px !important;
+  left:auto !important;
+  bottom:auto !important;
+  translate:0 -50% !important;
+  transform:none !important;
+  z-index:10030 !important;
+}
+body .empire-compass-trigger:hover,
+body .empire-compass-trigger:focus-visible{
+  transform:rotate(30deg) scale(1.08) !important;
+}
+@media(max-width:700px){
+  body .empire-compass-trigger{
+    top:38vh !important;
+    right:12px !important;
+  }
+}
