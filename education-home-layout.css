@@ -1,0 +1,36 @@
+/* RESPONSIVE LAYOUT REFINEMENT — homepage controls never collide */
+:root{scroll-padding-top:76px}
+
+/* Give the long ministry navigation room before it reaches the utility controls. */
+@media (max-width:1120px){
+  body:not(.arg-body) .nav-inner{gap:10px;flex-wrap:wrap;padding-block:8px}
+  body:not(.arg-body) .nav-kicker{display:none}
+  body:not(.arg-body) .nav-toggle{display:inline-flex;align-items:center;gap:9px;min-height:38px;padding:8px 13px;border:1px solid rgba(139,98,49,.5);background:linear-gradient(135deg,#fffaf0,#e9d9ba);color:#562236;cursor:pointer}
+  body:not(.arg-body) .nav-links{display:none;position:absolute;left:0;right:0;top:100%;z-index:95;padding:12px clamp(18px,4vw,42px) 18px;background:rgba(255,250,240,.985);border-bottom:1px solid #b18a4d;box-shadow:0 14px 28px rgba(45,24,28,.15);flex-direction:column;align-items:stretch;gap:0}
+  body:not(.arg-body) .nav-links.open{display:flex}
+  body:not(.arg-body) .nav-links a{padding:11px 4px;border-bottom:1px solid rgba(139,98,49,.18);white-space:normal}
+  body:not(.arg-body) .grand-utility{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+}
+@media (max-width:860px){
+  body:not(.arg-body) .ribbon-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body:not(.arg-body) .ribbon-item{min-width:0;padding:15px 16px}
+  body:not(.arg-body) .ribbon-item:nth-child(odd){border-left:1px solid rgba(146,105,55,.34)}
+  body:not(.arg-body) .hero-buttons{align-items:stretch;gap:10px}
+  body:not(.arg-body) .hero-buttons a{flex:1 1 210px;min-width:0}
+}
+@media (max-width:520px){
+  body:not(.arg-body) .ribbon-grid{grid-template-columns:1fr}
+  body:not(.arg-body) .ribbon-item,
+  body:not(.arg-body) .ribbon-item:first-child{min-height:76px;border-left:0;border-right:0;border-bottom:1px solid rgba(146,105,55,.24);padding:12px 8px}
+  body:not(.arg-body) .hero-buttons{display:grid;grid-template-columns:1fr}
+  body:not(.arg-body) .hero-buttons a{width:100%;min-height:48px}
+  body:not(.arg-body) .grand-utility{gap:6px}
+  body:not(.arg-body) .grand-utility button{max-width:calc(50vw - 30px);white-space:nowrap}
+}
+/* Prevent long Japanese labels and decorative arrows from forcing overflow. */
+body:not(.arg-body) .hero-buttons a,
+body:not(.arg-body) .ribbon-item,
+body:not(.arg-body) .grand-utility button{box-sizing:border-box}
+body:not(.arg-body) .ribbon-item>span:last-child{min-width:0}
+body:not(.arg-body) .ribbon-item strong,
+body:not(.arg-body) .ribbon-item small{overflow-wrap:anywhere}
