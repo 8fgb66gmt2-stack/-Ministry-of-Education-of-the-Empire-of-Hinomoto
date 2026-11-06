@@ -4,7 +4,7 @@
 const KEY="hinomoto-education-marginalia-v1";
 const PAGE_KEY="hinomoto-education-pages-v1";
 const $=(s,r=document)=>r.querySelector(s);
-const $=(s,r=document)=>Array.from(r.querySelectorAll(s));
+const $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
 const safeRead=(key,fallback)=>{try{const v=JSON.parse(localStorage.getItem(key)||"null");return v??fallback}catch(_){return fallback}};
 const safeWrite=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value))}catch(_){}};
 const state=safeRead(KEY,{found:[],complete:false});
