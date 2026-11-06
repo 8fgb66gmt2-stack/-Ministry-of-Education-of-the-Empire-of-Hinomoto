@@ -210,3 +210,53 @@ body.lantern-reading .masthead,body.lantern-reading .section-heading,body.lanter
 @keyframes renaissance-petal-flight{0%{opacity:0;transform:translate(0,0) rotate(0) scale(.45)}18%{opacity:.95}100%{opacity:0;transform:translate(var(--petal-x),var(--petal-y)) rotate(var(--petal-turn)) scale(1.12)}}
 @media(prefers-reduced-motion:reduce){.renaissance-lantern-glow{transition:none}.renaissance-petal{display:none!important}.renaissance-lantern-toggle{transition:none}}
 @media(max-width:520px){.renaissance-lantern-toggle{height:42px;padding:0 12px;font-size:10px}.renaissance-dock{gap:7px}}
+
+
+/* FLOATING TOOLS — separate the reading cabinet and lantern controls */
+.renaissance-dock{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  gap:12px;
+  right:clamp(14px,2vw,24px);
+  bottom:clamp(14px,2vw,24px);
+  z-index:180;
+}
+.renaissance-dock .renaissance-lantern-toggle{
+  order:0;
+  min-width:104px;
+  min-height:42px;
+  padding:0 15px;
+  white-space:nowrap;
+  box-shadow:0 6px 18px rgba(37,13,22,.2);
+}
+.renaissance-dock .dock-main{
+  order:1;
+  flex:0 0 52px;
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+}
+@media(max-width:680px){
+  .renaissance-dock{
+    right:12px;
+    bottom:calc(12px + env(safe-area-inset-bottom,0px));
+    gap:9px;
+  }
+  .renaissance-dock .renaissance-lantern-toggle{
+    min-width:92px;
+    min-height:40px;
+    padding:0 12px;
+    font-size:10px;
+  }
+  .renaissance-dock .dock-main{
+    flex-basis:46px;
+    width:46px;
+    height:46px;
+  }
+}
+@media(max-width:380px){
+  .renaissance-dock{right:9px;bottom:calc(9px + env(safe-area-inset-bottom,0px))}
+}
