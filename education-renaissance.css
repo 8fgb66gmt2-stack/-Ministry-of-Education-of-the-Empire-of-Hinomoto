@@ -351,3 +351,36 @@ body.lantern-reading .subsection{
     50%{opacity:1;transform:scale(1.12)}
   }
 }
+
+
+/* LANTERN BEAM — 懐中電灯のように頁を照らす強い光 */
+.renaissance-lantern-glow{
+  opacity:0;
+  background:
+    radial-gradient(ellipse 78% 92% at 88% 86%,
+      rgba(255,255,245,.98) 0%,
+      rgba(255,250,226,.92) 18%,
+      rgba(255,239,194,.72) 36%,
+      rgba(255,225,171,.38) 56%,
+      rgba(255,218,166,.12) 76%,
+      transparent 100%),
+    radial-gradient(ellipse 48% 72% at 92% 100%,
+      rgba(255,255,238,.72),
+      rgba(255,239,201,.22) 52%,
+      transparent 100%);
+  mix-blend-mode:screen;
+  filter:brightness(1.55) saturate(.88);
+  transition:opacity .45s ease;
+}
+body.lantern-reading .renaissance-lantern-glow{opacity:1}
+body.lantern-reading main{
+  filter:brightness(1.16) saturate(.94);
+}
+body.lantern-reading .renaissance-lantern-toggle{
+  background:radial-gradient(circle at 35% 25%,#fffef3 0%,#fff2c9 48%,#e9c77f 100%)!important;
+  color:#583817!important;
+  box-shadow:0 0 0 1px #fff8df,0 0 18px 7px rgba(255,235,176,.75),0 0 44px 18px rgba(255,222,151,.42)!important;
+}
+@media(prefers-reduced-motion:reduce){
+  .renaissance-lantern-glow{transition:none}
+}
