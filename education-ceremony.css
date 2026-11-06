@@ -140,3 +140,40 @@ body:not(.vault-body) .celestial-trigger{left:18px!important;bottom:18px!importa
 @media(prefers-reduced-motion:reduce){
  .reader-pass-trigger,.reader-pass-submit,.reader-pass-open,.reader-pass-section *,.vault-fragment,.vault-fragment .vault-copy,.vault-final{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
+
+/* UNIVERSITY-INSPIRED IMPERIAL HERO — dark lacquer, antique gold and vellum light */
+body:not(.arg-body):not(.vault-body) .hero{
+ background:
+  radial-gradient(520px circle at var(--pointer-x,68%) var(--pointer-y,42%),rgba(224,190,139,.23),transparent 62%),
+  radial-gradient(ellipse at 80% 48%,rgba(227,211,190,.24),transparent 36%),
+  linear-gradient(108deg,#26151a 0%,#4b2831 41%,#786b69 70%,#b4a89e 100%);
+}
+body:not(.arg-body):not(.vault-body) .hero:after{
+ opacity:.56;
+ background:
+  radial-gradient(circle at 76% 48%,transparent 0 25%,rgba(242,226,195,.12) 25.1%,transparent 25.3% 35%,rgba(242,226,195,.1) 35.1%,transparent 35.3% 48%,rgba(242,226,195,.08) 48.1%,transparent 48.3%),
+  repeating-linear-gradient(115deg,transparent 0 76px,rgba(234,216,173,.075) 77px,transparent 78px 154px),
+  radial-gradient(circle at 50% 50%,transparent 0 42%,rgba(0,0,0,.18) 100%);
+}
+body:not(.arg-body):not(.vault-body) .hero .hero-overline{color:#e8d2a7;text-shadow:0 1px 10px rgba(30,8,15,.25)}
+body:not(.arg-body):not(.vault-body) .hero-visual{filter:drop-shadow(0 16px 30px rgba(28,12,18,.16))}
+body:not(.arg-body):not(.vault-body) .hero-visual .visual-caption{color:#f0dfbf;text-shadow:0 2px 12px rgba(27,10,16,.4)}
+body:not(.arg-body):not(.vault-body) .reader-pass-section .reader-pass-heading,
+body:not(.arg-body):not(.vault-body) .reader-pass-section .reader-pass-heading p{color:#f0e4d1}
+body:not(.arg-body):not(.vault-body) .reader-pass-card{transition:transform .38s cubic-bezier(.2,.75,.25,1),box-shadow .38s,border-color .38s}
+body:not(.arg-body):not(.vault-body) .reader-pass-card:hover{transform:translateY(-5px);border-color:#c4a56a;box-shadow:0 30px 78px rgba(12,4,10,.3),inset 0 0 0 5px rgba(177,138,77,.1)}
+body:not(.arg-body):not(.vault-body) .reader-pass-card:after{content:"";position:absolute;inset:7px;border:1px solid rgba(177,138,77,.18);pointer-events:none}
+.reader-pass-trigger{position:relative}
+.reader-pass-trigger:before{content:"✧";font-size:12px;color:#a47c47}
+@media(max-width:980px){
+ .reader-pass-trigger{min-height:32px;padding:5px 8px;font-size:8px;letter-spacing:.06em}
+ .reader-pass-trigger .reader-pass-status{display:none}
+}
+@media(max-width:680px){
+ body:not(.arg-body):not(.vault-body) .hero{background:
+  radial-gradient(ellipse at 78% 74%,rgba(216,192,158,.18),transparent 38%),
+  linear-gradient(145deg,#2a151d 0%,#5b2c3a 72%,#806b68 100%)}
+ body:not(.arg-body):not(.vault-body) .hero:after{opacity:.32}
+ .reader-pass-preview{grid-template-columns:56px 1fr}
+ .reader-pass-seal{width:50px}
+}
