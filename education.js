@@ -182,7 +182,7 @@ const records=[
  {title:"知識天象儀",desc:"四方位から古典・歴史・自然・藝術の知を巡る",url:"index.html#imperial-instruments",keywords:"知識天象儀 天象儀 星盤 方位 古典 歴史 自然 藝術"},
  {title:"閲覧者証",desc:"関心に応じた知の航路と巡覧記録を整える",url:"index.html#reader-registry",keywords:"閲覧者証 閲覧者 登録 航路 巡覧 學印"},
  {title:"重層文書閲覧室",desc:"薔薇窓、知の星図、知識天象儀に残された學印を辿る",url:"index.html#palimpsest",keywords:"重層文書閲覧室 重層文書 學印 封緘 記録"},
- {title:"封緘文庫",desc:"教育史料を辿り、三つの鍵を解く探索頁",url:"sealed-folio.html",keywords:"封緘文庫 探索 暗号 書架 封緘 鍵 ARG"},
+
  {title:"學問手帖",desc:"問いの錬成室や帝國學問羅針盤から学びの記録を書き留める",url:"index.html#inquiry-atelier",keywords:"學問手帖 手帖 記録 メモ ノート 巡覧"},
  {title:"余白の書",desc:"三つの星章を集めた者にひらかれる隠された閲覧頁",url:"marginalia.html",keywords:"余白の書 星章 秘密 閲覧書架"},
  {title:"星辰大書架",desc:"四つの断章から帝國教育廳の理念を辿る",url:"astral-vault.html",keywords:"星辰大書架 断章 知識天象儀"},
