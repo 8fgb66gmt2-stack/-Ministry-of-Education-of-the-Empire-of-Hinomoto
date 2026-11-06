@@ -16,12 +16,12 @@ const pages={
  "palimpsest.html":{title:"失われた余白",en:"THE IMPERIAL PALIMPSEST",url:"palimpsest.html",desc:"四つの學印を結び、封じられた最終頁へ。"}
 };
 const stars=[
- {id:"inheritance",title:"受け継ぐ",en:"INHERITANCE",glyph:"❧",desc:"古典と歴史を読み、先人の知を次代へ手渡す。",link:"archives.html#history",linkLabel:"帝國教育史をひらく"},
- {id:"inquiry",title:"問いを立てる",en:"INQUIRY",glyph:"✧",desc:"答えを受け取るだけでなく、自ら問い、考え、探究する。",link:"index.html#atlas",linkLabel:"知の星図を巡る"},
- {id:"freedom",title:"自由を守る",en:"LIBERTAS",glyph:"☼",desc:"身分や家柄に左右されず、学びたい者に学びの門をひらく。",link:"about.html#philosophy",linkLabel:"教育理念を読む"},
- {id:"culture",title:"文化を育む",en:"CULTURA",glyph:"✿",desc:"学問と芸術、言葉と思想を結び、豊かな文化を育てる。",link:"archives.html#publications",linkLabel:"刊行物・研究資料へ"},
- {id:"future",title:"未来を拓く",en:"FUTURE",glyph:"☾",desc:"学びを受け取った一人ひとりが、自らの意志で未来を選ぶ。",link:"institutions.html#university",linkLabel:"帝國大學を訪ねる"},
- {id:"harmony",title:"知を結ぶ",en:"SAPIENTIA",glyph:"✥",desc:"古き知と新しき知を対話させ、世界を多面的に見つめる。",link:"index.html#two-libraries",linkLabel:"古典と近代の対話へ"}
+ {id:"inheritance",title:"受け継ぐ",en:"INHERITANCE",glyph:"❧",desc:"古典と歴史を読み、先人の知を次代へ手渡す。",link:"archives.html#history",linkLabel:"帝國教育史をひらく",connections:[["『教育侖』","archives.html#education-theory"],["教育人物録","archives.html#persons"],["帝國大學","institutions.html#university"]]},
+ {id:"inquiry",title:"問いを立てる",en:"INQUIRY",glyph:"✧",desc:"答えを受け取るだけでなく、自ら問い、考え、探究する。",link:"index.html#atlas",linkLabel:"知の星図を巡る",connections:[["知の錬成室","index.html#inquiry-atelier"],["知の星図","index.html#atlas"],["知の巡礼","index.html#pilgrimage"]]},
+ {id:"freedom",title:"自由を守る",en:"LIBERTAS",glyph:"☼",desc:"身分や家柄に左右されず、学びたい者に学びの門をひらく。",link:"about.html#philosophy",linkLabel:"教育理念を読む",connections:[["九条院春臣の思想","about.html#director"],["教育思想閲覧室","index.html#codex"],["閲覧者証","index.html#reader-registry"]]},
+ {id:"culture",title:"文化を育む",en:"CULTURA",glyph:"✿",desc:"学問と芸術、言葉と思想を結び、豊かな文化を育てる。",link:"archives.html#publications",linkLabel:"刊行物・研究資料へ",connections:[["古典と近代の対話","index.html#two-libraries"],["刊行物・著作","archives.html#publications"],["六條杠葉","archives.html#sixjo-yuzuriha"]]},
+ {id:"future",title:"未来を拓く",en:"FUTURE",glyph:"☾",desc:"学びを受け取った一人ひとりが、自らの意志で未来を選ぶ。",link:"institutions.html#university",linkLabel:"帝國大學を訪ねる",connections:[["帝國大學","institutions.html#university"],["帝都女學院","institutions.html#academy"],["教育行政の公表資料","notices.html"]]},
+ {id:"harmony",title:"知を結ぶ",en:"SAPIENTIA",glyph:"✥",desc:"古き知と新しき知を対話させ、世界を多面的に見つめる。",link:"index.html#two-libraries",linkLabel:"古典と近代の対話へ",connections:[["知の対話","index.html#two-libraries"],["教育機關の系譜","index.html#institutions-orbit"],["知識天象儀","index.html#imperial-instruments"]]}
 ];
 const journeys={
  thinker:{label:"思索の道",steps:["about.html#philosophy","index.html#atlas","index.html#codex"],text:"教育理念から知の星図へ。問いを持ち、自分の考えを深める道。"},
@@ -38,8 +38,13 @@ if(!state.visited.includes(currentVisit)){state.visited.push(currentVisit);safeW
 let collected=safeRead(HUNT,[]);
 if(!Array.isArray(collected))collected=[];
 const root=document.createElement("div");
-root.innerHTML='<button class="empire-compass-trigger" type="button" aria-label="帝國學問羅針盤をひらく" title="帝國學問羅針盤">✥</button><dialog class="empire-dialog" id="empire-knowledge-dialog" aria-labelledby="empire-dialog-title"><div class="empire-shell"><header class="empire-dialog-head"><button class="empire-dialog-close" type="button" aria-label="閉じる">×</button><small>THE IMPERIAL ATLAS OF LEARNING　／　日ノ本帝國教育星圖</small><h2 id="empire-dialog-title">帝國學問羅針盤</h2><p>知の星辰を結び、學びの道をひらく。</p></header><div class="empire-dialog-body"><div class="empire-statusbar"><small>THE CONSTELLATION OF KNOWLEDGE　／　知の星座</small><div class="empire-progress" id="empire-progress" aria-label="學印の蒐集状況"></div></div><div class="empire-constellation" id="empire-constellation"></div><section class="empire-detail" aria-live="polite"><small id="empire-detail-en">SELECT A STAR</small><h3 id="empire-detail-title">星をひとつ選んでください</h3><p id="empire-detail-text">星を選ぶと、その知の領域と学びの道筋がひらかれます。</p><a class="empire-detail-link" id="empire-detail-link" href="index.html#atlas">関連する頁をひらく　→</a></section><div class="empire-journeys" role="group" aria-label="知の巡路"><button type="button" data-empire-journey="thinker">思索の道</button><button type="button" data-empire-journey="teacher">教育の道</button><button type="button" data-empire-journey="culture">文化の道</button></div><p id="empire-journey-text" style="font-size:12px;line-height:2;color:#5b4843;margin:0 0 12px" aria-live="polite"></p><nav class="empire-route" id="empire-route" aria-label="知の巡路"></nav><section class="empire-secret" id="empire-secret"><small>ARCANUM EDUCATIONIS　／　秘められた教育理念</small><h3>四つの學印、ここに結ばれる。</h3><p>学びを受け継ぎ、問いを立て、自由を守り、文化を育む。知はひとりの胸に閉じるものではなく、人から人へと渡され、未来を照らす光となる。</p><div class="secret-motto">學ビヲ絶ヤサズ、未来ヲ拓ク。</div><p>學印を集めた者に、帝國教育廳の理念を示す特別の頁をひらく。</p><a href="about.html#philosophy" style="display:inline-block;margin-top:8px;color:#64172e;border-bottom:1px solid #b18a4d">教育理念を読み返す　✧</a></section></div></div></dialog>';
+root.innerHTML='<button class="empire-compass-trigger" type="button" aria-label="帝國學問羅針盤をひらく" title="帝國學問羅針盤">✥</button><dialog class="empire-dialog" id="empire-knowledge-dialog" aria-labelledby="empire-dialog-title"><div class="empire-shell"><header class="empire-dialog-head"><button class="empire-dialog-close" type="button" aria-label="閉じる">×</button><small>THE IMPERIAL ATLAS OF LEARNING　／　日ノ本帝國教育星圖</small><h2 id="empire-dialog-title">帝國學問羅針盤</h2><p>知の星辰を結び、學びの道をひらく。</p></header><div class="empire-dialog-body"><div class="empire-statusbar"><small>THE CONSTELLATION OF KNOWLEDGE　／　知の星座</small><div class="empire-progress" id="empire-progress" aria-label="學印の蒐集状況"></div></div><div class="empire-constellation" id="empire-constellation"></div><section class="empire-detail" aria-live="polite"><small id="empire-detail-en">SELECT A STAR</small><h3 id="empire-detail-title">星をひとつ選んでください</h3><p id="empire-detail-text">星を選ぶと、その知の領域と学びの道筋がひらかれます。</p><a class="empire-detail-link" id="empire-detail-link" href="index.html#atlas">関連する頁をひらく　→</a><nav class="empire-connections" id="empire-connections" aria-label="この星と連なる閲覧頁"></nav></section><div class="empire-journeys" role="group" aria-label="知の巡路"><button type="button" data-empire-journey="thinker">思索の道</button><button type="button" data-empire-journey="teacher">教育の道</button><button type="button" data-empire-journey="culture">文化の道</button></div><p id="empire-journey-text" style="font-size:12px;line-height:2;color:#5b4843;margin:0 0 12px" aria-live="polite"></p><nav class="empire-route" id="empire-route" aria-label="知の巡路"></nav><section class="empire-secret" id="empire-secret"><small>ARCANUM EDUCATIONIS　／　秘められた教育理念</small><h3>四つの學印、ここに結ばれる。</h3><p>学びを受け継ぎ、問いを立て、自由を守り、文化を育む。知はひとりの胸に閉じるものではなく、人から人へと渡され、未来を照らす光となる。</p><div class="secret-motto">學ビヲ絶ヤサズ、未来ヲ拓ク。</div><p>學印を集めた者に、帝國教育廳の理念を示す特別の頁をひらく。</p><a href="about.html#philosophy" style="display:inline-block;margin-top:8px;color:#64172e;border-bottom:1px solid #b18a4d">教育理念を読み返す　✧</a></section></div></div></dialog>';
 document.body.appendChild(root);
+/* THE CONSTELLATION'S CROSS-REFERENCES — each selected principle opens a living reading path. */
+const connectionStyle=document.createElement("style");
+connectionStyle.textContent=".empire-connections{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:15px;padding-top:12px;border-top:1px solid #b18a4d55}.empire-connections>small{flex:0 0 100%;font:italic 9px Georgia,serif;letter-spacing:.16em;color:#8b633b}.empire-connections>a{display:inline-flex;align-items:center;min-height:30px;padding:6px 9px;border:1px solid #b18a4d66;background:#fffaf0;color:#64172e;text-decoration:none;font:11px 'Shippori Mincho',serif;transition:background .2s,color .2s,border-color .2s}.empire-connections>a:hover,.empire-connections>a:focus-visible{background:#64172e;color:#fff0d6;border-color:#64172e}@media(max-width:600px){.empire-connections>a{flex:1 1 calc(50% - 7px);justify-content:center;text-align:center}}@media(prefers-reduced-motion:reduce){.empire-connections>a{transition:none}}";
+document.head.appendChild(connectionStyle);
+
 /* Mount the compass in the shared reading dock instead of floating over other controls. */
 const compassTrigger=root.querySelector(".empire-compass-trigger");
 let floatingDock=document.querySelector(".renaissance-dock");
@@ -82,6 +87,15 @@ function updateHunt(){
 }
 function showStar(item){
  detailEn.textContent=item.en;detailTitle.textContent=item.title;detailText.textContent=item.desc;if(detailLink){detailLink.href=item.link;detailLink.textContent=item.linkLabel+"　→"}
+ const connectionNav=root.querySelector("#empire-connections");
+ if(connectionNav){
+  connectionNav.replaceChildren();
+  const caption=document.createElement("small");caption.textContent="RELATED FOLIOS　／　連環する頁";connectionNav.appendChild(caption);
+  (item.connections||[]).forEach(([label,url])=>{
+   const a=document.createElement("a");a.href=url;a.textContent=label;connectionNav.appendChild(a);
+  });
+ }
+ state.lastSubject=item.id;safeWrite(STORE,state);
  root.querySelectorAll(".empire-star").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.star===item.id)));
 }
 const constellation=root.querySelector("#empire-constellation");
@@ -137,7 +151,7 @@ dialog.addEventListener("click",event=>{if(event.target===dialog)close()});
 dialog.addEventListener("close",()=>trigger.focus());
 document.addEventListener("keydown",event=>{if(event.altKey&&event.key.toLowerCase()==="e"&&!event.repeat){event.preventDefault();open()}});
 root.querySelectorAll("[data-empire-journey]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.empireJourney===state.journey)));
-renderJourney(state.journey||"thinker");showStar(stars[0]);updateHunt();
+renderJourney(state.journey||"thinker");showStar(stars.find(item=>item.id===state.lastSubject)||stars[0]);updateHunt();
 const huntTargets={"index.html":".imperial-principle-copy .emp-translation","about.html":"#director .kicker","institutions.html":"#academy-founder h3","archives.html":"#sixjo-yuzuriha h2"};
 if(huntTargets[page]){
  const target=document.querySelector(huntTargets[page]);
