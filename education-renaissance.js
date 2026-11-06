@@ -1,6 +1,8 @@
 /* THE IMPERIAL READING CABINET & MARGINALIA QUEST */
 (function(){
 "use strict";
+if(window.__hinomotoReadingCabinetInstalled)return;
+window.__hinomotoReadingCabinetInstalled=true;
 const KEY="hinomoto-education-marginalia-v1";
 const PAGE_KEY="hinomoto-education-pages-v1";
 const $=(s,r=document)=>r.querySelector(s);
