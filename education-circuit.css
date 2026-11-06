@@ -48,7 +48,7 @@
 .circuit-node small{font:italic 8px "Cormorant Garamond",serif;letter-spacing:.12em;color:#98784b}
 .circuit-node strong{font-size:13px;font-weight:600}
 .circuit-node span{font-size:9px;color:#79675c}
-.circuit-node:hover{transform:translateY(-3px);border-color:#8a2944}
+.circuit-node:hover{transform:translateY(-3px);border-color:#8a2944}.circuit-node.is-off-route{opacity:.38;filter:grayscale(.35)}.circuit-node.is-on-route{box-shadow:0 0 0 2px #c7a56b55,0 7px 18px #38231b12}.circuit-node[aria-pressed=true]{opacity:1;filter:none}
 .circuit-node[aria-pressed=true]{background:linear-gradient(145deg,#64172e,#3a1422);border-color:#d8bd82;color:#fff4df;box-shadow:0 10px 25px #42152335}
 .circuit-node[aria-pressed=true] small,.circuit-node[aria-pressed=true] span{color:#ead9b0}
 .node-haruomi{left:3%;top:8%}.node-philosophy{right:3%;top:8%}.node-book{left:3%;bottom:8%}.node-university{right:3%;bottom:8%}.node-yuzuriha{left:50%;top:0;transform:translateX(-50%)}.node-yuzuriha:hover{transform:translate(-50%,-3px)}.node-academy{left:50%;bottom:0;transform:translateX(-50%)}.node-academy:hover{transform:translate(-50%,-3px)}
