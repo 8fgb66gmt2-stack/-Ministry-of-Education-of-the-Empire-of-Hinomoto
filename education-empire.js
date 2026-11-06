@@ -12,7 +12,8 @@ const pages={
  "archives.html":{title:"教育史料室",en:"ARCHIVES",url:"archives.html",desc:"書物、人物、思想。時代を越えて受け継がれる知の記録。"},
  "notices.html":{title:"告示・公表資料",en:"PUBLIC RECORDS",url:"notices.html",desc:"教育行政に關する公表文書と制度の記録を閲覧する。"},
  "sealed-folio.html":{title:"封緘文庫",en:"SEALED FOLIO",url:"sealed-folio.html",desc:"問いを持ち、頁を読み、三つの鍵を解く。"},
- "marginalia.html":{title:"余白の書",en:"THE MARGINALIA",url:"marginalia.html",desc:"知の余白に遺された、最後の問い。"}
+ "marginalia.html":{title:"余白の書",en:"THE MARGINALIA",url:"marginalia.html",desc:"知の余白に遺された、最後の問い。"},
+ "palimpsest.html":{title:"失われた余白",en:"THE IMPERIAL PALIMPSEST",url:"palimpsest.html",desc:"四つの學印を結び、封じられた最終頁へ。"}
 };
 const stars=[
  {id:"inheritance",title:"受け継ぐ",en:"INHERITANCE",glyph:"❧",desc:"古典と歴史を読み、先人の知を次代へ手渡す。",link:"archives.html#history",linkLabel:"帝國教育史をひらく"},
@@ -140,4 +141,5 @@ if(huntTargets[page]){
  target.appendChild(button);
  if(collected.includes(page)){button.classList.add("is-found");button.textContent="✦"}
 }
+const palaceLoader=document.createElement("script");palaceLoader.src="education-palace.js?v=20261106-1";palaceLoader.defer=true;document.head.appendChild(palaceLoader);
 })();
