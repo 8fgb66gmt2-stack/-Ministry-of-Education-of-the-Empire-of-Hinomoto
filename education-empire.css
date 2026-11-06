@@ -153,3 +153,42 @@
 .arg-tools button{border:0;padding:4px 0;background:transparent;color:#7b5c38;text-decoration:underline;font:inherit;font-size:11px;cursor:pointer}
 .arg-tools button:focus-visible{outline:2px solid #c5a36a;outline-offset:4px}
 .arg-tools span{font-size:10px;color:#80694f}
+
+/* THE IMPERIAL PALACE — progressive layer */
+.imperial-palace-dock{position:fixed;z-index:118;right:22px;bottom:22px;display:flex;align-items:center;gap:7px;padding:7px;border:1px solid rgba(177,138,77,.72);border-radius:999px;background:rgba(43,19,29,.94);box-shadow:0 12px 38px rgba(38,16,24,.25),inset 0 0 0 1px rgba(255,244,220,.08);backdrop-filter:blur(14px);color:#f6ead0}
+.imperial-palace-dock button{display:grid;place-items:center;min-width:38px;height:38px;padding:0 11px;border:1px solid rgba(224,201,150,.28);border-radius:999px;background:transparent;color:#f4e5c5;font:12px var(--serif);cursor:pointer;transition:background .25s,border-color .25s,transform .25s}
+.imperial-palace-dock button:hover,.imperial-palace-dock button:focus-visible{background:rgba(224,201,150,.15);border-color:#e0c996;transform:translateY(-2px)}
+.imperial-palace-dock .dock-seal{font:19px Georgia,serif;color:#e0c996}
+.imperial-palace-dock .dock-label{font-size:10px;letter-spacing:.08em;white-space:nowrap}
+body.imperial-lantern-on{--ivory:#e9dfc9;--white:#f8f0df;--ink:#241b1b;filter:none}
+body.imperial-lantern-on main{filter:sepia(.055) contrast(1.025)}
+body.imperial-lantern-on:after{content:"";position:fixed;inset:0;z-index:45;pointer-events:none;background:radial-gradient(ellipse at 50% 38%,transparent 38%,rgba(45,18,26,.12) 100%)}
+@media(max-width:600px){.imperial-palace-dock{right:12px;bottom:12px;gap:4px;padding:5px}.imperial-palace-dock button{min-width:35px;height:35px;padding-inline:8px}.imperial-palace-dock .dock-label{display:none}}
+@media(prefers-reduced-motion:reduce){.imperial-palace-dock button{transition:none}}
+.palimpsest-body{min-height:100vh;background:#21151b;color:#eadfc8;background-image:radial-gradient(ellipse at 50% 0%,rgba(125,57,69,.38),transparent 55%),linear-gradient(135deg,#21151b,#38202a 55%,#1b1418)}
+.palimpsest-shell{width:min(980px,calc(100% - 34px));margin:0 auto;padding:28px 0 70px}
+.palimpsest-top{display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid rgba(210,180,125,.3);padding:0 0 15px;font:10px var(--roman);letter-spacing:.16em;color:#d5bd91}
+.palimpsest-top a{color:inherit}.palimpsest-hero{text-align:center;padding:65px 15px 42px}
+.palimpsest-seal{width:82px;height:82px;margin:0 auto 24px;display:grid;place-items:center;border:1px solid #b8955c;border-radius:50%;box-shadow:0 0 0 7px rgba(184,149,92,.08),inset 0 0 28px rgba(184,149,92,.12);font-size:34px;color:#e6d1a6}
+.palimpsest-overline{font:10px var(--roman);letter-spacing:.23em;color:#c7a66b}
+.palimpsest-hero h1{margin:14px 0 12px;font-size:clamp(30px,6vw,54px);font-weight:500;letter-spacing:.2em;color:#f6ead2}
+.palimpsest-hero p{max-width:620px;margin:0 auto;color:#cbbca5;font-size:13px;line-height:2.3}
+.palimpsest-rule{width:160px;height:1px;margin:28px auto;background:linear-gradient(90deg,transparent,#b8955c,transparent)}
+.palimpsest-card{position:relative;overflow:hidden;padding:clamp(22px,5vw,48px);border:1px solid rgba(190,157,101,.48);background:linear-gradient(145deg,rgba(247,235,208,.075),rgba(247,235,208,.025));box-shadow:0 24px 70px rgba(0,0,0,.2)}
+.palimpsest-card:before,.palimpsest-card:after{content:"✧";position:absolute;color:rgba(211,179,119,.48);font-size:22px}.palimpsest-card:before{top:13px;left:17px}.palimpsest-card:after{right:17px;bottom:13px}
+.palimpsest-progress{display:flex;gap:8px;justify-content:center;margin:0 0 32px}.palimpsest-progress i{width:34px;height:3px;background:rgba(220,198,157,.2);transition:background .3s,box-shadow .3s}.palimpsest-progress i.is-done{background:#d4b779;box-shadow:0 0 12px rgba(212,183,121,.45)}
+.palimpsest-step{text-align:center}.palimpsest-step small{font:10px var(--roman);letter-spacing:.2em;color:#c7a66b}
+.palimpsest-step h2{margin:10px 0 14px;font-size:clamp(20px,4vw,29px);font-weight:500;letter-spacing:.1em;color:#f2e5cb}
+.palimpsest-step p{max-width:650px;margin:0 auto 20px;color:#cdbfa9;font-size:13px;line-height:2.15}
+.palimpsest-question{max-width:690px;margin:25px auto;padding:20px 22px;border-top:1px solid rgba(190,157,101,.32);border-bottom:1px solid rgba(190,157,101,.32);color:#f0e2c7;font-size:15px;line-height:2.1}
+.palimpsest-form{display:flex;max-width:590px;margin:0 auto;gap:9px}.palimpsest-form input{min-width:0;flex:1;padding:13px 15px;border:1px solid rgba(207,180,129,.5);background:rgba(14,10,13,.42);color:#f5ead6;font:14px var(--serif);border-radius:0}
+.palimpsest-form input::placeholder{color:#a99a85}.palimpsest-form button,.palimpsest-next{padding:12px 20px;border:1px solid #c6a46c;background:linear-gradient(135deg,#b28b4e,#80613d);color:#24171b;font:12px var(--serif);letter-spacing:.08em;cursor:pointer}
+.palimpsest-hint{margin-top:17px;border:0;background:transparent;color:#c7a66b;text-decoration:underline;text-underline-offset:4px;font:12px var(--serif);cursor:pointer}
+.palimpsest-feedback{min-height:32px;margin-top:17px;color:#d8c18e;font-size:12px}
+.palimpsest-final{display:none;max-width:690px;margin:24px auto 0;padding:28px;border:1px solid rgba(207,180,129,.4);background:rgba(10,8,10,.2);text-align:center}
+.palimpsest-final.is-open{display:block;animation:palimpsestReveal .9s both}.palimpsest-final h3{font-size:23px;font-weight:500;letter-spacing:.13em;color:#f4e7ce}
+.palimpsest-final p{font-size:13px;line-height:2.2;color:#d1c2aa}.palimpsest-return{display:inline-block;margin:9px 8px;padding:10px 15px;border:1px solid rgba(207,180,129,.55);color:#e7d1a5;font-size:12px}
+.palimpsest-foot{text-align:center;margin-top:34px;color:#aa9677;font:10px var(--roman);letter-spacing:.18em;line-height:2.2}
+@keyframes palimpsestReveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:560px){.palimpsest-top{font-size:8px}.palimpsest-form{flex-direction:column}.palimpsest-form button{min-height:46px}.palimpsest-hero{padding-top:48px}}
+@media(prefers-reduced-motion:reduce){.palimpsest-final.is-open{animation:none}.palimpsest-progress i{transition:none}}
