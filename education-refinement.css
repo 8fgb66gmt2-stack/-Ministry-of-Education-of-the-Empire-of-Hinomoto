@@ -1,0 +1,166 @@
+/* THE IMPERIAL MINISTRY REFINEMENT — 玲瓏浪漫・共通仕上げ */
+:root{
+  --ref-wine:#64172e;
+  --ref-wine-deep:#28101b;
+  --ref-gold:#c7a56b;
+  --ref-gold-light:#ead9b0;
+  --ref-ivory:#fff9ec;
+  --ref-ink:#35252a;
+}
+
+/* Imperial standard time — a quiet instrument in the official masthead */
+.utility-time{
+  display:inline-flex;
+  align-items:baseline;
+  gap:8px;
+  margin-left:auto;
+  white-space:nowrap;
+  color:#ead9b0;
+  font-variant-numeric:tabular-nums;
+}
+.utility-time small{
+  color:#c4a977;
+  font:italic 9px "Cormorant Garamond",Georgia,serif;
+  letter-spacing:.19em;
+}
+.utility-time time{
+  color:#f4e9d3;
+  font:600 12px "Cormorant Garamond",Georgia,serif;
+  letter-spacing:.12em;
+  font-variant-numeric:tabular-nums;
+}
+
+/* The three floating instruments become one deliberate reading dock.
+   Children remain independently clickable; the dock never covers the page. */
+.renaissance-dock{
+  position:fixed!important;
+  inset:auto max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) auto!important;
+  z-index:10020!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:10px!important;
+  width:max-content!important;
+  height:auto!important;
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  isolation:isolate!important;
+  pointer-events:none!important;
+}
+.renaissance-dock>*{pointer-events:auto!important}
+.renaissance-dock>.empire-compass-trigger{
+  position:relative!important;
+  inset:auto!important;
+  translate:none!important;
+  transform:none!important;
+  z-index:auto!important;
+  display:grid!important;
+  place-items:center!important;
+  flex:0 0 50px!important;
+  width:50px!important;
+  height:50px!important;
+  min-height:50px!important;
+  margin:0!important;
+  padding:0!important;
+  border:1px solid #d8bd82!important;
+  border-radius:50%!important;
+  background:radial-gradient(circle at 35% 28%,#fff8e6 0 8%,#d8bd82 9% 11%,#64172e 12% 68%,#260d19 100%)!important;
+  color:#fff0cf!important;
+  box-shadow:0 8px 24px #210c174a,inset 0 0 0 4px #f2dfb52b!important;
+  cursor:pointer;
+  font:23px Georgia,serif!important;
+}
+.renaissance-dock>.empire-compass-trigger:before{
+  position:absolute;
+  inset:6px;
+  border:1px solid #e9d4a1;
+  border-radius:50%;
+  transform:rotate(-24deg) scaleX(.72);
+  content:"";
+  pointer-events:none;
+}
+.renaissance-dock>.empire-compass-trigger:hover,
+.renaissance-dock>.empire-compass-trigger:focus-visible{
+  transform:rotate(22deg) scale(1.06)!important;
+}
+.renaissance-dock>.renaissance-lantern-toggle{
+  order:1!important;
+  min-width:100px!important;
+  min-height:42px!important;
+  margin:0!important;
+}
+.renaissance-dock>.dock-main{
+  order:2!important;
+  flex:0 0 50px!important;
+  width:50px!important;
+  height:50px!important;
+  margin:0!important;
+}
+.renaissance-dock>.empire-compass-trigger{order:0!important}
+
+/* Keyboard access and tactile clarity */
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{
+  outline:2px solid #b18a4d;
+  outline-offset:3px;
+  box-shadow:0 0 0 3px rgba(177,138,77,.15);
+}
+.command-dialog :where(button,input,a):focus-visible,
+.reader-pass-dialog :where(button,input,select):focus-visible{
+  outline-color:#8b2744;
+  box-shadow:0 0 0 3px rgba(177,138,77,.2);
+}
+
+/* Keep the navigation and official utilities calm at narrow widths */
+@media(max-width:680px){
+  .utility .wrap{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:5px 10px;
+    padding:5px 0;
+  }
+  .utility-time{margin-left:0;gap:0}
+  .utility-time small{display:none}
+  .utility-time time{font-size:11px}
+  .utility-tools{display:flex;gap:5px;flex-wrap:nowrap}
+  .utility-tools button{padding:4px 7px;font-size:8px;white-space:nowrap}
+  .renaissance-dock{
+    right:max(10px,env(safe-area-inset-right,0px))!important;
+    bottom:max(10px,env(safe-area-inset-bottom,0px))!important;
+    gap:8px!important;
+  }
+  .renaissance-dock>.empire-compass-trigger{
+    flex-basis:46px!important;
+    width:46px!important;
+    height:46px!important;
+    min-height:46px!important;
+    font-size:21px!important;
+  }
+  .renaissance-dock>.renaissance-lantern-toggle{
+    min-width:90px!important;
+    min-height:40px!important;
+    padding-inline:11px!important;
+    font-size:10px!important;
+  }
+  .renaissance-dock>.dock-main{
+    flex-basis:46px!important;
+    width:46px!important;
+    height:46px!important;
+  }
+}
+@media(max-height:560px) and (min-width:600px){
+  .renaissance-dock{
+    flex-direction:row!important;
+    align-items:center!important;
+    gap:8px!important;
+  }
+  .renaissance-dock>.empire-compass-trigger{order:0!important}
+  .renaissance-dock>.renaissance-lantern-toggle{order:1!important}
+  .renaissance-dock>.dock-main{order:2!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .renaissance-dock>*,
+  .utility-time,
+  .command-dialog *{transition:none!important;animation:none!important}
+}
