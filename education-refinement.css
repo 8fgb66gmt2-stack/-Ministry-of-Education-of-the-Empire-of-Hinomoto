@@ -32,7 +32,7 @@
 
 /* The three floating instruments become one deliberate reading dock.
    Children remain independently clickable; the dock never covers the page. */
-.renaissance-dock{
+body:not(.vault-body) .renaissance-dock{
   position:fixed!important;
   inset:auto max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) auto!important;
   z-index:10020!important;
@@ -49,8 +49,8 @@
   isolation:isolate!important;
   pointer-events:none!important;
 }
-.renaissance-dock>*{pointer-events:auto!important}
-.renaissance-dock>.empire-compass-trigger{
+body:not(.vault-body) .renaissance-dock>*{pointer-events:auto!important}
+body:not(.vault-body) .renaissance-dock>.empire-compass-trigger{
   position:relative!important;
   inset:auto!important;
   translate:none!important;
@@ -72,7 +72,7 @@
   cursor:pointer;
   font:23px Georgia,serif!important;
 }
-.renaissance-dock>.empire-compass-trigger:before{
+body:not(.vault-body) .renaissance-dock>.empire-compass-trigger:before{
   position:absolute;
   inset:6px;
   border:1px solid #e9d4a1;
@@ -81,24 +81,24 @@
   content:"";
   pointer-events:none;
 }
-.renaissance-dock>.empire-compass-trigger:hover,
-.renaissance-dock>.empire-compass-trigger:focus-visible{
+body:not(.vault-body) .renaissance-dock>.empire-compass-trigger:hover,
+body:not(.vault-body) .renaissance-dock>.empire-compass-trigger:focus-visible{
   transform:rotate(22deg) scale(1.06)!important;
 }
-.renaissance-dock>.renaissance-lantern-toggle{
+body:not(.vault-body) .renaissance-dock>.renaissance-lantern-toggle{
   order:1!important;
   min-width:100px!important;
   min-height:42px!important;
   margin:0!important;
 }
-.renaissance-dock>.dock-main{
+body:not(.vault-body) .renaissance-dock>.dock-main{
   order:2!important;
   flex:0 0 50px!important;
   width:50px!important;
   height:50px!important;
   margin:0!important;
 }
-.renaissance-dock>.empire-compass-trigger{order:0!important}
+body:not(.vault-body) .renaissance-dock>.empire-compass-trigger{order:0!important}
 
 /* Keyboard access and tactile clarity */
 :where(a,button,input,select,textarea,[tabindex]):focus-visible{
@@ -125,42 +125,42 @@
   .utility-time time{font-size:11px}
   .utility-tools{display:flex;gap:5px;flex-wrap:nowrap}
   .utility-tools button{padding:4px 7px;font-size:8px;white-space:nowrap}
-  .renaissance-dock{
+  body:not(.vault-body) .renaissance-dock{
     right:max(10px,env(safe-area-inset-right,0px))!important;
     bottom:max(10px,env(safe-area-inset-bottom,0px))!important;
     gap:8px!important;
   }
-  .renaissance-dock>.empire-compass-trigger{
+  body:not(.vault-body) .renaissance-dock>.empire-compass-trigger{
     flex-basis:46px!important;
     width:46px!important;
     height:46px!important;
     min-height:46px!important;
     font-size:21px!important;
   }
-  .renaissance-dock>.renaissance-lantern-toggle{
+  body:not(.vault-body) .renaissance-dock>.renaissance-lantern-toggle{
     min-width:90px!important;
     min-height:40px!important;
     padding-inline:11px!important;
     font-size:10px!important;
   }
-  .renaissance-dock>.dock-main{
+  body:not(.vault-body) .renaissance-dock>.dock-main{
     flex-basis:46px!important;
     width:46px!important;
     height:46px!important;
   }
 }
 @media(max-height:560px) and (min-width:600px){
-  .renaissance-dock{
+  body:not(.vault-body) .renaissance-dock{
     flex-direction:row!important;
     align-items:center!important;
     gap:8px!important;
   }
-  .renaissance-dock>.empire-compass-trigger{order:0!important}
-  .renaissance-dock>.renaissance-lantern-toggle{order:1!important}
-  .renaissance-dock>.dock-main{order:2!important}
+  body:not(.vault-body) .renaissance-dock>.empire-compass-trigger{order:0!important}
+  body:not(.vault-body) .renaissance-dock>.renaissance-lantern-toggle{order:1!important}
+  body:not(.vault-body) .renaissance-dock>.dock-main{order:2!important}
 }
 @media(prefers-reduced-motion:reduce){
-  .renaissance-dock>*,
+  body:not(.vault-body) .renaissance-dock>*,
   .utility-time,
   .command-dialog *{transition:none!important;animation:none!important}
 }
