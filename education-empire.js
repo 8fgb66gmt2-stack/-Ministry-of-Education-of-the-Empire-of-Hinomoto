@@ -40,6 +40,17 @@ if(!Array.isArray(collected))collected=[];
 const root=document.createElement("div");
 root.innerHTML='<button class="empire-compass-trigger" type="button" aria-label="帝國學問羅針盤をひらく" title="帝國學問羅針盤">✥</button><dialog class="empire-dialog" id="empire-knowledge-dialog" aria-labelledby="empire-dialog-title"><div class="empire-shell"><header class="empire-dialog-head"><button class="empire-dialog-close" type="button" aria-label="閉じる">×</button><small>THE IMPERIAL ATLAS OF LEARNING　／　日ノ本帝國教育星圖</small><h2 id="empire-dialog-title">帝國學問羅針盤</h2><p>知の星辰を結び、學びの道をひらく。</p></header><div class="empire-dialog-body"><div class="empire-statusbar"><small>THE CONSTELLATION OF KNOWLEDGE　／　知の星座</small><div class="empire-progress" id="empire-progress" aria-label="學印の蒐集状況"></div></div><div class="empire-constellation" id="empire-constellation"></div><section class="empire-detail" aria-live="polite"><small id="empire-detail-en">SELECT A STAR</small><h3 id="empire-detail-title">星をひとつ選んでください</h3><p id="empire-detail-text">星を選ぶと、その知の領域と学びの道筋がひらかれます。</p><a class="empire-detail-link" id="empire-detail-link" href="index.html#atlas">関連する頁をひらく　→</a></section><div class="empire-journeys" role="group" aria-label="知の巡路"><button type="button" data-empire-journey="thinker">思索の道</button><button type="button" data-empire-journey="teacher">教育の道</button><button type="button" data-empire-journey="culture">文化の道</button></div><p id="empire-journey-text" style="font-size:12px;line-height:2;color:#5b4843;margin:0 0 12px" aria-live="polite"></p><nav class="empire-route" id="empire-route" aria-label="知の巡路"></nav><section class="empire-secret" id="empire-secret"><small>ARCANUM EDUCATIONIS　／　秘められた教育理念</small><h3>四つの學印、ここに結ばれる。</h3><p>学びを受け継ぎ、問いを立て、自由を守り、文化を育む。知はひとりの胸に閉じるものではなく、人から人へと渡され、未来を照らす光となる。</p><div class="secret-motto">學ビヲ絶ヤサズ、未来ヲ拓ク。</div><p>學印を集めた者に、帝國教育廳の理念を示す特別の頁をひらく。</p><a href="about.html#philosophy" style="display:inline-block;margin-top:8px;color:#64172e;border-bottom:1px solid #b18a4d">教育理念を読み返す　✧</a></section></div></div></dialog>';
 document.body.appendChild(root);
+/* Mount the compass in the shared reading dock instead of floating over other controls. */
+const compassTrigger=root.querySelector(".empire-compass-trigger");
+let floatingDock=document.querySelector(".renaissance-dock");
+if(!floatingDock){
+ floatingDock=document.createElement("div");
+ floatingDock.className="renaissance-dock";
+ document.body.appendChild(floatingDock);
+}
+floatingDock.setAttribute("role","group");
+floatingDock.setAttribute("aria-label","帝國教育廳の閲覧補助器具");
+if(compassTrigger)floatingDock.insertBefore(compassTrigger,floatingDock.firstChild);
 const ledger=document.createElement("section");
 ledger.className="empire-ledger";
 ledger.innerHTML='<div class="empire-ledger-heading"><small>THE RECORD OF YOUR INQUIRY　／　知的巡覧録</small><h3>學びの足跡</h3><p>訪れた頁を記録し、選んだ巡路の進み具合を映します。この記録は、この端末のブラウザーに保存されます。</p></div><div class="empire-ledger-progress"><div class="empire-ledger-progress-label"><span id="empire-ledger-route">思索の道</span><strong id="empire-ledger-count">0 / 3</strong></div><div class="empire-ledger-track"><i id="empire-ledger-fill"></i></div></div><ol class="empire-ledger-steps" id="empire-ledger-steps"></ol><div class="empire-notebook"><div><small>THE SCHOLAR\'S NOTEBOOK　／　學問手帖</small><h3>頁の余白に、あなたの言葉を。</h3><p>気づいたこと、心に残った一節、次に調べたい問いを自由に書き留められます。</p></div><textarea id="empire-notebook-text" rows="4" maxlength="5000" placeholder="今日、心に留まった言葉は……"></textarea><div class="empire-notebook-actions"><span id="empire-notebook-status" role="status">この端末に保存できます。</span><div><button type="button" id="empire-notebook-save">手帖に記す</button><button type="button" id="empire-notebook-export">記録を持ち出す</button></div></div></div>';
@@ -60,7 +71,7 @@ ledger.querySelector("#empire-notebook-export").addEventListener("click",()=>{
  a.href=url;a.download="帝國教育廳_學問手帖.txt";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
  noteStatus.textContent="學問手帖を書き出しました。";
 });
-const dialog=root.querySelector("dialog"),trigger=root.querySelector(".empire-compass-trigger");
+const dialog=root.querySelector("dialog"),trigger=compassTrigger;
 const detailEn=root.querySelector("#empire-detail-en"),detailTitle=root.querySelector("#empire-detail-title"),detailText=root.querySelector("#empire-detail-text"),detailLink=root.querySelector("#empire-detail-link");
 const progress=root.querySelector("#empire-progress"),secret=root.querySelector("#empire-secret");
 function toast(message){let el=document.querySelector(".empire-toast");if(!el){el=document.createElement("div");el.className="empire-toast";el.setAttribute("role","status");document.body.appendChild(el)}el.textContent=message;el.classList.add("is-shown");clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove("is-shown"),2600)}
