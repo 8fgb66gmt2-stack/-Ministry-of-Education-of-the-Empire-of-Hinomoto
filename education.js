@@ -1,7 +1,22 @@
 (function(){
 "use strict";
 const $=(selector,root=document)=>root.querySelector(selector);
-const $$=(selector,root=document)=>Array.from(root.querySelectorAll(selector));
+const $=(selector,root=document)=>Array.from(root.querySelectorAll(selector));
+
+/* Imperial standard time — always rendered in Japan Standard Time */
+const imperialClock=$("#imperial-clock");
+if(imperialClock){
+ const clockFormatter=new Intl.DateTimeFormat("en-GB",{
+  timeZone:"Asia/Tokyo",hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"
+ });
+ const updateImperialClock=()=>{
+  const now=new Date();
+  imperialClock.textContent=clockFormatter.format(now);
+  imperialClock.dateTime=now.toISOString();
+ };
+ updateImperialClock();
+ window.setInterval(updateImperialClock,1000);
+}
 
 /* Reading line */
 const progress=$("#reading-progress");
@@ -186,6 +201,49 @@ if(searchForm&&searchInput&&searchPanel&&searchList&&searchCount){
   searchPanel.classList.add("open");
  });
  const close=$("#search-close");if(close)close.addEventListener("click",()=>searchPanel.classList.remove("open"));
+}
+
+/* Make the national index available on every principal Ministry page. */
+if(!$("#command-dialog")){
+ const navInner=$(".nav-inner");
+ let utility=navInner?$(".grand-utility",navInner):null;
+ if(navInner&&!utility){
+  utility=document.createElement("div");
+  utility.className="grand-utility";
+  navInner.appendChild(utility);
+ }
+ if(utility&&!$("[data-open-search]",utility)){
+  const button=document.createElement("button");
+  button.type="button";
+  button.className="nav-index";
+  button.dataset.openSearch="";
+  button.setAttribute("aria-haspopup","dialog");
+  button.setAttribute("aria-controls","command-dialog");
+  button.setAttribute("aria-label","帝國教育廳の総合索引をひらく");
+  button.innerHTML='総合索引 <kbd>Ctrl / ⌘ K</kbd>';
+  utility.appendChild(button);
+ }
+ const dialog=document.createElement("dialog");
+ dialog.className="command-dialog";
+ dialog.id="command-dialog";
+ dialog.setAttribute("aria-labelledby","command-title");
+ dialog.innerHTML=
+  '<div class="command-top">'+
+   '<button class="command-close" type="button" data-command-close aria-label="索引を閉じる">×</button>'+
+   '<small>THE IMPERIAL KNOWLEDGE INDEX</small>'+
+   '<h2 id="command-title">帝國教育廳　総合索引</h2>'+
+   '<form class="command-search" id="command-search-form">'+
+    '<label class="sr-only" for="command-search-input">検索語</label>'+
+    '<input id="command-search-input" type="search" placeholder="人物・學校・思想・著作を検索" autocomplete="off">'+
+    '<button type="submit">探す</button>'+
+   '</form>'+
+   '<div class="command-hints"><span><kbd>↑</kbd> <kbd>↓</kbd> 移動</span><span><kbd>Enter</kbd> 開く</span><span><kbd>Esc</kbd> 閉じる</span></div>'+
+  '</div>'+
+  '<div class="command-results">'+
+   '<div class="command-results-head"><strong id="command-count">主要項目</strong><span>EDUCATION / ARCHIVE / PEOPLE</span></div>'+
+   '<div class="command-results-list" id="command-results-list"></div>'+
+  '</div>';
+ document.body.appendChild(dialog);
 }
 
 /* Command palette: keyboard-first, instant navigation */
