@@ -1,7 +1,7 @@
 (function(){
 "use strict";
 const $=(selector,root=document)=>root.querySelector(selector);
-const $=(selector,root=document)=>Array.from(root.querySelectorAll(selector));
+const $$=(selector,root=document)=>Array.from(root.querySelectorAll(selector));
 
 /* Imperial standard time — always rendered in Japan Standard Time */
 const imperialClock=$("#imperial-clock");
