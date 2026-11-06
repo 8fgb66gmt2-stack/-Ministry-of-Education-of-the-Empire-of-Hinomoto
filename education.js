@@ -370,7 +370,7 @@ const orbitRecords={
  juku:{label:"PRIVATE ACADEMY　／　01",title:"九条院塾",text:"九条院春臣が開いた私塾。春臣は塾生たちと学問を共にし、問いを持つことや、自ら考えることを大切にした。中原壱葉もかつてこの塾で学んだ。"},
  university:{label:"HIGHER EDUCATION　／　02",title:"日ノ本帝國國立帝國大學",text:"九条院春臣が創設した高等教育・学術研究機關。「學問ノ府、文化ノ源流」を精神に掲げ、文学・哲学・歴史・自然科学・医学・美術など、学問そのものを探究する場所として構想された。"},
  academy:{label:"GIRLS' ACADEMY　／　03",title:"日ノ本國立帝都女學院",text:"國語教諭の詩人・中原壱葉、央語教諭の文學者・翻譯家・中原八雲が教壇に立つ。異なる言葉と感性を持つ教師たちが、学生の学びを支えている。"},
- ministry:{label:"PUBLIC EDUCATION　／　04",title:"帝國教育廳",text:"九条院春臣が長官を務める中央行政機關。教育と学問の発展を支え、学ぶ機会と学問の自由、文化の継承を重んじる。"}
+ ministry:{label:"CENTRAL ADMINISTRATION　／　04",title:"帝國教育廳",text:"九条院春臣が長官を務める中央行政機關。教育と学問の発展を支え、学ぶ機会と学問の自由、文化の継承を重んじる。"}
 };
 const orbitButtons=$$("[data-orbit]"),orbitLabel=$("#orbit-label"),orbitTitle=$("#orbit-title"),orbitDescription=$("#orbit-description");
 function selectOrbit(key){
