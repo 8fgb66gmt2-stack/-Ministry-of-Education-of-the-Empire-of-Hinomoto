@@ -260,3 +260,53 @@ body.lantern-reading .masthead,body.lantern-reading .section-heading,body.lanter
 @media(max-width:380px){
   .renaissance-dock{right:9px;bottom:calc(9px + env(safe-area-inset-bottom,0px))}
 }
+
+
+/* FIX: keep the floating reading controls separate from one another */
+body .renaissance-dock{
+  position:fixed !important;
+  right:max(18px, env(safe-area-inset-right, 0px)) !important;
+  bottom:max(18px, env(safe-area-inset-bottom, 0px)) !important;
+  z-index:10020 !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-end !important;
+  justify-content:flex-end !important;
+  gap:14px !important;
+  width:max-content !important;
+  height:auto !important;
+  min-height:0 !important;
+  padding:8px !important;
+  isolation:isolate !important;
+}
+body .renaissance-dock > button{
+  position:relative !important;
+  inset:auto !important;
+  display:flex !important;
+  flex:0 0 auto !important;
+  align-items:center !important;
+  justify-content:center !important;
+  margin:0 !important;
+  transform:none;
+}
+body .renaissance-dock > .renaissance-lantern-toggle{
+  order:0 !important;
+  min-width:92px !important;
+  min-height:44px !important;
+}
+body .renaissance-dock > .dock-main{
+  order:1 !important;
+  width:52px !important;
+  height:52px !important;
+}
+@media(max-width:720px){
+  body .renaissance-dock{
+    right:max(10px, env(safe-area-inset-right, 0px)) !important;
+    bottom:max(10px, env(safe-area-inset-bottom, 0px)) !important;
+    gap:12px !important;
+  }
+  body .renaissance-dock > .dock-main{
+    width:48px !important;
+    height:48px !important;
+  }
+}
