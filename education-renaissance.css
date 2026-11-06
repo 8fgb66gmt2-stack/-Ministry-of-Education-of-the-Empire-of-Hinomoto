@@ -384,3 +384,27 @@ body.lantern-reading .renaissance-lantern-toggle{
 @media(prefers-reduced-motion:reduce){
   .renaissance-lantern-glow{transition:none}
 }
+
+
+/* LANTERN BALANCE — bright beam without bleaching the page */
+.renaissance-lantern-glow{
+  background:
+    radial-gradient(ellipse 48% 58% at 88% 86%,
+      rgba(255,255,244,.62) 0%,
+      rgba(255,246,218,.42) 22%,
+      rgba(255,226,174,.20) 48%,
+      rgba(255,218,166,.06) 72%,
+      transparent 100%),
+    radial-gradient(ellipse 34% 44% at 94% 100%,
+      rgba(255,252,231,.30),
+      rgba(255,233,191,.09) 55%,
+      transparent 100%);
+  mix-blend-mode:soft-light;
+  filter:none;
+  transition:opacity .35s ease;
+}
+body.lantern-reading .renaissance-lantern-glow{opacity:.78}
+body.lantern-reading main{filter:none}
+body.lantern-reading .renaissance-lantern-toggle{
+  box-shadow:0 0 0 1px rgba(255,250,226,.8),0 0 14px rgba(255,220,150,.42),0 6px 18px rgba(77,43,28,.16)!important;
+}
