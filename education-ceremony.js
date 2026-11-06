@@ -72,6 +72,8 @@ function setupRegistry(){
  button.type="button";button.className="reader-pass-trigger";button.innerHTML='閲覧者証 <span class="reader-pass-status">未登録</span>';
  button.setAttribute("aria-haspopup","dialog");button.setAttribute("aria-label","帝國教育廳の閲覧者証を登録・閲覧する");
  nav.appendChild(button);
+ const sectionButton=$("[data-open-reader-pass]");
+ if(sectionButton)sectionButton.addEventListener("click",()=>button.click());
  const dialog=document.createElement("dialog");
  dialog.className="reader-pass-dialog";dialog.id="reader-pass-dialog";
  dialog.setAttribute("aria-labelledby","reader-pass-title");
