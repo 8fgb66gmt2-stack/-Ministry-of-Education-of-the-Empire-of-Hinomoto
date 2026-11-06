@@ -232,3 +232,22 @@ body .empire-compass-trigger:focus-visible{
     right:12px !important;
   }
 }
+
+
+/* Compass visibility safeguard */
+body .empire-compass-trigger{
+  display:grid!important;
+  place-items:center!important;
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+  position:fixed!important;
+  top:42vh!important;
+  right:18px!important;
+  left:auto!important;
+  bottom:auto!important;
+  z-index:2147483000!important;
+}
+@media(max-width:700px){
+  body .empire-compass-trigger{top:38vh!important;right:12px!important}
+}
