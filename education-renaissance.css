@@ -386,25 +386,24 @@ body.lantern-reading .renaissance-lantern-toggle{
 }
 
 
-/* LANTERN BALANCE — bright beam without bleaching the page */
+/* LANTERN BALANCE — a restrained pool of warm reading light */
 .renaissance-lantern-glow{
   background:
-    radial-gradient(ellipse 48% 58% at 88% 86%,
-      rgba(255,255,244,.62) 0%,
-      rgba(255,246,218,.42) 22%,
-      rgba(255,226,174,.20) 48%,
-      rgba(255,218,166,.06) 72%,
+    radial-gradient(ellipse 27% 34% at 91% 88%,
+      rgba(255,239,195,.16) 0%,
+      rgba(255,226,174,.10) 38%,
+      rgba(255,218,166,.035) 68%,
       transparent 100%),
-    radial-gradient(ellipse 34% 44% at 94% 100%,
-      rgba(255,252,231,.30),
-      rgba(255,233,191,.09) 55%,
+    radial-gradient(ellipse 18% 24% at 96% 100%,
+      rgba(255,247,218,.09),
+      rgba(255,233,191,.025) 58%,
       transparent 100%);
   mix-blend-mode:soft-light;
   filter:none;
   transition:opacity .35s ease;
 }
-body.lantern-reading .renaissance-lantern-glow{opacity:.78}
+body.lantern-reading .renaissance-lantern-glow{opacity:.42}
 body.lantern-reading main{filter:none}
 body.lantern-reading .renaissance-lantern-toggle{
-  box-shadow:0 0 0 1px rgba(255,250,226,.8),0 0 14px rgba(255,220,150,.42),0 6px 18px rgba(77,43,28,.16)!important;
+  box-shadow:0 0 0 1px rgba(255,250,226,.72),0 0 9px rgba(255,220,150,.22),0 5px 14px rgba(77,43,28,.14)!important;
 }
