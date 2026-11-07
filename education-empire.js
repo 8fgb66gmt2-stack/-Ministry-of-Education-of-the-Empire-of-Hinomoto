@@ -168,5 +168,5 @@ if(huntTargets[page]){
  target.appendChild(button);
  if(collected.includes(page)){button.classList.add("is-found");button.textContent="✦"}
 }
-const palaceLoader=document.createElement("script");palaceLoader.src="education-palace.js?v=20261106-2";palaceLoader.defer=true;document.head.appendChild(palaceLoader);
+if(!document.querySelector('script[src^="education-palace.js"]')){const palaceLoader=document.createElement("script");palaceLoader.src="education-palace.js?v=20261106-3";palaceLoader.defer=true;document.head.appendChild(palaceLoader);}
 })();
