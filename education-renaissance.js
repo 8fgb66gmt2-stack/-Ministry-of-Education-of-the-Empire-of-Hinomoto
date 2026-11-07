@@ -113,13 +113,13 @@ function installMarginaliaPuzzle(){
   const sealedProgress=JSON.parse(localStorage.getItem("hinomoto-sealed-folio-progress-v1")||"null");
   sealedFolioComplete=!!sealedProgress&&(sealedProgress.complete===true||Number(sealedProgress.current)>=3);
  }catch(_){}
- if(count<3&&!sealedFolioComplete){form.hidden=true;feedback.textContent="三つの星章が揃っていない。教育廳の各頁を巡り、頁間の星章を収められよ。";return}
  if(state.complete===true){
   form.hidden=true;
   feedback.textContent="解錠済み。";
   reward.classList.add("is-open");
   return;
  }
+ if(count<3&&!sealedFolioComplete){form.hidden=true;feedback.textContent="三つの星章が揃っていない。教育廳の各頁を巡り、頁間の星章を収められよ。";return}
  form.addEventListener("submit",event=>{
   event.preventDefault();const answer=input.value.normalize("NFKC").replace(/[\s　・「」『』。、]/g,"");
   if(["自分自身","自分自身になる","自分自身になれる"].includes(answer)){
