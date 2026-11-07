@@ -1,5 +1,7 @@
 (function(){
 "use strict";
+if(window.__HINOMOTO_EDUCATION_PALACE_INITIALIZED__)return;
+window.__HINOMOTO_EDUCATION_PALACE_INITIALIZED__=true;
 const folio=document.querySelector("#empire-secret");
 if(folio&&!folio.querySelector("[data-palimpsest-link]")){
  const link=document.createElement("a");link.href="palimpsest.html";link.className="empire-detail-link";link.dataset.palimpsestLink="true";link.textContent="失われた余白をひらく　／　THE IMPERIAL PALIMPSEST　✧";link.style.display="inline-block";link.style.marginTop="12px";link.style.borderBottom="1px solid #b18a4d";folio.appendChild(link);
