@@ -108,7 +108,18 @@ function installMarginaliaPuzzle(){
  const form=$("#marginalia-form"),input=$("#marginalia-answer"),feedback=$("#marginalia-feedback"),reward=$("#marginalia-reward");
  if(!form||!input||!feedback||!reward)return;
  const count=fragments.filter(x=>state.found.includes(x.id)).length;
- if(count<3){form.hidden=true;feedback.textContent="三つの星章が揃っていない。教育廳の各頁を巡り、頁間の星章を収められよ。";return}
+ let sealedFolioComplete=false;
+ try{
+  const sealedProgress=JSON.parse(localStorage.getItem("hinomoto-sealed-folio-progress-v1")||"null");
+  sealedFolioComplete=!!sealedProgress&&(sealedProgress.complete===true||Number(sealedProgress.current)>=3);
+ }catch(_){}
+ if(count<3&&!sealedFolioComplete){form.hidden=true;feedback.textContent="三つの星章が揃っていない。教育廳の各頁を巡り、頁間の星章を収められよ。";return}
+ if(state.complete===true){
+  form.hidden=true;
+  feedback.textContent="解錠済み。";
+  reward.classList.add("is-open");
+  return;
+ }
  form.addEventListener("submit",event=>{
   event.preventDefault();const answer=input.value.normalize("NFKC").replace(/[\s　・「」『』。、]/g,"");
   if(["自分自身","自分自身になる","自分自身になれる"].includes(answer)){
