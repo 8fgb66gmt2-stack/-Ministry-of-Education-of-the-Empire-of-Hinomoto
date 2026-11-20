@@ -173,6 +173,7 @@ const records=[
  {title:"教育人物録",desc:"教育・学術・文化に携わる人々",url:"archives.html#persons",keywords:"人物録 人物 教師 春臣 壱葉 八雲"},
  {title:"刊行物・研究資料",desc:"教育思想・学術・文化継承に關する記録",url:"archives.html#publications",keywords:"刊行物 研究 資料 学術"},
  {title:"告示・公表資料",desc:"教育行政情報・公表文書・統計・刊行物",url:"notices.html",keywords:"告示 統計 公表 通達 行政情報"},
+ {title:"知の連環図譜",desc:"人物・教育思想・著作・教育機關の関係を辿り、関連する閲覧頁を行き来する",url:"circuit.html",keywords:"連環 図譜 知識 相関 人物 思想 著作 教育機關 関係 巡路"},
  {title:"知の星図",desc:"九条院春臣の学問的関心を六つの領域から辿る",url:"index.html#atlas",keywords:"星図 学問領域 古典 漢学 歴史 文学 哲学 自然科学 教育学 美術"},
  {title:"知の錬成室",desc:"学問領域と問いの方法を組み合わせ、探究の入口をひらく",url:"index.html#inquiry-atelier",keywords:"錬成室 探究 問い 方法 学問手帖"},
  {title:"教育思想閲覧室",desc:"九条院春臣の教育思想『教育侖』を四つの章から読む",url:"index.html#codex",keywords:"思想閲覧室 教育侖 九条院春臣 教育 自由 教師 学生 古典 近代"},
