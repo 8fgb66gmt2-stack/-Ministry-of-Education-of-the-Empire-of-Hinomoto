@@ -22,7 +22,7 @@ const stars=[
  {id:"freedom",title:"自由を守る",en:"LIBERTAS",glyph:"☼",desc:"身分や家柄に左右されず、学びたい者に学びの門をひらく。",link:"about.html#philosophy",linkLabel:"教育理念を読む",connections:[["九条院春臣の思想","about.html#director"],["教育思想閲覧室","index.html#codex"],["閲覧者証","index.html#reader-registry"]]},
  {id:"culture",title:"文化を育む",en:"CULTURA",glyph:"✿",desc:"学問と芸術、言葉と思想を結び、豊かな文化を育てる。",link:"archives.html#publications",linkLabel:"刊行物・研究資料へ",connections:[["古典と近代の対話","index.html#two-libraries"],["刊行物・著作","archives.html#publications"],["六條杠葉","archives.html#sixjo-yuzuriha"]]},
  {id:"future",title:"未来を拓く",en:"FUTURE",glyph:"☾",desc:"学びを受け取った一人ひとりが、自らの意志で未来を選ぶ。",link:"institutions.html#university",linkLabel:"帝國大學を訪ねる",connections:[["帝國大學","institutions.html#university"],["帝都女學院","institutions.html#academy"],["教育行政の公表資料","notices.html"]]},
- {id:"harmony",title:"知を結ぶ",en:"SAPIENTIA",glyph:"✥",desc:"古き知と新しき知を対話させ、世界を多面的に見つめる。",link:"index.html#two-libraries",linkLabel:"古典と近代の対話へ",connections:[["知の対話","index.html#two-libraries"],["教育機關の系譜","index.html#institutions-orbit"],["知識天象儀","index.html#imperial-instruments"]]}
+ {id:"harmony",title:"知を結ぶ",en:"SAPIENTIA",glyph:"✥",desc:"古き知と新しき知を対話させ、人物・思想・著作・教育機關の関係を辿る。",link:"circuit.html",linkLabel:"知の連環図譜をひらく",connections:[["知の連環図譜","circuit.html"],["知の対話","index.html#two-libraries"],["教育機關の系譜","index.html#institutions-orbit"],["知識天象儀","index.html#imperial-instruments"]]}
 ];
 const journeys={
  thinker:{label:"思索の道",steps:["about.html#philosophy","index.html#atlas","index.html#codex"],text:"教育理念から知の星図へ。問いを持ち、自分の考えを深める道。"},
